@@ -1,0 +1,64 @@
+{
+  "perguntas": [
+    {
+      "id": 1,
+      "pergunta": "O que é HTML?",
+      "resumo": "HTML é a linguagem de marcação...",
+      "respostaCompleta": "HTML (HyperText Markup Language) é a linguagem padrão para criar páginas web. Ela descreve a estrutura de uma página utilizando elementos como títulos, parágrafos, links, e muito mais."
+    },
+    {
+      "id": 2,
+      "pergunta": "O que é CSS?",
+      "resumo": "CSS é a linguagem de estilos...",
+      "respostaCompleta": "CSS (Cascading Style Sheets) é usada para estilizar e definir o layout de páginas web. Com ela, podemos controlar as cores, fontes, espaçamentos e posicionamentos de elementos HTML."
+    },
+    {
+      "id": 3,
+      "pergunta": "O que é JavaScript?",
+      "resumo": "JavaScript é a linguagem de programação...",
+      "respostaCompleta": "JavaScript é uma linguagem de programação que permite adicionar interatividade às páginas web, como animações, validações de formulários e muito mais."
+    },
+    {
+      "id": 4,
+      "pergunta": "O que são APIs?",
+      "resumo": "APIs permitem a comunicação entre sistemas...",
+      "respostaCompleta": "API (Application Programming Interface) é um conjunto de definições e protocolos para criar e integrar software, permitindo que diferentes sistemas se comuniquem."
+    },
+    {
+      "id": 5,
+      "pergunta": "O que é DOM?",
+      "resumo": "DOM representa a estrutura da página...",
+      "respostaCompleta": "DOM (Document Object Model) é uma interface de programação que representa a estrutura de um documento HTML ou XML como uma árvore de objetos que pode ser manipulada pelo JavaScript."
+    },
+    {
+      "id": 6,
+      "pergunta": "O que é responsividade?",
+      "resumo": "Responsividade é a adaptação da página...",
+      "respostaCompleta": "Responsividade refere-se à capacidade de um site ajustar seu layout de forma adequada em diferentes tamanhos de tela, como desktop, tablet e smartphone."
+    },
+    {
+      "id": 7,
+      "pergunta": "O que é Git?",
+      "resumo": "Git é um sistema de controle de versão...",
+      "respostaCompleta": "Git é um sistema de controle de versão distribuído que permite que desenvolvedores acompanhem as mudanças no código-fonte de um projeto e colaborem de forma eficiente."
+    },
+    {
+      "id": 8,
+      "pergunta": "O que é um framework?",
+      "resumo": "Frameworks ajudam no desenvolvimento...",
+      "respostaCompleta": "Frameworks são bibliotecas de software que oferecem funcionalidades predefinidas, permitindo que desenvolvedores construam aplicativos mais rapidamente e de forma estruturada."
+    },
+    {
+      "id": 9,
+      "pergunta": "O que é uma função em JavaScript?",
+      "resumo": "Funções são blocos de código reutilizáveis...",
+      "respostaCompleta": "Uma função em JavaScript é um bloco de código que realiza uma tarefa específica e pode ser reutilizada em diferentes partes de um programa."
+    },
+    {
+      "id": 10,
+      "pergunta": "O que é Node.js?",
+      "resumo": "Node.js é um ambiente de execução...",
+      "respostaCompleta": "Node.js é um ambiente de execução JavaScript que permite que desenvolvedores executem código JavaScript no servidor, construindo aplicações back-end robustas."
+    }
+  ]
+}
