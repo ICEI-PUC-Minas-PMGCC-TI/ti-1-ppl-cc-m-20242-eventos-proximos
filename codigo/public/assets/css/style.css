@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .logo img {
@@ -23,8 +22,27 @@
 }
 
 .barra-pesquisa {
-    padding: 15px 30px;
-    width: 500px;
+    display: flex;                
+    align-items: center;     
+    padding: 10px 10px;           
+    width: 550px;                
+    border: 1px solid black;      
+    border-radius: 8px;          
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barra-pesquisa ion-icon {
+    margin-right: 10px;        
+    font-size: 45px;        
+    color: black;              
+}
+
+.barra-pesquisa input {
+    width: 100%;                  
+    border: none;             
+    outline: none;               
+    font-size: 25px;             
+    transition: border-color 0.3s; 
 }
 
 .texto-seta {
@@ -34,14 +52,7 @@
     font-style: normal;
     font-size: 20px;
 }
-.barra-pesquisa input {
-    width: 100%; 
-    border: 1px solid black; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    font-size: 25px; 
-    transition: border-color 0.3s; 
-}
+
 
 .perfil-do-usuario a {
     font-family: "Inter", sans-serif;
@@ -56,7 +67,8 @@
 
 .filtro-localizacao ion-icon {
     font-size: 20px; 
-    color: #007BFF; 
+    color: black; 
+    margin-left: 8px;
 }
 
 

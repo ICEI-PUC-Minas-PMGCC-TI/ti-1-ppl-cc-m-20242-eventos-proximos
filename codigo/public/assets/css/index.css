@@ -1,0 +1,14 @@
+.carousel-item {
+    height: 250px; /* Ajustar conforme o design */
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Alinhamento e espaçamento entre os elementos */
+  .carousel-control-prev, .carousel-control-next {
+    width: 5%;
+  }
