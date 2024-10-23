@@ -1,14 +1,39 @@
 .carousel-item {
-    height: 250px; /* Ajustar conforme o design */
-  }
+  display: flex;
+  padding: 20px;
+  margin-top: 40px;
+  justify-content: center;
+}
 
-  .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+.carousel-item img {
+  height: 300px; 
+  object-fit: cover; 
+  transition: height 0.5s; 
+}
 
-  /* Alinhamento e espaçamento entre os elementos */
-  .carousel-control-prev, .carousel-control-next {
-    width: 5%;
-  }
+.carousel-item .col-md-4.middle img {
+  height: 400px; 
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px; 
+  height: 12px;
+  background-color: #007bff; 
+  border-radius: 50%; 
+  opacity: 0.5; 
+}
+
+.carousel-indicators .active {
+  background-color: #0056b3; 
+}
+
+footer {
+  background-color: black;
+  height: 150px;
+  width: 100%;
+}
+
+footer h2 {
+  color: white;
+  padding: 30px 60px;
+}
