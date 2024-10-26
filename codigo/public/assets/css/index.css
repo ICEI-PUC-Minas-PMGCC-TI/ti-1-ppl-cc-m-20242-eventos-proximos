@@ -1,0 +1,55 @@
+.carousel-item {
+  display: flex;
+  padding: 20px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.carousel-item img {
+  height: 300px; 
+  object-fit: cover; 
+  transition: height 0.5s; 
+}
+
+.carousel-item .col-md-4.middle img {
+  height: 400px; 
+  width: 600px;
+}
+
+.col-md-4.left, .col-md-4.right {
+  width: 30%;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px; 
+  height: 12px;
+  background-color: #007bff; 
+  border-radius: 50%; 
+  opacity: 0.5; 
+}
+
+.carousel-indicators .active {
+  background-color: #0056b3; 
+}
+
+footer {
+  background-color: black;
+  height: 150px;
+  width: 100%;
+}
+
+footer h2 {
+  color: white;
+  padding: 30px 60px;
+}
+
+.eventos {
+  display:flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid black;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
