@@ -1,0 +1,136 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+    color: #333;
+}
+
+/* Formulário */
+.event-form {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Eventos Cadastrados */
+.event-list {
+    margin-top: 20px;
+}
+
+.event-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-details {
+    display: flex;
+    align-items: center;
+}
+
+.event-info {
+    margin-left: 10px;
+}
+
+.event-image {
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.event-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+button.edit-btn, 
+button.delete-btn {
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+button.edit-btn {
+    background-color: #ffc107;
+    margin-bottom: 5px;
+}
+
+button.delete-btn {
+    background-color: #dc3545;
+    margin-bottom: 5px;
+}
+
+button.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+button.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.event-actions a {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.event-actions a:hover {
+    text-decoration: underline;
+}
