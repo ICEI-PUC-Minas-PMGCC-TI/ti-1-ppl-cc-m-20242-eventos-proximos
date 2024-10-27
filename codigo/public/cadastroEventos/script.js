@@ -31,12 +31,23 @@ function loadEvents() {
 
 function saveEvent(event) {
     const events = JSON.parse(localStorage.getItem('events')) || [];
+    
     const existingIndex = events.findIndex(e => e.id === event.id);
-
     if (existingIndex !== -1) {
-        events[existingIndex] = event; 
+        const newImage = document.getElementById('imagem').files[0];
+        if (newImage) {
+            event.imagem = URL.createObjectURL(newImage);
+        } else {
+            event.imagem = events[existingIndex].imagem;
+        }
+        events[existingIndex] = event;
     } else {
-        events.push(event); 
+
+        const newImage = document.getElementById('imagem').files[0];
+        if (newImage) {
+            event.imagem = URL.createObjectURL(newImage);
+        }
+        events.push(event);
     }
 
     localStorage.setItem('events', JSON.stringify(events));
@@ -70,6 +81,13 @@ function displayEvents(events) {
     });
 }
 
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
 function editEvent(id) {
     const events = JSON.parse(localStorage.getItem('events')) || [];
     const event = events.find(e => e.id === id);
@@ -79,11 +97,26 @@ function editEvent(id) {
         document.getElementById('data').value = event.data;
         document.getElementById('descricao').value = event.descricao;
         document.getElementById('categoria').value = event.categoria;
+
         document.getElementById('rua').value = event.endereco.rua;
         document.getElementById('numero').value = event.endereco.numero;
         document.getElementById('cidade').value = event.endereco.cidade;
         document.getElementById('estado').value = event.endereco.estado;
         document.getElementById('cep').value = event.endereco.cep;
+
+        const imageContainer = document.getElementById('imageContainer');
+        imageContainer.innerHTML = '';
+
+        if (event.imagem) {
+            const imagePreview = document.createElement('img');
+            imagePreview.src = event.imagem;
+            imagePreview.alt = "Imagem do Evento";
+            imagePreview.classList.add('event-image');
+            imagePreview.style.width = '100px';
+            imagePreview.style.height = 'auto';
+            imageContainer.appendChild(imagePreview);
+        }
+        scrollToTop();
     }
 }
 
