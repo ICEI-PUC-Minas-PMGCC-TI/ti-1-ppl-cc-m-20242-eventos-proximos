@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventful</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="eventful.png" alt="Logo Eventful">
+            </div>
+
+            <div class="barra-pesquisa">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" id="searchInput" placeholder="Pesquisar eventos...">
+            </div>
+
+            <div class="location-filter-container">
+                <img src="loc.png" alt="Ícone Local" class="location-icon">
+                <select class="location-filter" id="locationFilter">
+                    <option value="">Onde encontrar</option>
+                    <option value="local1">Local 1</option>
+                    <option value="local2">Local 2</option>
+                    <option value="local3">Local 3</option>
+                    <option value="florianopolis">Florianópolis</option>
+                    <option value="belo_horizonte">Belo Horizonte</option>
+                </select>
+            </div>
+
+            <div class="menu-direita">
+                <div class="usuario">
+                    Olá, fulano!
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside class="filters">
+            <h2>Filtros de Evento</h2>
+            <label><input type="checkbox" class="type-filter" value="shows"> Shows</label>
+            <label><input type="checkbox" class="type-filter" value="teatro"> Teatro</label>
+            <label><input type="checkbox" class="type-filter" value="exposicoes"> Exposições</label>
+            <label><input type="checkbox" class="type-filter" value="festivais"> Festivais</label>
+            <label><input type="checkbox" class="type-filter" value="seminarios"> Seminários</label>
+            <label><input type="checkbox" class="type-filter" value="workshops"> Workshops</label>
+            <label><input type="checkbox" class="type-filter" value="palestras"> Palestras</label>
+        </aside>
+
+        <section class="events">
+            <div class="event-card" data-category="shows" data-location="florianopolis" data-name="Numanice em Florianópolis">
+                <div class="event-image" style="background-image: url('numanice.png');"></div>
+                <h3>Numanice em Florianópolis</h3>
+                <button>Ver Detalhes</button>
+            </div>
+            <div class="event-card" data-category="teatro" data-location="belo_horizonte" data-name="Alice no País das Maravilhas em Belo Horizonte">
+                <div class="event-image" style="background-image: url('teatroalice.webp');"></div>
+                <h3>Alice no País das Maravilhas em Belo Horizonte</h3>
+                <button>Ver Detalhes</button>
+            </div>
+            <div class="event-card" data-category="workshops" data-location="belo_horizonte" data-name="EvenTalk em Belo Horizonte">
+                <div class="event-image" style="background-image: url('eventalk.png');"></div>
+                <h3>EvenTalk em Belo Horizonte</h3>
+                <button>Ver Detalhes</button>
+            </div>
+            <div class="event-card" data-category="shows" data-location="florianopolis" data-name="Evento Cultural em Florianópolis">
+                <div class="event-image" style="background-image: url('eventocultural.png');"></div>
+                <h3>Evento Cultural em Florianópolis</h3>
+                <button>Ver Detalhes</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
