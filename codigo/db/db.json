@@ -69,12 +69,14 @@
   "eventos": [
     {
       "id": 1,
-      "nome": "Festival Música Boa - 2ª edição",
-      "data": "19-10-2024",
+      "nome": "Numanice #3 Tour",
+      "data": "15-02-2025",
+      "local": "Belo horizonte - Mineirão",
       "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
       "categoria": "Show",
       "id_usuario": 1,
-      "status": "ativo"
+      "status": "ativo",
+      "imagem": "https://images.sympla.com.br/6660df0acbc1f-xs.png"
     }
   ]
 }
