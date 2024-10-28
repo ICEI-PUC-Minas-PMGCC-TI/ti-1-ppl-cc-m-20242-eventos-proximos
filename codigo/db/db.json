@@ -76,31 +76,31 @@
       "categoria": "Show",
       "id_usuario": 1,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/6660df0acbc1f-xs.png"
+      "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
     },
 
     {
       "id": 2,
-      "nome": "EVENtalk",
-      "data": "05-12-2024",
-      "local": "Belo horizonte - MinasCentro",
-      "descricao": "Eventos, tecnologia e conhecimento",
+      "nome": "Web-Tech Days",
+      "data": "29-11-2024",
+      "local": "Belo horizonte - Auditório Liberdade",
+      "descricao": "Inteligência artificial, tecnologia e conhecimento",
       "categoria": "Educacional",
       "id_usuario": 1,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/6660df0acbc1f-xs.png"
+      "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg"
     },
 
     {
       "id": 2,
-      "nome": "Evento Cultural",
-      "data": "05-01-2025",
-      "local": "Florianópolis - Camerata Florianópolis",
-      "descricao": "Evento cultural - abba ana viola",
-      "categoria": "Cultural",
+      "nome": "Réveillon da Serra",
+      "data": "31-12-2024",
+      "local": "Petrópolis - Castelo de Itaipava",
+      "descricao": "Venha passar o Réveillon na festa mais tradicional da serra. Uma ceia especial e muita animação. Traga a família e os amigos para viver esta experiência.",
+      "categoria": "Festa",
       "id_usuario": 1,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/6660df0acbc1f-xs.png"
+      "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
     }
   ]
 }

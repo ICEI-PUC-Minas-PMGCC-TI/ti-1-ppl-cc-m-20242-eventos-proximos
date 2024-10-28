@@ -1,35 +1,24 @@
+.carousel-inner {
+  display: flex; 
+}
+
 .carousel-item {
   display: flex;
-  padding: 20px;
-  margin-top: 40px;
-  justify-content: center;
+  width: 100%; 
+}
+
+.carousel-item .row {
+  display: flex; 
+}
+
+.carousel-item .col-md-4 {
+  flex: 1;
+  padding: 5px; /
 }
 
 .carousel-item img {
-  height: 300px; 
-  object-fit: cover; 
-  transition: height 0.5s; 
-}
-
-.carousel-item .col-md-4.middle img {
-  height: 400px; 
-  width: 600px;
-}
-
-.col-md-4.left, .col-md-4.right {
-  width: 30%;
-}
-
-.carousel-indicators [data-bs-target] {
-  width: 12px; 
-  height: 12px;
-  background-color: #007bff; 
-  border-radius: 50%; 
-  opacity: 0.5; 
-}
-
-.carousel-indicators .active {
-  background-color: #0056b3; 
+  width: 30%; 
+  height: auto; 
 }
 
 footer {
