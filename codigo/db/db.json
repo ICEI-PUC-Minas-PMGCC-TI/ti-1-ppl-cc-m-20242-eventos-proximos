@@ -77,6 +77,30 @@
       "id_usuario": 1,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/6660df0acbc1f-xs.png"
+    },
+
+    {
+      "id": 2,
+      "nome": "EVENtalk",
+      "data": "05-12-2024",
+      "local": "Belo horizonte - MinasCentro",
+      "descricao": "Eventos, tecnologia e conhecimento",
+      "categoria": "Educacional",
+      "id_usuario": 1,
+      "status": "ativo",
+      "imagem": "https://images.sympla.com.br/6660df0acbc1f-xs.png"
+    },
+
+    {
+      "id": 2,
+      "nome": "Evento Cultural",
+      "data": "05-01-2025",
+      "local": "Florianópolis - Camerata Florianópolis",
+      "descricao": "Evento cultural - abba ana viola",
+      "categoria": "Cultural",
+      "id_usuario": 1,
+      "status": "ativo",
+      "imagem": "https://images.sympla.com.br/6660df0acbc1f-xs.png"
     }
   ]
 }
