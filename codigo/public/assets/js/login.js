@@ -1,4 +1,4 @@
-// Trabalho Interdisciplinar 1 - Aplicações Web
+ // Trabalho Interdisciplinar 1 - Aplicações Web
 //
 // Esse módulo realiza o registro de novos usuários e login para aplicações com 
 // backend baseado em API REST provida pelo JSONServer
