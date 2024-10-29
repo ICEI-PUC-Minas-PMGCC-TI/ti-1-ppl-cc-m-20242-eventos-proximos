@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="forum.css">
+  <link rel="stylesheet" href="../../../assets/css/index.css">
+  <link rel="stylesheet" href="../../../assets/css/style.css">
+  <link rel="stylesheet" href="../global.css">
+  <title>FORUM </title>
+</head>
+
+<body>
+  <header>
+    <nav class="caixa-menu-principal">
+      <div class="logo">
+        <img src="../../../assets/images/eventful.png" alt="logotipo">
+      </div>
+      <div class="barra-pesquisa">
+        <ion-icon name="search-outline"></ion-icon>
+        <input type="text" placeholder="Pesquisar eventos..." id="search-input">
+      </div>
+      <div class="filtro-localizacao">
+        <img src="https://img.icons8.com/?size=100&id=Qrcap2tCbmPN&format=png&color=000000" alt="icon-localizacao">
+        <span class="texto-seta">Onde encontrar</span>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+      <div class="perfil-do-usuario">
+        <a href=" ">Olá, fulano!</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container_titulo">
+    <section id="home">
+      <h2 class="h2_titulo">Forum de Perguntas</h2>
+      <div class="sub_container">
+        <input type="text" class="input_perguntas" id="search-id-input" placeholder="Pesquisa por ID"></input>
+        <button id="novaPerguntaBtn" class="btn_titulo">Nova Pergunta</button>
+      </div>
+
+      <!-- Popup -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h2>Criar Nova Pergunta</h2>
+          <label for="pergunta">Pergunta:</label>
+          <input type="text" id="pergunta" class="input_perguntas" placeholder="Digite sua pergunta">
+          <label for="resumo">Resumo:</label>
+          <input type="text" id="resumo" class="input_perguntas" placeholder="Digite um resumo">
+          <label for="respostaCompleta">Resposta Completa:</label>
+          <textarea id="respostaCompleta" class="input_perguntas" placeholder="Digite a resposta completa"></textarea>
+          <button id="adicionarPergunta" class="btn_titulo">Adicionar Pergunta</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="perguntas"></section>
+
+  </main>
+
+  <footer>
+    <div class="container_footer">
+      <p>&copy; 2024 Minha Empresa. Todos os direitos reservados.</p>
+      <p><a href="#privacy">Política de Privacidade</a> | <a href="#terms">Termos de Uso</a></p>
+    </div>
+  </footer>
+
+  <script src="forum.js"></script>
+</body>
+
+</html>
