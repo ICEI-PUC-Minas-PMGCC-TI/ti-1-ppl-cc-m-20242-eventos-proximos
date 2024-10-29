@@ -24,7 +24,6 @@
 .carousel-item img {
   width: 30%; 
   min-height: 400px; 
-
 }
 
 .eventos {
@@ -73,4 +72,60 @@ footer h2 {
   color: black;
   margin-right: 20px;
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .caixa-menu-principal {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+  
+  .logo img {
+      width: 80px;
+  }
+
+  .barra-pesquisa {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .filtro-localizacao {
+      display: none;
+  }
+
+  .perfil-do-usuario {
+      font-size: 1em;
+  }
+
+  .carousel-item .col-md-4 {
+      flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .caixa-menu-principal {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .eventos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .eventos img {
+      width: 90%;
+      margin-bottom: 10px;
+  }
+
+  .eventos-txt h2 {
+      font-size: 1.2em;
+  }
+
+  .eventos-txt p {
+      font-size: 0.9em;
+      text-align: center;
+  }
 }
