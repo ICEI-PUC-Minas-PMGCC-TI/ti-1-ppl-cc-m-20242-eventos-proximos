@@ -24,10 +24,10 @@
                 <img src="/codigo/public/assets/images/eventful.png" alt="logotipo">       
             </div>  
             <div class="barra-pesquisa">
-              <ion-icon name="search-outline"></ion-icon>
-              <input type="text" placeholder="Pesquisar eventos..." id="search-input">
-          </div>
-
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" placeholder="Pesquisar eventos..." id="search-input">
+            </div>
+            
             <div class="filtro-localizacao">
                 <img src="https://img.icons8.com/?size=100&id=Qrcap2tCbmPN&format=png&color=000000" alt="icon-localizacao">
                 <span class="texto-seta">Onde encontrar</span> 
@@ -37,11 +37,11 @@
             <div class="perfil-do-usuario">
                 <a href=" ">Olá, fulano!</a>
             </div>
-            </nav>
+        </nav>
     </header>
     <div class="container">
         <h2>Cadastro de Eventos</h2>
-        <form id="eventForm" class="event-form">
+        <form id="formularioEvento" class="event-form">
             <div class="form-row">
                 <label for="id" class="form-id">ID do Evento:</label>
                 <input type="text" id="id" placeholder="Id" required class="input-small">
@@ -55,13 +55,17 @@
             <div class="form-row">
                 <label for="categoria">Categoria do Evento:</label>
                 <select id="categoria" required>
+                    <option value="Corporativo">Corporativo</option>
                     <option value="Cultural">Cultural</option>
+                    <option value="Educacional">Educacional</option>
                     <option value="Esportivo">Esportivo</option>
                     <option value="Exposição">Exposição</option>
+                    <option value="Festa">Festa</option>
                     <option value="Festival">Festival</option>
                     <option value="Palestra">Palestra</option>
                     <option value="Show">Show</option>
                     <option value="Teatro">Teatro</option>
+                    <option value="Workshop">Workshop</option>
                 </select>
             </div>
 
@@ -104,19 +108,19 @@
             <div class="form-row">
                 <label for="imagem">Imagem:</label>
                 <input type="file" id="imagem" accept="image/*">
-                <div id="imageContainer"></div>
+                <div id="containerImagem"></div>
             </div>
 
             <button type="submit">Salvar Evento</button>
         </form>
 
         <h2>Eventos Cadastrados</h2>
-        <div id="eventList" class="event-list"></div>
+        <div id="listaEventos" class="event-list"></div>
     </div>
 
     <script src="script.js"></script>
     <footer>
         <h2><i>EVENTFUL</i></h2>
-      </footer>
+    </footer>
 </body>
 </html>

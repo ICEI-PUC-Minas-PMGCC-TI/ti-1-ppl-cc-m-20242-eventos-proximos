@@ -64,7 +64,7 @@ button:hover {
     margin-top: 20px;
 }
 
-.event-item {
+.item-evento {
     background: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -75,29 +75,29 @@ button:hover {
     align-items: center;
 }
 
-.event-details {
+.detalhes-evento {
     display: flex;
     align-items: center;
 }
 
-.event-info {
-    margin-left: 10px;
-}
-
-.event-image {
+.imagem-evento {
     width: 100px;
     height: auto;
     border-radius: 4px;
 }
 
-.event-actions {
+.info-evento {
+    margin-left: 10px;
+}
+
+.acoes-evento {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
 
-button.edit-btn, 
-button.delete-btn {
+button.editar-btn, 
+button.excluir-btn {
     width: 80px;
     height: 35px;
     border-radius: 5px;
@@ -106,31 +106,31 @@ button.delete-btn {
     border: none;
 }
 
-button.edit-btn {
+button.editar-btn {
     background-color: #ffc107;
     margin-bottom: 5px;
 }
 
-button.delete-btn {
+button.excluir-btn {
     background-color: #dc3545;
     margin-bottom: 5px;
 }
 
-button.edit-btn:hover {
+button.editar-btn:hover {
     background-color: #e0a800;
 }
 
-button.delete-btn:hover {
+button.excluir-btn:hover {
     background-color: #c82333;
 }
 
-.event-actions a {
+.acoes-evento a {
     color: #007bff;
     text-decoration: none;
     margin-top: 5px;
     font-weight: bold;
 }
 
-.event-actions a:hover {
+.acoes-evento a:hover {
     text-decoration: underline;
 }

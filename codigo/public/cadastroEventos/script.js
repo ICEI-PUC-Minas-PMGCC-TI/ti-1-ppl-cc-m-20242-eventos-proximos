@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', loadEvents);
+document.addEventListener('DOMContentLoaded', carregarEventos);
 
-document.getElementById('eventForm').addEventListener('submit', function (e) {
+document.getElementById('formularioEvento').addEventListener('submit', function (e) {
     e.preventDefault();
 
     const evento = {
@@ -21,116 +21,109 @@ document.getElementById('eventForm').addEventListener('submit', function (e) {
         imagem: document.getElementById('imagem').files[0] ? URL.createObjectURL(document.getElementById('imagem').files[0]) : null
     };
 
-    saveEvent(evento);
+    salvarEvento(evento);
 });
 
-function loadEvents() {
-    const events = JSON.parse(localStorage.getItem('events')) || [];
-    displayEvents(events);
+function carregarEventos() {
+    const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
+    exibirEventos(eventos);
 }
 
-function saveEvent(event) {
-    const events = JSON.parse(localStorage.getItem('events')) || [];
+function salvarEvento(evento) {
+    const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
     
-    const existingIndex = events.findIndex(e => e.id === event.id);
-    if (existingIndex !== -1) {
-        const newImage = document.getElementById('imagem').files[0];
-        if (newImage) {
-            event.imagem = URL.createObjectURL(newImage);
-        } else {
-            event.imagem = events[existingIndex].imagem;
-        }
-        events[existingIndex] = event;
+    const indiceExistente = eventos.findIndex(e => e.id === evento.id);
+    if (indiceExistente !== -1) {
+        const novaImagem = document.getElementById('imagem').files[0];
+        evento.imagem = novaImagem ? URL.createObjectURL(novaImagem) : eventos[indiceExistente].imagem;
+        eventos[indiceExistente] = evento;
     } else {
-
-        const newImage = document.getElementById('imagem').files[0];
-        if (newImage) {
-            event.imagem = URL.createObjectURL(newImage);
+        if (document.getElementById('imagem').files[0]) {
+            evento.imagem = URL.createObjectURL(document.getElementById('imagem').files[0]);
         }
-        events.push(event);
+        eventos.push(evento);
     }
 
-    localStorage.setItem('events', JSON.stringify(events));
-    displayEvents(events);
-    resetForm();
+    localStorage.setItem('eventos', JSON.stringify(eventos));
+    exibirEventos(eventos);
+    resetarFormulario();
 }
 
-function displayEvents(events) {
-    const eventList = document.getElementById('eventList');
-    eventList.innerHTML = '';
+function exibirEventos(eventos) {
+    const listaEventos = document.getElementById('listaEventos');
+    listaEventos.innerHTML = '';
 
-    events.forEach(event => {
-        const eventItem = document.createElement('div');
-        eventItem.classList.add('event-item');
-        eventItem.innerHTML = `
-            <div class="event-details">
-                <img src="${event.imagem}" alt="Imagem do Evento" class="event-image">
-                <div class="event-info">
-                    <strong>ID: ${event.id}</strong> - <strong>${event.nome}</strong> <br>
-                    <em>${event.categoria}</em> | Data: ${event.data} <br>
-                    <em>${event.descricao}</em>
+    eventos.forEach(evento => {
+        const itemEvento = document.createElement('div');
+        itemEvento.classList.add('item-evento');
+        itemEvento.innerHTML = `
+            <div class="detalhes-evento">
+                <img src="${evento.imagem}" alt="Imagem do Evento" class="imagem-evento">
+                <div class="info-evento">
+                    <strong>ID: ${evento.id}</strong> - <strong>${evento.nome}</strong> <br>
+                    <em>${evento.categoria}</em> | Data: ${evento.data} <br>
+                    <em>${evento.descricao}</em>
                 </div>
             </div>
-            <div class="event-actions">
-                <button class="edit-btn" onclick="editEvent(${event.id})">Editar</button>
-                <button class="delete-btn" onclick="deleteEvent(${event.id})">Excluir</button>
-                <a href="#" onclick="viewEventPage(${event.id})">Ver página do evento</a>
+            <div class="acoes-evento">
+                <button class="editar-btn" onclick="editarEvento(${evento.id})">Editar</button>
+                <button class="excluir-btn" onclick="excluirEvento(${evento.id})">Excluir</button>
+                <a href="#" onclick="verPaginaEvento(${evento.id})">Ver página do evento</a>
             </div>
         `;
-        eventList.appendChild(eventItem);
+        listaEventos.appendChild(itemEvento);
     });
 }
 
-function scrollToTop() {
+function rolarParaTopo() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 }
 
-function editEvent(id) {
-    const events = JSON.parse(localStorage.getItem('events')) || [];
-    const event = events.find(e => e.id === id);
-    if (event) {
-        document.getElementById('id').value = event.id;
-        document.getElementById('nome').value = event.nome;
-        document.getElementById('data').value = event.data;
-        document.getElementById('descricao').value = event.descricao;
-        document.getElementById('categoria').value = event.categoria;
+function editarEvento(id) {
+    const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
+    const evento = eventos.find(e => e.id === id);
+    if (evento) {
+        document.getElementById('id').value = evento.id;
+        document.getElementById('nome').value = evento.nome;
+        document.getElementById('data').value = evento.data;
+        document.getElementById('descricao').value = evento.descricao;
+        document.getElementById('categoria').value = evento.categoria;
+        document.getElementById('rua').value = evento.endereco.rua;
+        document.getElementById('numero').value = evento.endereco.numero;
+        document.getElementById('cidade').value = evento.endereco.cidade;
+        document.getElementById('estado').value = evento.endereco.estado;
+        document.getElementById('cep').value = evento.endereco.cep;
 
-        document.getElementById('rua').value = event.endereco.rua;
-        document.getElementById('numero').value = event.endereco.numero;
-        document.getElementById('cidade').value = event.endereco.cidade;
-        document.getElementById('estado').value = event.endereco.estado;
-        document.getElementById('cep').value = event.endereco.cep;
+        const containerImagem = document.getElementById('containerImagem');
+        containerImagem.innerHTML = '';
 
-        const imageContainer = document.getElementById('imageContainer');
-        imageContainer.innerHTML = '';
-
-        if (event.imagem) {
-            const imagePreview = document.createElement('img');
-            imagePreview.src = event.imagem;
-            imagePreview.alt = "Imagem do Evento";
-            imagePreview.classList.add('event-image');
-            imagePreview.style.width = '100px';
-            imagePreview.style.height = 'auto';
-            imageContainer.appendChild(imagePreview);
+        if (evento.imagem) {
+            const imagemPreview = document.createElement('img');
+            imagemPreview.src = evento.imagem;
+            imagemPreview.alt = "Imagem do Evento";
+            imagemPreview.classList.add('imagem-evento');
+            imagemPreview.style.width = '100px';
+            imagemPreview.style.height = 'auto';
+            containerImagem.appendChild(imagemPreview);
         }
-        scrollToTop();
+        rolarParaTopo();
     }
 }
 
-function deleteEvent(id) {
-    let events = JSON.parse(localStorage.getItem('events')) || [];
-    events = events.filter(e => e.id !== id);
-    localStorage.setItem('events', JSON.stringify(events));
-    displayEvents(events);
+function excluirEvento(id) {
+    let eventos = JSON.parse(localStorage.getItem('eventos')) || [];
+    eventos = eventos.filter(e => e.id !== id);
+    localStorage.setItem('eventos', JSON.stringify(eventos));
+    exibirEventos(eventos);
 }
 
-function viewEventPage(id) {
+function verPaginaEvento(id) {
     alert(`Exibindo a página do evento com ID: ${id}`);
 }
 
-function resetForm() {
-    document.getElementById('eventForm').reset();
+function resetarFormulario() {
+    document.getElementById('formularioEvento').reset();
 }
