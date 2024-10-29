@@ -11,6 +11,34 @@
     {
       "id": 2,
       "nome": "evento B",
+      "id_usuario": 1,
+      "id_evento": 2
+    },
+
+    {
+      "id": 3,
+      "nome": "evento B",
+      "id_usuario": 2,
+      "id_evento": 1
+    },
+
+    {
+      "id": 4,
+      "nome": "evento B",
+      "id_usuario": 1,
+      "id_evento": 3
+    },
+
+    {
+      "id": 5,
+      "nome": "evento B",
+      "id_usuario": 1,
+      "id_evento": 4
+    },
+
+    {
+      "id": 6,
+      "nome": "evento B",
       "id_usuario": 2,
       "id_evento": 1
     }
@@ -140,4 +168,5 @@
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2g1gnk3b44m1q8e8g6kevcbmqgd3defd5t2251493ultt2mbiqidmtkdko4rc1eksee15dt70u6q2gfuvhherf5tlu0dv4j70276oqj.webp"
     }
   ]
+  
 }
