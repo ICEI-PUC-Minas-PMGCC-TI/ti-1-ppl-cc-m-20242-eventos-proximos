@@ -20,6 +20,12 @@ const router = jsonServer.router('./db/db.json')
 // Para permitir que os dados sejam alterados, altere a linha abaixo
 // colocando o atributo readOnly como false.
 const middlewares = jsonServer.defaults({ noCors: true })
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); 
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 server.use(middlewares)
 server.use(router)
 

@@ -1,5 +1,10 @@
+
+
 .carousel-inner {
   display: flex; 
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 
 .carousel-item {
@@ -13,12 +18,16 @@
 
 .carousel-item .col-md-4 {
   flex: 1;
-  padding: 5px; /
+  padding: 5px; 
 }
 
 .carousel-item img {
   width: 30%; 
   height: auto; 
+}
+
+.eventos {
+  height: 300px;
 }
 
 footer {

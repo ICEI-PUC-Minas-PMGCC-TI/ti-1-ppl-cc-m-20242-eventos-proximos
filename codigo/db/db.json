@@ -92,7 +92,7 @@
     },
 
     {
-      "id": 2,
+      "id": 3,
       "nome": "Réveillon da Serra",
       "data": "31-12-2024",
       "local": "Petrópolis - Castelo de Itaipava",
@@ -101,6 +101,42 @@
       "id_usuario": 1,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
+    },
+
+    {
+      "id": 4,
+      "nome": "6ª Mostra de tecnologia + TI",
+      "data": "26-11-2024",
+      "local": "Brasília - Centro de Convenções Ulysses Guimarães",
+      "descricao": "Nos dias 26, 27 e 28 de novembro, o Centro de Convenções Ulysses Guimarães será o ponto de encontro de especialistas, empresários, estudantes e entusiastas da tecnologia para a 6ª Mostra de Tecnologia Brasília Mais TI, o maior evento de tecnologia do Centro-Oeste.",
+      "categoria": "Coorporativo",
+      "id_usuario": 1,
+      "status": "ativo",
+      "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
+    },
+
+    {
+      "id": 4,
+      "nome": "6ª Mostra de tecnologia + TI",
+      "data": "26-11-2024",
+      "local": "Brasília - Centro de Convenções Ulysses Guimarães",
+      "descricao": "Nos dias 26, 27 e 28 de novembro, o Centro de Convenções Ulysses Guimarães será o ponto de encontro de especialistas, empresários, estudantes e entusiastas da tecnologia para a 6ª Mostra de Tecnologia Brasília Mais TI, o maior evento de tecnologia do Centro-Oeste.",
+      "categoria": "Coorporativo",
+      "id_usuario": 1,
+      "status": "ativo",
+      "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
+    },
+
+    {
+      "id": 5,
+      "nome": "Fábio JR",
+      "data": "07-11-2024",
+      "local": "Porto Alegre - Araújo Vianna - Parque Farroupilha",
+      "descricao": "Um dos maiores artistas do país, completa 70 anos e quem ganha o presente é o público. Para celebrar esse marco, Fábio Jr trará a Porto Alegre sua nova turnê “Bem Mais Que os Meus 20 e Poucos Anos”, que vai contar de forma surpreendente a história artística do cantor.",
+      "categoria": "Show",
+      "id_usuario": 1,
+      "status": "ativo",
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2g1gnk3b44m1q8e8g6kevcbmqgd3defd5t2251493ultt2mbiqidmtkdko4rc1eksee15dt70u6q2gfuvhherf5tlu0dv4j70276oqj.webp"
     }
   ]
 }
