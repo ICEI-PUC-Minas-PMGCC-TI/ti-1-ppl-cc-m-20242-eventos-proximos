@@ -12,36 +12,53 @@
             <img src="../assets/images/eventful.png" alt="logotipo">       
         </div>  
     </header>
-    <main id="events"></main>
+    <main id="events">
+        <div id="event-details"></div>
+    </main>
     <footer><h2><i>EVENTFUL</i></h2></footer>
 
     <script>
-        async function fetchEvents() {
+        function getEventIdFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+
+        async function fetchEventDetails() {
+            const eventId = getEventIdFromUrl(); 
+            if (!eventId) {
+                console.error('ID do evento não encontrado na URL');
+                return;
+            }
+
             try {
                 const response = await fetch('http://localhost:3000/eventos');
                 const events = await response.json();
 
-                const eventsContainer = document.getElementById('events');
-                events.forEach(event => {
-                    const eventElement = document.createElement('div');
-                    eventElement.classList.add('event');
-                    eventElement.innerHTML = `
+                // Filtra o evento específico pelo ID
+                const event = events.find(e => e.id == eventId);
+                
+                if (!event) {
+                    console.error('Evento não encontrado');
+                    return;
+                }
+
+                // Exibe os detalhes do evento
+                const eventDetailsContainer = document.getElementById('event-details');
+                eventDetailsContainer.innerHTML = `
+                    <div class="event-detail">
                         <img src="${event.imagem}" alt="${event.nome}" class="event-image"> 
-                        <h2><a href="eventoDetalhes.html?id=${event.id}">${event.nome}</a></h2>
+                        <h2>${event.nome}</h2>
                         <p class="event-date">Data: ${event.data}</p>
-                        <p class="event-date">${event.local}</p>
+                        <p class="event-location">Local: ${event.local}</p>
                         <p class="event-description">Descrição: ${event.descricao}</p>
-                        
-                    `;
-                    eventsContainer.appendChild(eventElement);
-                });
+                    </div>
+                `;
             } catch (error) {
-                console.error('Erro ao buscar os eventos:', error);
+                console.error('Erro ao buscar o evento:', error);
             }
         }
 
-       
-        fetchEvents();
+        fetchEventDetails();
     </script>
 </body>
 </html>
