@@ -23,11 +23,23 @@
 
 .carousel-item img {
   width: 30%; 
-  height: auto; 
+  min-height: 400px; 
+
 }
 
 .eventos {
   height: 300px;
+}
+
+.eventos img {
+  width: 25%;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.eventos-txt {
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -42,12 +54,23 @@ footer h2 {
 }
 
 .eventos {
+  position: relative;
   display:flex;
   align-items: center;
-  width: 100%;
   border-radius: 20px;
   border: 2px solid black;
   padding: 40px;
   margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
+.data-evento {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: black;
+  margin-right: 20px;
+  margin-top: 20px;
+}

@@ -146,14 +146,14 @@
 
     {
       "id": 4,
-      "nome": "6ª Mostra de tecnologia + TI",
-      "data": "26-11-2024",
-      "local": "Brasília - Centro de Convenções Ulysses Guimarães",
-      "descricao": "Nos dias 26, 27 e 28 de novembro, o Centro de Convenções Ulysses Guimarães será o ponto de encontro de especialistas, empresários, estudantes e entusiastas da tecnologia para a 6ª Mostra de Tecnologia Brasília Mais TI, o maior evento de tecnologia do Centro-Oeste.",
-      "categoria": "Coorporativo",
+      "nome": "Bruno Mars - Live in Brazil",
+      "data": "05-11-2024",
+      "local": "Belo Horizonte - Estádio Mineirão",
+      "descricao": "Bruno Mars apresentará seu show Live in Brazil em Belo Horizonte no dia 5 de novembro de 2024, no Mineirão. O espetáculo promete hits como Uptown Funk e Just the Way You Are, oferecendo uma noite vibrante e inesquecível para o público",
+      "categoria": "Show",
       "id_usuario": 1,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
+      "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png"
     },
 
     {
