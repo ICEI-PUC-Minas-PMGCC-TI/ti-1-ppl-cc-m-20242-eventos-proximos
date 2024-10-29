@@ -34,4 +34,30 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch(error => console.error("Erro ao carregar os eventos:", error));
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("http://localhost:3000/eventos")
+      .then(response => response.json())
+      .then(data => {
+        console.log(data); 
+        const eventos = document.querySelectorAll(".eventos");
+  
+        
+        const eventosCount = Math.min(data.length, eventos.length);
+  
+        for (let i = 0; i < eventosCount; i++) {
+          const evento = data[i];
+          eventos[i].querySelector("img").src = evento.imagem; 
+          eventos[i].querySelector("h2").textContent = evento.nome; 
+          eventos[i].querySelector("p").textContent = evento.descricao; 
+          
+          
+          const dataElemento = document.createElement("p");
+          dataElemento.textContent = evento.data; 
+          dataElemento.classList.add("data-evento");
+          eventos[i].appendChild(dataElemento);
+        }
+      })
+      .catch(error => console.error("Erro ao carregar os eventos:", error));
+  });
   
