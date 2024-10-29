@@ -3,15 +3,44 @@
     {
       "id": 1,
       "nome": "evento A",
-      "id_usuario": 1
+      "id_usuario": 1,
+      "id_evento": 1
       
     },
 
     {
       "id": 2,
       "nome": "evento B",
-      "id_usuario": 2
-      
+      "id_usuario": 1,
+      "id_evento": 2
+    },
+
+    {
+      "id": 3,
+      "nome": "evento B",
+      "id_usuario": 2,
+      "id_evento": 1
+    },
+
+    {
+      "id": 4,
+      "nome": "evento B",
+      "id_usuario": 1,
+      "id_evento": 3
+    },
+
+    {
+      "id": 5,
+      "nome": "evento B",
+      "id_usuario": 1,
+      "id_evento": 4
+    },
+
+    {
+      "id": 6,
+      "nome": "evento B",
+      "id_usuario": 2,
+      "id_evento": 1
     }
   ],
   
@@ -39,42 +68,248 @@
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com"     
+    },
+
+    {
+      "id": 4,
+      "login": "maria123",
+      "senha": "senha123",
+      "nome": "Maria Silva",
+      "email": "maria.silva@gmail.com"
+    },
+
+    {
+      "id": 5,
+      "login": "joaod",
+      "senha": "pass456",
+      "nome": "João Dias",
+      "email": "joao.dias@hotmail.com"
+    },
+
+    {
+      "id": 6,
+      "login": "carla_santos",
+      "senha": "senha789",
+      "nome": "Carla Santos",
+      "email": "carla.santos@yahoo.com"
+    },
+
+    {
+      "id": 7,
+      "login": "ricardo85",
+      "senha": "minhasenha",
+      "nome": "Ricardo Pereira",
+      "email": "ricardo.pereira@empresa.com"
     }
   ],
 
   "produtor": [
+    {
+      "id": 1,
+      "id_usuario":1
+    },
+
+    {
+      "id": 2,
+      "id_usuario":2
+    }
 
   ],
 
+  "enderecos": [
+    {
+        "id": 1,
+        "rua": "Av. das Nações Unidas",
+        "numero": 1234,
+        "bairro": "Brooklin",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "04578-000"
+    },
+    {
+        "id": 2,
+        "rua": "Av. do Mineirão",
+        "numero": 500,
+        "bairro": "Estádio Mineirão",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "31275-000"
+    },
+    {
+        "id": 3,
+        "rua": "Rua Liberdade",
+        "numero": 200,
+        "bairro": "Centro",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "30140-000"
+    },
+    {
+        "id": 4,
+        "rua": "Estrada do Castelo",
+        "numero": 10,
+        "bairro": "Castelo",
+        "cidade": "Petrópolis",
+        "estado": "RJ",
+        "cep": "25685-000"
+    },
+    {
+        "id": 5,
+        "rua": "Setor de Autarquias Sul",
+        "numero": 100,
+        "bairro": "Asa Sul",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "cep": "70070-000"
+    },
+    {
+        "id": 6,
+        "rua": "Av. João Pessoa",
+        "numero": 1500,
+        "bairro": "Cidade Baixa",
+        "cidade": "Porto Alegre",
+        "estado": "RS",
+        "cep": "90040-000"
+    }
+],
   "locais": [
-    {
-      "id": 1,
-      "nome": "Centro de Convenções Belo Horizonte",
-      "endereco_id": 1 
-    }
-  ],
+  {
+    "id": 1,
+    "nome": "Centro de Convenções Belo Horizonte",
+    "endereco_id": 1
+  },
+  {
+    "id": 2,
+    "nome": "Mineirão",
+    "endereco_id": 2
+  },
+  {
+    "id": 3,
+    "nome": "Auditório Liberdade",
+    "endereco_id": 3
+  },
+  {
+    "id": 4,
+    "nome": "Castelo de Itaipava",
+    "endereco_id": 4
+  },
+  {
+    "id": 5,
+    "nome": "Centro de Convenções Ulysses Guimarães",
+    "endereco_id": 5
+  },
+  {
+    "id": 6,
+    "nome": "Araújo Vianna - Parque Farroupilha",
+    "endereco_id": 6
+  }
+],
 
-  "endereco": [
-    {
-      "id": 1,
-      "rua": "Av. das Nações Unidas",
-      "numero": 1234,
-      "bairro": "Brooklin",
-      "cidade": "Belo Horizonte",
-      "estado": "MG",
-      "cep": "04578-000"
-    }  
-  ],
+"eventos": [
+  {
+    "id": 1,
+    "nome": "Numanice #3 Tour",
+    "data": "15-02-2025",
+    "id_local": 2,  
+    "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
+    "id_categoria": 1,
+    "id_produtor": 1,
+    "status": "ativo",
+    "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
+  },
 
-  "eventos": [
+  {
+    "id": 2,
+    "nome": "Web-Tech Days",
+    "data": "29-11-2024",
+    "id_local": 3,  
+    "descricao": "Inteligência artificial, tecnologia e conhecimento",
+    "id_categoria": 5,
+    "id_produtor": 1,
+    "status": "ativo",
+    "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg"
+  },
+
+  {
+    "id": 3,
+    "nome": "Réveillon da Serra",
+    "data": "31-12-2024",
+    "id_local": 4,  
+    "descricao": "Venha passar o Réveillon na festa mais tradicional da serra. Uma ceia especial e muita animação. Traga a família e os amigos para viver esta experiência.",
+    "id_categoria": 6,
+    "id_produtor": 1,
+    "status": "ativo",
+    "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
+  },
+
+  {
+    "id": 4,
+    "nome": "6ª Mostra de tecnologia + TI",
+    "data": "26-11-2024",
+    "id_local": 5,  
+    "descricao": "Nos dias 26, 27 e 28 de novembro, o Centro de Convenções Ulysses Guimarães será o ponto de encontro de especialistas, empresários, estudantes e entusiastas da tecnologia para a 6ª Mostra de Tecnologia Brasília Mais TI, o maior evento de tecnologia do Centro-Oeste.",
+    "id_categoria": 3,
+    "id_produtor": 1,
+    "status": "ativo",
+    "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
+  },
+
+  {
+    "id": 5,
+    "nome": "Bruno Mars - Live in Brazil",
+    "data": "05-11-2024",
+    "id_local": 2,  
+    "descricao": "Bruno Mars apresentará seu show Live in Brazil em Belo Horizonte no dia 5 de novembro de 2024, no Mineirão. O espetáculo promete hits como Uptown Funk e Just the Way You Are, oferecendo uma noite vibrante e inesquecível para o público.",
+    "id_categoria": 1,
+    "id_produtor": 1,
+    "status": "ativo",
+    "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png"
+  },
+
+  {
+    "id": 6,
+    "nome": "Fábio JR",
+    "data": "07-11-2024",
+    "id_local": 6,  
+    "descricao": "Um dos maiores artistas do país, completa 70 anos e quem ganha o presente é o público. Para celebrar esse marco, Fábio Jr trará a Porto Alegre sua nova turnê “Bem Mais Que os Meus 20 e Poucos Anos”, que vai contar de forma surpreendente a história artística do cantor.",
+    "id_categoria": 1,
+    "id_produtor": 1,
+    "status": "ativo",
+    "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2g1gnk3b44m1q8e8g6kevcbmqgd3defd5t2251493ultt2mbiqidmtkdko4rc1eksee15dt70u6q2gfuvhherf5tlu0dv4j70276oqj.webp"
+  }
+],
+
+
+  "categorias": [
     {
       "id": 1,
-      "nome": "Festival Música Boa - 2ª edição",
-      "data": "19-10-2024",
-      "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
-      "categoria": "Show",
-      "id_usuario": 1,
-      "status": "ativo"
+      "tipo": "Show"
+    },
+    {
+      "id": 2,
+      "tipo": "Exposição"
+    },
+    {
+      "id": 3,
+      "tipo": "Workshop"
+    },
+    {
+      "id": 4,
+      "tipo": "Feira"
+    },
+    {
+      "id": 5,
+      "tipo": "Palestra"
+    },
+    {
+      "id": 6,
+      "tipo": "Festival"
+    },
+    {
+      "id": 7,
+      "tipo": "Encontro"
     }
+
   ]
+
 }

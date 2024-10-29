@@ -1,35 +1,44 @@
+
+
+.carousel-inner {
+  display: flex; 
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
 .carousel-item {
   display: flex;
-  padding: 20px;
-  margin-top: 40px;
-  justify-content: center;
+  width: 100%; 
+}
+
+.carousel-item .row {
+  display: flex; 
+}
+
+.carousel-item .col-md-4 {
+  flex: 1;
+  padding: 5px; 
 }
 
 .carousel-item img {
-  height: 300px; 
-  object-fit: cover; 
-  transition: height 0.5s; 
+  width: 30%; 
+  min-height: 400px; 
 }
 
-.carousel-item .col-md-4.middle img {
-  height: 400px; 
-  width: 600px;
+.eventos {
+  height: 300px;
 }
 
-.col-md-4.left, .col-md-4.right {
-  width: 30%;
+.eventos img {
+  width: 25%;
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
-.carousel-indicators [data-bs-target] {
-  width: 12px; 
-  height: 12px;
-  background-color: #007bff; 
-  border-radius: 50%; 
-  opacity: 0.5; 
-}
-
-.carousel-indicators .active {
-  background-color: #0056b3; 
+.eventos-txt {
+  display: flex;
+  flex-direction: column;
 }
 
 footer {
@@ -44,12 +53,79 @@ footer h2 {
 }
 
 .eventos {
+  position: relative;
   display:flex;
   align-items: center;
-  width: 100%;
   border-radius: 20px;
   border: 2px solid black;
   padding: 40px;
   margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
+.data-evento {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: black;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .caixa-menu-principal {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+  }
+  
+  .logo img {
+      width: 80px;
+  }
+
+  .barra-pesquisa {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .filtro-localizacao {
+      display: none;
+  }
+
+  .perfil-do-usuario {
+      font-size: 1em;
+  }
+
+  .carousel-item .col-md-4 {
+      flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .caixa-menu-principal {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .eventos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .eventos img {
+      width: 90%;
+      margin-bottom: 10px;
+  }
+
+  .eventos-txt h2 {
+      font-size: 1.2em;
+  }
+
+  .eventos-txt p {
+      font-size: 0.9em;
+      text-align: center;
+  }
+}

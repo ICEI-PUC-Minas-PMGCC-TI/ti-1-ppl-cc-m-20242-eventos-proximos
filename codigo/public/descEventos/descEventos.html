@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../assets/images/eventful.png" alt="logotipo">       
+        </div>  
+    </header>
+    <main id="events">
+        <div id="event-details"></div>
+    </main>
+    <footer><h2><i>EVENTFUL</i></h2></footer>
+
+    <script>
+        function getEventIdFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+
+        async function fetchEventDetails() {
+            const eventId = getEventIdFromUrl(); 
+            if (!eventId) {
+                console.error('ID do evento não encontrado na URL');
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:3000/eventos');
+                const events = await response.json();
+
+                // Filtra o evento específico pelo ID
+                const event = events.find(e => e.id == eventId);
+                
+                if (!event) {
+                    console.error('Evento não encontrado');
+                    return;
+                }
+
+                // Exibe os detalhes do evento
+                const eventDetailsContainer = document.getElementById('event-details');
+                eventDetailsContainer.innerHTML = `
+                    <div class="event-detail">
+                        <img src="${event.imagem}" alt="${event.nome}" class="event-image"> 
+                        <h2>${event.nome}</h2>
+                        <p class="event-date">Data: ${event.data}</p>
+                        <p class="event-location">Local: ${event.local}</p>
+                        <p class="event-description">Descrição: ${event.descricao}</p>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Erro ao buscar o evento:', error);
+            }
+        }
+
+        fetchEventDetails();
+    </script>
+</body>
+</html>
