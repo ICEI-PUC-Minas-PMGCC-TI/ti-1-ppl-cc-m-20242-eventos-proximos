@@ -1,0 +1,84 @@
+{
+    "categorias": [
+      "Corporativo",
+      "Cultural",
+      "Educacional",
+      "Esportivo",
+      "Exposição",
+      "Festa",
+      "Festival",
+      "Palestra",
+      "Show",
+      "Teatro",
+      "Workshop"
+    ],
+    "eventos": [
+      {
+        "id": 1,
+        "nome": "Numanice #3 Tour",
+        "data": "15-02-2025",
+        "local": "Belo Horizonte - Mineirão",
+        "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
+        "categoria": "Show",
+        "id_usuario": 1,
+        "status": "ativo",
+        "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
+      },
+      {
+        "id": 2,
+        "nome": "Web-Tech Days",
+        "data": "29-11-2024",
+        "local": "Belo Horizonte - Auditório Liberdade",
+        "descricao": "Inteligência artificial, tecnologia e conhecimento",
+        "categoria": "Educacional",
+        "id_usuario": 1,
+        "status": "ativo",
+        "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg"
+      },
+      {
+        "id": 3,
+        "nome": "Réveillon da Serra",
+        "data": "31-12-2024",
+        "local": "Petrópolis - Castelo de Itaipava",
+        "descricao": "Venha passar o Réveillon na festa mais tradicional da serra. Uma ceia especial e muita animação.",
+        "categoria": "Festa",
+        "id_usuario": 1,
+        "status": "ativo",
+        "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
+      },
+      {
+        "id": 4,
+        "nome": "6ª Mostra de tecnologia + TI",
+        "data": "26-11-2024",
+        "local": "Brasília - Centro de Convenções Ulysses Guimarães",
+        "descricao": "O maior evento de tecnologia do Centro-Oeste.",
+        "categoria": "Corporativo",
+        "id_usuario": 1,
+        "status": "ativo",
+        "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
+      },
+      {
+        "id": 5,
+        "nome": "Bruno Mars - Live in Brazil",
+        "data": "05-11-2024",
+        "local": "Belo Horizonte - Estádio Mineirão",
+        "descricao": "Bruno Mars apresentará seu show em Belo Horizonte com os maiores sucessos.",
+        "categoria": "Show",
+        "id_usuario": 1,
+        "status": "ativo",
+        "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png"
+      },
+      {
+        "id": 6,
+        "nome": "Fábio JR",
+        "data": "07-11-2024",
+        "local": "Porto Alegre - Araújo Vianna - Parque Farroupilha",
+        "descricao": "Turnê Bem Mais Que os Meus 20 e Poucos Anos.",
+        "categoria": "Show",
+        "id_usuario": 1,
+        "status": "ativo",
+        "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2g1gnk3b44m1q8e8g6kevcbmqgd3defd5t2251493ultt2mbiqidmtkdko4rc1eksee15dt70u6q2gfuvhherf5tlu0dv4j70276oqj.webp"
+      }
+    ]
+  }
+  
