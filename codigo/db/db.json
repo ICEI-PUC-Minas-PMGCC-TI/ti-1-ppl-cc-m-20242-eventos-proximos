@@ -328,5 +328,32 @@
           "comentario": "Gostei, mas poderia ter mais opções de alimentação.",
           "dataAvaliacao": "2024-11-16"
         }
-      ]
+      ],
+
+  "maps": [
+    {
+      "id": 1,
+      "id_evento": 1,
+      "latlong": [-43.992911,-19.923564],
+      "cor": "red"
+      
+    },
+
+    {
+      "id": 2,
+      "id_evento": 2,
+      "latlong": [-43.992911,-19.923564],
+      "cor": "blue"
+      
+    },
+
+    {
+      "id": 3,
+      "id_evento": 3,
+      "latlong": [-43.992911,-19.923564],
+      "cor": "green"
+      
+    }
+    
+  ]
 }
