@@ -375,5 +375,36 @@
       
     }
     
-  ]
+  ],
+  "meses": [
+      { "nome": "Janeiro", "numero_dias": 31, "trimestre": 1 },
+      { "nome": "Fevereiro", "numero_dias": 28, "trimestre": 1 },
+      { "nome": "Março", "numero_dias": 31, "trimestre": 1 },
+      { "nome": "Abril", "numero_dias": 30, "trimestre": 2 },
+      { "nome": "Maio", "numero_dias": 31, "trimestre": 2 },
+      { "nome": "Junho", "numero_dias": 30, "trimestre": 2 },
+      { "nome": "Julho", "numero_dias": 31, "trimestre": 3 },
+      { "nome": "Agosto", "numero_dias": 31, "trimestre": 3 },
+      { "nome": "Setembro", "numero_dias": 30, "trimestre": 3 },
+      { "nome": "Outubro", "numero_dias": 31, "trimestre": 4 },
+      { "nome": "Novembro", "numero_dias": 30, "trimestre": 4 },
+      { "nome": "Dezembro", "numero_dias": 31, "trimestre": 4 }
+    ],
+    "dias_da_semana": [
+      { "nome": "Domingo", "abreviacao": "D" },
+      { "nome": "Segunda-feira", "abreviacao": "S" },
+      { "nome": "Terça-feira", "abreviacao": "T" },
+      { "nome": "Quarta-feira", "abreviacao": "Q" },
+      { "nome": "Quinta-feira", "abreviacao": "Q" },
+      { "nome": "Sexta-feira", "abreviacao": "S" },
+      { "nome": "Sábado", "abreviacao": "S" }
+    ],
+    "anos": [
+      { "ano": 2024, "bissexto": true },
+      { "ano": 2025, "bissexto": false }
+    ],
+    "feriados": [
+      { "nome": "Ano Novo", "data": "2024-01-01", "tipo": "Nacional", "descricao": "Celebração do início do ano" },
+      { "nome": "Carnaval", "data": "2024-02-13", "tipo": "Feriado Nacional", "descricao": "Dia de celebração e desfiles de carnaval" }
+    ]
 }
