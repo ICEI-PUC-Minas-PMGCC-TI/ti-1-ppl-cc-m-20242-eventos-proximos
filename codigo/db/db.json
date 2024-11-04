@@ -283,31 +283,51 @@
   "categorias": [
     {
       "id": 1,
-      "tipo": "Show"
+      "tipo": "Corporativo"
     },
     {
       "id": 2,
-      "tipo": "Exposição"
+      "tipo": "Cultural"
     },
     {
       "id": 3,
-      "tipo": "Workshop"
+      "tipo": "Educacional"
     },
     {
       "id": 4,
-      "tipo": "Feira"
+      "tipo": "Esportivo"
     },
     {
       "id": 5,
-      "tipo": "Palestra"
+      "tipo": "Exposição"
     },
     {
       "id": 6,
-      "tipo": "Festival"
+      "tipo": "Festa"
     },
     {
       "id": 7,
-      "tipo": "Encontro"
+      "tipo": "Festival"
+    },
+    {
+      "id": 8,
+      "tipo": "Palestra"
+    },
+    {
+      "id": 9,
+      "tipo": "Show"
+    },
+    {
+      "id": 10,
+      "tipo": "Festa"
+    },
+    {
+      "id": 11,
+      "tipo": "Teatro"
+    },
+    {
+      "id": 12,
+      "tipo": "Workshop"
     }
   ],
 
