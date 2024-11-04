@@ -333,17 +333,17 @@
 
   "avaliacoes": [
         {
+          "id": 1,
           "usuarioId": 1,
           "eventoId": 1,
-          "nomeUsuario": "admin",
           "nota": 4.5,
           "comentario": "Evento bem organizado e com boa seleção de bandas!",
           "dataAvaliacao": "2024-11-16"
         },
         {
+          "id": 2,
           "usuarioId": 2,
           "eventoId": 2,
-          "nomeUsuario": "user",
           "nota": 3,
           "comentario": "Gostei, mas poderia ter mais opções de alimentação.",
           "dataAvaliacao": "2024-11-16"
