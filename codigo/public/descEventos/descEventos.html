@@ -56,7 +56,6 @@
                 const response = await fetch('http://localhost:3000/eventos');
                 const events = await response.json();
 
-                // Filtra o evento específico pelo ID
                 const event = events.find(e => e.id == eventId);
 
                 if (!event) {
@@ -64,7 +63,6 @@
                     return;
                 }
 
-                // Exibe os detalhes do evento
                 const eventDetailsContainer = document.getElementById('event-details');
                 eventDetailsContainer.innerHTML = `
                     <div class="event-detail">
@@ -77,7 +75,7 @@
                     </div>
                 `;
 
-                // Recupera o estado de confirmação do evento no localStorage
+
                 const confirmed = localStorage.getItem(`event-${eventId}-confirmed`);
                 if (confirmed === 'true') {
                     setConfirmed();
