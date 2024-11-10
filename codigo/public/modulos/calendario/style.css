@@ -81,6 +81,31 @@ body {
   background-color: #e0e0e0;
 }
 
+.calendar-days div.event-day {
+  font-weight: bold;
+  border-radius: 50%;
+  position: relative; /* Para permitir o posicionamento do ícone de pin */
+  background-color: transparent; /* Remove a cor de fundo */
+}
+
+.calendar-days div.event-day::after {
+  content: '\f041'; /* Unicode do ícone de pin */
+  font-family: 'Font Awesome 5 Free'; /* Certifique-se de incluir a fonte do Font Awesome no HTML */
+  font-weight: 900;
+  color: #e84118; /* Cor do ícone de pin */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 18px; /* Tamanho do ícone */
+}
+
+.calendar-days div.event-day:hover {
+  background-color: transparent; /* Remove qualquer efeito hover */
+}
+
+
+
+
 .events-header {
   display: flex;
   justify-content: space-between;
@@ -130,19 +155,128 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+  animation: fadeIn 0.3s ease; /* Animação de suavidade ao abrir */
 }
 
 .modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 400px;
+  position: relative;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 450px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  animation: slideDown 0.3s ease;
 }
 
 .modal-close {
   font-size: 24px;
+  font-weight: bold;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 15px;
   cursor: pointer;
+  color: #666;
+  transition: color 0.2s;
 }
+
+.modal-close:hover {
+  color: #1a73e8; /* Cor de destaque ao passar o mouse */
+}
+
+.modal h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.modal input[type="date"],
+.modal input[type="text"],
+.modal textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s;
+}
+
+.modal input[type="date"]:focus,
+.modal input[type="text"]:focus,
+.modal textarea:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+.modal textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.modal button[type="submit"] {
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  background-color: #1a73e8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal button[type="submit"]:hover {
+  background-color: #155a8a;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); }
+  to { transform: translateY(0); }
+}
+
+/* Estilo dos botões de editar e excluir */
+.edit-button, .delete-button {
+  padding: 5px 10px;
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  display: inline-block;
+}
+
+.edit-button {
+  background-color: #1a73e8;
+  color: white;
+}
+
+.edit-button:hover {
+  background-color: #155a8a;
+}
+
+.delete-button {
+  background-color: #e84118;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c23616;
+}
+
