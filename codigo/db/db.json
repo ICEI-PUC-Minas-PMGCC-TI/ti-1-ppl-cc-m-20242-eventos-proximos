@@ -2,7 +2,6 @@
   "favoritos":[
     {
       "id": 1,
-      "nome": "evento A",
       "id_usuario": 1,
       "id_evento": 1
       
@@ -10,35 +9,30 @@
 
     {
       "id": 2,
-      "nome": "evento B",
       "id_usuario": 1,
       "id_evento": 2
     },
 
     {
       "id": 3,
-      "nome": "evento B",
       "id_usuario": 2,
       "id_evento": 1
     },
 
     {
       "id": 4,
-      "nome": "evento B",
       "id_usuario": 1,
       "id_evento": 3
     },
 
     {
       "id": 5,
-      "nome": "evento B",
       "id_usuario": 1,
       "id_evento": 4
     },
 
     {
       "id": 6,
-      "nome": "evento B",
       "id_usuario": 2,
       "id_evento": 1
     }
