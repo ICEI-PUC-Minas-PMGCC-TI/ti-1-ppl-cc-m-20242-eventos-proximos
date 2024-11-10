@@ -22,15 +22,14 @@ async function exibirFavoritos(idUsuario) {
       const favoritos = await favoritosResponse.json();
       const eventos = await eventosResponse.json();
   
-      // Debug: Verificar se os dados foram carregados
       console.log('Favoritos:', favoritos);
       console.log('Eventos:', eventos);
   
       const favoritosDoUsuario = favoritos.filter(fav => fav.id_usuario === idUsuario);
-      console.log('Favoritos do usuário:', favoritosDoUsuario); // Verifique se há favoritos
+      console.log('Favoritos do usuário:', favoritosDoUsuario); 
   
       const eventosFavoritos = eventos.filter(evento => favoritosDoUsuario.some(fav => fav.id_evento === evento.id));
-      console.log('Eventos favoritos do usuário:', eventosFavoritos); // Verifique se há eventos correspondentes
+      console.log('Eventos favoritos do usuário:', eventosFavoritos); 
   
       const container = document.getElementById('eventosFavoritos');
       container.innerHTML = '';
