@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 100px;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-header h1 {
+    margin-right: 10px;
+}
+
+.icon img {
+    height: 30px;
+}
+
+.greeting p {
+    margin: 0;
+}
+
+.calendar-controls {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-controls select {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+}
+
+.calendar-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.day {
+    background-color: #e0e0e0;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.favorite {
+    background-color: #ffd700; 
+}
+
+.favorite .star {
+    color: gold; 
+}
+
+.star {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.star:hover {
+    color: gold;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+    margin: 0 0 20px;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tag {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

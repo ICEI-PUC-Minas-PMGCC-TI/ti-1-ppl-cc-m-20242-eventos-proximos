@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Eventos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Captura de tela de 2024-09-16 19-36-13.png" alt="Eventful Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar eventos...">
+        </div>
+        <div class="calendar-header">
+            <h1 id="month-year">Calendário</h1>
+            <div class="icon"><img src="calendario.png" alt="Ícone do calendário"></div>
+        </div>
+        <div class="greeting">
+            <p>Olá, Fulano!</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="calendar-controls">
+            <select id="month-year-select" onchange="selectMonthYear()"></select>
+        </div>
+
+        <div class="calendar-container">
+            <div class="days-of-week" id="days-of-week"></div>
+            <div class="calendar-grid" id="calendar-grid"></div>
+        </div>
+
+        <div class="sidebar">
+            <h3>Seus Eventos Favoritos</h3>
+            <div id="favorite-events"></div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
