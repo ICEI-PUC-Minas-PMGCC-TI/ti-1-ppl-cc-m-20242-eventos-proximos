@@ -1,11 +1,11 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Eventful
 authors:
-  - family-names: 
+  - family-names:
     given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Fernandes da Silva
+    given-names: Caio
   - family-names: 
     given-names: 
   - family-names: 
@@ -16,12 +16,16 @@ authors:
     given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Vieira Carneiro
+    given-names: Rommel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Oliveira Caetano
+    given-names: João Carlos
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Freitas Diniz
+    given-names: Luciana Mara
 keywords:
   - 
   - 
