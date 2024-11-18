@@ -8,7 +8,7 @@ let currentYear = new Date().getFullYear();
 let currentMonth = new Date().getMonth();
 let data;
 
-fetch('data.json')
+fetch('../../db/db.json')
     .then(response => response.json())
     .then(jsonData => {
         data = jsonData;
