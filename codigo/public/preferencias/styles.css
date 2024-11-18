@@ -90,7 +90,7 @@ main {
     cursor: pointer;
     position: relative;
     opacity: 0.8;
-    filter: grayscale(75%); /* Reduz mais a saturação das cores */
+    filter: grayscale(75%); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -115,7 +115,7 @@ main {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Destaque nos cards preferidos */
+
 .card.active {
     outline: 4px solid #6c63ff;
     background-color: rgba(108, 99, 255, 0.8);
@@ -123,10 +123,10 @@ main {
     color: white;
     transition: all 0.3s ease-in-out;
     opacity: 1;
-    filter: grayscale(0%); /* Remove o efeito de dessaturação */
+    filter: grayscale(0%); 
 }
 
-/* Adicionando a estrela */
+
 .card.active::before {
     content: '★';
     position: absolute;
@@ -164,46 +164,46 @@ button:active {
 
 
 .card[data-category="Corporativo"] {
-    background-image: url('corporativo.png');
+    background-image: url('img/corporativo.png');
 }
 
 .card[data-category="Cultural"] {
-    background-image: url('cultural.png');
+    background-image: url('img/cultural.png');
 }
 
 .card[data-category="Educacional"] {
-    background-image: url('educacional.png');
+    background-image: url('img/educacional.png');
 }
 
 .card[data-category="Esportivo"] {
-    background-image: url('esportivo.png');
+    background-image: url('img/esportivo.png');
 }
 
 .card[data-category="Exposição"] {
-    background-image: url('exposicao.png');
+    background-image: url('img/exposicao.png');
 }
 
 .card[data-category="Festa"] {
-    background-image: url('festa.png');
+    background-image: url('img/festa.png');
 }
 
 .card[data-category="Festival"] {
-    background-image: url('festival.png');
+    background-image: url('img/festival.png');
 }
 
 .card[data-category="Palestra"] {
-    background-image: url('palestra.png');
+    background-image: url('img/palestra.png');
 }
 
 .card[data-category="Show"] {
-    background-image: url('show.png');
+    background-image: url('img/show.png');
 }
 
 .card[data-category="Teatro"] {
-    background-image: url('teatro.png');
+    background-image: url('img/teatro.png');
 }
 
 .card[data-category="Workshop"] {
-    background-image: url('workshop.png');
+    background-image: url('img/workshop.png');
 }
 
