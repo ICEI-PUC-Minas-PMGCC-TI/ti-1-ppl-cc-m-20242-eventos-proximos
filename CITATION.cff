@@ -2,8 +2,8 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: Eventful
 authors:
-  - family-names:
-    given-names: 
+  - family-names: Henrique Silva  
+    given-names: Rafael
   - family-names: Fernandes da Silva
     given-names: Caio
   - family-names: 
@@ -27,9 +27,9 @@ authors:
     family-names: Freitas Diniz
     given-names: Luciana Mara
 keywords:
-  - 
-  - 
-repository-code: 
+  - Eventos
+  - Buscar
+repository-code: https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-ppl-cc-m-20242-eventos-proximos
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2022-07-14
