@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Preferências</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Eventful Logo">
+
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="🔍 Pesquisar eventos...">
+        </div>
+        <div class="user-greeting">
+            <p>Olá, Fulano!</p>
+        </div>
+    </header>    
+
+    <main>
+        <h2>Selecione suas preferências de categorias de eventos!</h2>
+        <div class="categories">
+            <div class="card" data-category="Corporativo" onclick="togglePreference(this)">
+                <h3>Corporativo</h3>
+                <p>Eventos voltados para o mundo dos negócios, como reuniões, workshops empresariais e mais.</p>
+            </div>
+            <div class="card" data-category="Cultural" onclick="togglePreference(this)">
+                <h3>Cultural</h3>
+                <p>Eventos que promovem arte, cultura e diversidade, incluindo exposições e espetáculos.</p>
+            </div>
+            <div class="card" data-category="Educacional" onclick="togglePreference(this)">
+                <h3>Educacional</h3>
+                <p>Palestras, cursos e seminários focados em aprendizado e capacitação.</p>
+            </div>
+            <div class="card" data-category="Esportivo" onclick="togglePreference(this)">
+                <h3>Esportivo</h3>
+                <p>Competições esportivas, corridas e eventos ligados à prática de esportes.</p>
+            </div>
+            <div class="card" data-category="Exposição" onclick="togglePreference(this)">
+                <h3>Exposição</h3>
+                <p>Mostras de arte, ciência ou tecnologia para o público geral.</p>
+            </div>
+            <div class="card" data-category="Festa" onclick="togglePreference(this)">
+                <h3>Festa</h3>
+                <p>Eventos sociais e celebrações com música, dança e diversão.</p>
+            </div>
+            <div class="card" data-category="Festival" onclick="togglePreference(this)">
+                <h3>Festival</h3>
+                <p>Grandes eventos culturais ou musicais, com várias atrações.</p>
+            </div>
+            <div class="card" data-category="Palestra" onclick="togglePreference(this)">
+                <h3>Palestra</h3>
+                <p>Eventos com especialistas compartilhando conhecimentos e insights.</p>
+            </div>
+            <div class="card" data-category="Show" onclick="togglePreference(this)">
+                <h3>Show</h3>
+                <p>Apresentações musicais e performances ao vivo.</p>
+            </div>
+            <div class="card" data-category="Teatro" onclick="togglePreference(this)">
+                <h3>Teatro</h3>
+                <p>Peças teatrais e performances dramáticas para entreter e emocionar.</p>
+            </div>
+            <div class="card" data-category="Workshop" onclick="togglePreference(this)">
+                <h3>Workshop</h3>
+                <p>Atividades práticas para aprender novas habilidades e técnicas.</p>
+            </div>
+        </div>
+        <button onclick="savePreferences()">Salvar Preferências</button>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
