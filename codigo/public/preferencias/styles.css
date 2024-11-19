@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 50px;
+    height: auto;
+}
+
+header .logo h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #222;
+    font-weight: bold;
+}
+
+header .search-bar {
+    flex: 1;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+header .search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+header .user-greeting {
+    text-align: right;
+    font-size: 14px;
+    color: #555;
+}
+
+header .user-greeting p {
+    margin: 0;
+}
+
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: transform 0.3s, filter 0.3s, opacity 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.8;
+    filter: grayscale(75%); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3, .card p {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.card.active {
+    outline: 4px solid #6c63ff;
+    background-color: rgba(108, 99, 255, 0.8);
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.6);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    filter: grayscale(0%); 
+}
+
+
+.card.active::before {
+    content: '★';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: gold;
+    z-index: 10;
+}
+
+button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #6c63ff, #574bcc);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #574bcc, #6c63ff);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.card[data-category="Corporativo"] {
+    background-image: url('img/corporativo.png');
+}
+
+.card[data-category="Cultural"] {
+    background-image: url('img/cultural.png');
+}
+
+.card[data-category="Educacional"] {
+    background-image: url('img/educacional.png');
+}
+
+.card[data-category="Esportivo"] {
+    background-image: url('img/esportivo.png');
+}
+
+.card[data-category="Exposição"] {
+    background-image: url('img/exposicao.png');
+}
+
+.card[data-category="Festa"] {
+    background-image: url('img/festa.png');
+}
+
+.card[data-category="Festival"] {
+    background-image: url('img/festival.png');
+}
+
+.card[data-category="Palestra"] {
+    background-image: url('img/palestra.png');
+}
+
+.card[data-category="Show"] {
+    background-image: url('img/show.png');
+}
+
+.card[data-category="Teatro"] {
+    background-image: url('img/teatro.png');
+}
+
+.card[data-category="Workshop"] {
+    background-image: url('img/workshop.png');
+}
+
