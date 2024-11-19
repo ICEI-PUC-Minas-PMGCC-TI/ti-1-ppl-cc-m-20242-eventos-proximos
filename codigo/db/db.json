@@ -184,14 +184,14 @@
     {
       "id": 1,
       "nome": "Numanice #3 Tour",
-      "data": "15-02-2025",
+      "data": "15-11-2024",
       "id_local": 2,
       "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
       "id_categoria": 1,
       "id_produtor": 1,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png",
-      "confirmed": false
+      "confirmed": true
     },
     {
       "id": 2,
@@ -203,7 +203,7 @@
       "id_produtor": 1,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg",
-      "confirmed": false
+      "confirmed": true
     },
     {
       "id": 3,
