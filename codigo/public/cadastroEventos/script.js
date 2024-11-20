@@ -20,6 +20,7 @@ document.getElementById('formularioEvento').addEventListener('submit', function 
         id_usuario: 1,
         imagem: document.getElementById('imagem').files[0] ? URL.createObjectURL(document.getElementById('imagem').files[0]) : null
     };
+
     salvarEvento(evento);
 });
 
