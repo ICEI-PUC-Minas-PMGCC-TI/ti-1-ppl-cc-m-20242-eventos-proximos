@@ -21,6 +21,7 @@ document.getElementById('formularioEvento').addEventListener('submit', function 
         imagem: document.getElementById('imagem').files[0] ? URL.createObjectURL(document.getElementById('imagem').files[0]) : null
     };
 
+    // Salva o evento no servidor e no localStorage
     salvarEvento(evento);
 });
 
@@ -29,7 +30,8 @@ function carregarEventos() {
     exibirEventos(eventos);
 }
 
-function salvarEvento(evento) {
+async function salvarEvento(evento) {
+    // Primeiro, salva o evento no localStorage
     const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
     
     const indiceExistente = eventos.findIndex(e => e.id === evento.id);
@@ -44,7 +46,26 @@ function salvarEvento(evento) {
         eventos.push(evento);
     }
 
+    // Atualiza o localStorage com a lista de eventos
     localStorage.setItem('eventos', JSON.stringify(eventos));
+
+    // Agora, envia o evento para o servidor
+    const resposta = await fetch("http://localhost:3000/eventos", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(evento),
+    });
+
+    if (resposta.ok) {
+        console.log("Evento salvo no servidor com sucesso!");
+        carregarEventos(); // Atualiza a lista com o novo evento
+    } else {
+        console.error("Erro ao salvar o evento no servidor:", resposta.statusText);
+    }
+
+    // Exibe os eventos atualizados
     exibirEventos(eventos);
     resetarFormulario();
 }
@@ -82,10 +103,12 @@ function rolarParaTopo() {
     });
 }
 
-function editarEvento(id) {
+async function editarEvento(id) {
     const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
     const evento = eventos.find(e => e.id === id);
+    
     if (evento) {
+        // Preenche o formulário com os dados do evento
         document.getElementById('id').value = evento.id;
         document.getElementById('nome').value = evento.nome;
         document.getElementById('data').value = evento.data;
@@ -109,15 +132,47 @@ function editarEvento(id) {
             imagemPreview.style.height = 'auto';
             containerImagem.appendChild(imagemPreview);
         }
+
+        // Envia os dados para atualizar o evento no servidor
+        const resposta = await fetch(`http://localhost:3000/eventos/${evento.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(evento),
+        });
+
+        if (resposta.ok) {
+            console.log("Evento atualizado no servidor com sucesso!");
+            carregarEventos(); // Atualiza a lista de eventos
+        } else {
+            console.error("Erro ao atualizar o evento no servidor:", resposta.statusText);
+        }
+
         rolarParaTopo();
+    } else {
+        console.error("Evento não encontrado para edição.");
     }
 }
 
-function excluirEvento(id) {
+async function excluirEvento(id) {
     let eventos = JSON.parse(localStorage.getItem('eventos')) || [];
+
+    // Exclui o evento do localStorage
     eventos = eventos.filter(e => e.id !== id);
     localStorage.setItem('eventos', JSON.stringify(eventos));
-    exibirEventos(eventos);
+    exibirEventos(eventos); // Atualiza a exibição dos eventos
+
+    // Exclui o evento do servidor
+    const resposta = await fetch(`http://localhost:3000/eventos/${id}`, {
+        method: 'DELETE',
+    });
+
+    if (resposta.ok) {
+        console.log("Evento excluído do servidor com sucesso!");
+    } else {
+        console.error("Erro ao excluir o evento do servidor:", resposta.statusText);
+    }
 }
 
 function verPaginaEvento(id) {
