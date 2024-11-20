@@ -35,13 +35,5 @@ function cadastrarAvaliacao(avaliacoes, usuarios, eventos, novaAvaliacao) {
   
     console.log("Avaliação cadastrada com sucesso:", novaEntrada);
   }
-  
-  const novaAvaliacao = {
-    usuarioId: 3,
-    eventoId: 5,
-    nota: 4.8,
-    comentario: "Evento incrível, superou minhas expectativas!"
-  };
-  
-  cadastrarAvaliacao(json.avaliacoes, json.usuarios, json.eventos, novaAvaliacao);
+
   
