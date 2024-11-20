@@ -20,8 +20,6 @@ document.getElementById('formularioEvento').addEventListener('submit', function 
         id_usuario: 1,
         imagem: document.getElementById('imagem').files[0] ? URL.createObjectURL(document.getElementById('imagem').files[0]) : null
     };
-
-    // Salva o evento no servidor e no localStorage
     salvarEvento(evento);
 });
 
@@ -31,7 +29,6 @@ function carregarEventos() {
 }
 
 async function salvarEvento(evento) {
-    // Primeiro, salva o evento no localStorage
     const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
     
     const indiceExistente = eventos.findIndex(e => e.id === evento.id);
@@ -46,10 +43,8 @@ async function salvarEvento(evento) {
         eventos.push(evento);
     }
 
-    // Atualiza o localStorage com a lista de eventos
     localStorage.setItem('eventos', JSON.stringify(eventos));
 
-    // Agora, envia o evento para o servidor
     const resposta = await fetch("http://localhost:3000/eventos", {
         method: "POST",
         headers: {
@@ -60,12 +55,11 @@ async function salvarEvento(evento) {
 
     if (resposta.ok) {
         console.log("Evento salvo no servidor com sucesso!");
-        carregarEventos(); // Atualiza a lista com o novo evento
+        carregarEventos();
     } else {
         console.error("Erro ao salvar o evento no servidor:", resposta.statusText);
     }
 
-    // Exibe os eventos atualizados
     exibirEventos(eventos);
     resetarFormulario();
 }
@@ -108,7 +102,6 @@ async function editarEvento(id) {
     const evento = eventos.find(e => e.id === id);
     
     if (evento) {
-        // Preenche o formulário com os dados do evento
         document.getElementById('id').value = evento.id;
         document.getElementById('nome').value = evento.nome;
         document.getElementById('data').value = evento.data;
@@ -133,7 +126,6 @@ async function editarEvento(id) {
             containerImagem.appendChild(imagemPreview);
         }
 
-        // Envia os dados para atualizar o evento no servidor
         const resposta = await fetch(`http://localhost:3000/eventos/${evento.id}`, {
             method: 'PUT',
             headers: {
@@ -144,7 +136,7 @@ async function editarEvento(id) {
 
         if (resposta.ok) {
             console.log("Evento atualizado no servidor com sucesso!");
-            carregarEventos(); // Atualiza a lista de eventos
+            carregarEventos();
         } else {
             console.error("Erro ao atualizar o evento no servidor:", resposta.statusText);
         }
@@ -158,12 +150,10 @@ async function editarEvento(id) {
 async function excluirEvento(id) {
     let eventos = JSON.parse(localStorage.getItem('eventos')) || [];
 
-    // Exclui o evento do localStorage
     eventos = eventos.filter(e => e.id !== id);
     localStorage.setItem('eventos', JSON.stringify(eventos));
-    exibirEventos(eventos); // Atualiza a exibição dos eventos
+    exibirEventos(eventos);
 
-    // Exclui o evento do servidor
     const resposta = await fetch(`http://localhost:3000/eventos/${id}`, {
         method: 'DELETE',
     });
