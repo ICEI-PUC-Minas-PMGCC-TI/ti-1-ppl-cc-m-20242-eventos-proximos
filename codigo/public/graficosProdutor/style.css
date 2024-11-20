@@ -1,0 +1,159 @@
+/* Estilo global*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.836);
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid black;
+}
+
+.caixa-menu-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    margin-left: 20px;
+    width: 60%;
+    height: auto;
+}
+
+.barra-pesquisa {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 550px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.barra-pesquisa ion-icon {
+    margin-right: 10px;
+    font-size: 25px;
+    color: black;
+}
+
+.barra-pesquisa input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: border-color 0.3s;
+}
+
+.filtro-localizacao {
+    display: flex;
+    align-items: center;
+}
+
+.filtro-localizacao img {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.filtro-localizacao ion-icon {
+    font-size: 20px;
+    color: black;
+    margin-left: 8px;
+}
+
+.texto-seta, .perfil-do-usuario a {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Barra Lateral */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.836);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 139px; /* Ajuste para cabeçalho */
+    border-right: 2px solid black;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 10px 0;
+    background-color: #34495e;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #b7c7cac2;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    width: calc(100% - 270px);
+    margin-top: 150px; /* Ajuste para cabeçalho */
+}
+
+.container {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo img {
+        width: 50%;
+        margin-left: 0;
+    }
+
+    .barra-pesquisa {
+        width: 100%;
+    }
+
+    .perfil-do-usuario a {
+        font-size: 18px;
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .caixa-menu-principal {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filtro-localizacao, .barra-pesquisa, .perfil-do-usuario a {
+        margin-top: 10px;
+    }
+
+    .barra-pesquisa ion-icon {
+        font-size: 20px;
+    }
+
+    .barra-pesquisa input {
+        font-size: 16px;
+    }
+}

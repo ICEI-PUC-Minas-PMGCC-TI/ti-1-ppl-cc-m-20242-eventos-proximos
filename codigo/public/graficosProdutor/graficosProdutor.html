@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Produtor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=HhSdUfUb18s5&format=png&color=000000" type="favicon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@5.5.2/dist/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="caixa-menu-principal">
+            <div class="logo">
+                <img src="/codigo/public/assets/images/eventful.png" alt="logotipo">       
+            </div>  
+            <div class="barra-pesquisa">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" placeholder="Pesquisar eventos..." id="search-input">
+            </div>
+            
+            <div class="filtro-localizacao">
+                <img src="https://img.icons8.com/?size=100&id=Qrcap2tCbmPN&format=png&color=000000" alt="icon-localizacao">
+                <span class="texto-seta">Onde encontrar</span> 
+                <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+
+            <div class="perfil-do-usuario">
+                <a href=" ">Olá, Produtor!</a>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <div class="sidebar">
+            <a href="javascript:void(0)" onclick="mostrarTela('meusEventos')">Meus Eventos</a>
+            <a href="javascript:void(0)" onclick="mostrarTela('maisFavoritados')">Mais Favoritados</a>
+            <a href="javascript:void(0)" onclick="mostrarTela('maisConfirmados')">Mais Confirmados</a>
+        </div>
+    
+        <div class="main-content">
+            <div class="container" id="meusEventos">
+                <h3>Meus Eventos</h3>
+                <p>Lista de eventos criados por você!!!</p>
+            </div>
+    
+            <div class="container" id="maisFavoritados">
+                <h3>Mais Favoritados</h3>
+                <p>Os seus eventos que foram mais favoritados pelos usuários.</p>
+            </div>
+    
+            <div class="container" id="maisConfirmados">
+                <h3>Mais Confirmados</h3>
+                <p>Os seus eventos com mais confirmações de presença.</p>
+            </div>
+        </div>
+    </body>
+
+    <script src="script.js"></script>
+</body>
+</html>
