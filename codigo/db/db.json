@@ -466,5 +466,47 @@
       "tipo": "Feriado Nacional",
       "descricao": "Dia de celebração e desfiles de carnaval"
     }
-  ]
+  ],
+
+ 
+    "notificacoes": [
+      {
+        "notificacoesId": 123,
+        "titulo": "Novo Workshop sobre Desenvolvimento Web",
+        "desc": "Inscreva-se agora para o workshop e não perca!",
+        "categoria": "workshop",
+        "lido": false,
+        "link": "/event/001",
+        "id_evento": 1
+      },
+      {
+        "notificacoesId": 124,
+        "titulo": "Novo Curso de React Disponível",
+        "desc": "Aprenda React com o nosso novo curso online!",
+        "categoria": "curso",
+        "lido": true,
+        "link": "/course/002",
+        "id_evento": 2
+      },
+      {
+        "notificacoesId": 125,
+        "titulo": "Evento de Networking em São Paulo",
+        "desc": "Conecte-se com profissionais de TI e expanda sua rede de contatos.",
+        "categoria": "evento",
+        "lido": false,
+        "link": "/event/003",
+        "id_evento": 3
+      },
+      {
+        "notificacoesId": 126,
+        "titulo": "Novo Workshop sobre Design de Interfaces",
+        "desc": "Não perca o workshop sobre Design de Interfaces!",
+        "categoria": "workshop",
+        "lido": false,
+        "link": "/event/004",
+        "id_evento": 4
+      }
+    ]
+  
 }
+

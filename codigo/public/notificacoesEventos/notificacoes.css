@@ -1,0 +1,120 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .header {
+    position: fixed;  
+    left: 0;
+    background-color: #333;
+    color: white;
+    width: 300px;  
+    height: 100vh; 
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+  
+
+  .header ul{
+    margin-top: 30px;
+  }
+  
+  .header nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .header nav ul li {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .logo{
+    margin-left: 20px;
+    width: 100px;
+  }
+  .header nav ul li a {
+    color: white;
+    font-weight:bolder;
+    font-size: 18px;
+  }
+  
+
+  .not{
+    text-decoration: underline;
+  }
+  
+
+
+
+
+
+  .main {
+    position: fixed;  
+    margin-left: 420px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 50%; 
+    flex-direction: column;
+  }
+  
+
+  .notification {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .notification-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .notification-checkbox {
+    margin-right: 10px;
+    transform: scale(1.2); /* Aumenta o tamanho do checkbox */
+  }
+  
+  .notification-box {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .notification-title {
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .notification-desc {
+    margin: 5px 0;
+  }
+  
+  .notification-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+  }
+  
+  .delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 15px;
+  }
+  
+  .delete-button:hover {
+    background-color: darkred;
+  }
