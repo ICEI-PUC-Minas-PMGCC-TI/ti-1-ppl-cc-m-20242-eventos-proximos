@@ -12,6 +12,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "json-server": "^0.17.3"
+    "json-server": "^0.17.3",
+    "mapbox-gl": "^3.8.0"
   }
 }

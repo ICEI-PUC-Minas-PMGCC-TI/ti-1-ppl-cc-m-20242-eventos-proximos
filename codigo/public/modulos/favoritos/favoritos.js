@@ -17,7 +17,7 @@ async function fetchUserName() {
 async function exibirFavoritos(idUsuario) {
     try {
       const favoritosResponse = await fetch("http://localhost:3000/favoritos");
-      const eventosResponse = await fetch("http://localhost:3000/eventos");
+      const eventosResponse = await fetch("http://localhost:3000/eventos"); 
   
       const favoritos = await favoritosResponse.json();
       const eventos = await eventosResponse.json();
