@@ -51,10 +51,6 @@ body {
   }
   
 
-
-
-
-
   .main {
     position: fixed;  
     margin-left: 420px;
@@ -79,7 +75,7 @@ body {
   
   .notification-checkbox {
     margin-right: 10px;
-    transform: scale(1.2); /* Aumenta o tamanho do checkbox */
+    transform: scale(1.2); 
   }
   
   .notification-box {

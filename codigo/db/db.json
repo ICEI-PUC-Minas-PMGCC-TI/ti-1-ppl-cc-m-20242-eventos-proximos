@@ -471,25 +471,25 @@
  
     "notificacoes": [
       {
-        "notificacoesId": 123,
+        "notificacoesId": 1,
         "titulo": "Novo Workshop sobre Desenvolvimento Web",
         "desc": "Inscreva-se agora para o workshop e não perca!",
         "categoria": "workshop",
-        "lido": false,
+        "lido": true,
         "link": "/event/001",
         "id_evento": 1
       },
       {
-        "notificacoesId": 124,
+        "notificacoesId": 2,
         "titulo": "Novo Curso de React Disponível",
         "desc": "Aprenda React com o nosso novo curso online!",
         "categoria": "curso",
-        "lido": true,
+        "lido": false,
         "link": "/course/002",
         "id_evento": 2
       },
       {
-        "notificacoesId": 125,
+        "notificacoesId": 3,
         "titulo": "Evento de Networking em São Paulo",
         "desc": "Conecte-se com profissionais de TI e expanda sua rede de contatos.",
         "categoria": "evento",
@@ -498,13 +498,27 @@
         "id_evento": 3
       },
       {
-        "notificacoesId": 126,
+        "notificacoesId": 4,
         "titulo": "Novo Workshop sobre Design de Interfaces",
         "desc": "Não perca o workshop sobre Design de Interfaces!",
         "categoria": "workshop",
         "lido": false,
         "link": "/event/004",
         "id_evento": 4
+      },
+      {
+        "notificacoesId": 5,
+        "titulo": "Novo Evento Disponível!",
+        "desc": "Um novo evento foi adicionado ao seu calendário de favoritos. Não perca a chance de participar!",
+        "link": "/event/005",
+        "lido": false
+      },
+      {
+        "notificacoesId": 6,
+        "titulo": "Lembrete de Evento",
+        "desc": "Você tem um evento programado para amanhã às 18:00. Não se esqueça de conferir os detalhes.",
+        "link": "/event/006",
+        "lido": false
       }
     ]
   
