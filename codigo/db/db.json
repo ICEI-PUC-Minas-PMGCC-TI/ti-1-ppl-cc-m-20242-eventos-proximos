@@ -180,6 +180,43 @@
       "endereco_id": 6
     }
   ],
+  "confirmacao":[
+    {
+      "id": 1,
+      "id_produtor": 5,
+      "id_usuario": 2,
+      "id_evento": 5,
+      "confirmed": false
+    },
+    {
+      "id": 2,
+      "id_produtor": 3,
+      "id_usuario": 1,
+      "id_evento": 4,
+      "confirmed": true
+    },
+    {
+      "id": 3,
+      "id_produtor": 4,
+      "id_usuario": 5,
+      "id_evento": 2,
+      "confirmed": true
+    },
+    {
+      "id": 4,
+      "id_produtor": 5,
+      "id_usuario": 4,
+      "id_evento": 2,
+      "confirmed": false
+    },
+    {
+      "id": 5,
+      "id_produtor": 5,
+      "id_usuario": 7,
+      "id_evento": 3,
+      "confirmed": true
+    }
+  ],
   "eventos": [
     {
       "id": 1,
@@ -190,8 +227,7 @@
       "id_categoria": 1,
       "id_produtor": 1,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png",
-      "confirmed": true
+      "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
     },
     {
       "id": 2,
@@ -202,8 +238,7 @@
       "id_categoria": 5,
       "id_produtor": 1,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg",
-      "confirmed": true
+      "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg"
     },
     {
       "id": 3,
@@ -214,8 +249,7 @@
       "id_categoria": 6,
       "id_produtor": 1,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg",
-      "confirmed": false
+      "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
     },
     {
       "id": 4,
@@ -226,8 +260,7 @@
       "id_categoria": 3,
       "id_produtor": 1,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png",
-      "confirmed": false
+      "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
     },
     {
       "id": 5,
@@ -238,8 +271,7 @@
       "id_categoria": 1,
       "id_produtor": 1,
       "status": "ativo",
-      "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png",
-      "confirmed": false
+      "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png"
     },
     {
       "id": 6,
@@ -250,8 +282,7 @@
       "id_categoria": 1,
       "id_produtor": 1,
       "status": "ativo",
-      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2g1gnk3b44m1q8e8g6kevcbmqgd3defd5t2251493ultt2mbiqidmtkdko4rc1eksee15dt70u6q2gfuvhherf5tlu0dv4j70276oqj.webp",
-      "confirmed": false
+      "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2g1gnk3b44m1q8e8g6kevcbmqgd3defd5t2251493ultt2mbiqidmtkdko4rc1eksee15dt70u6q2gfuvhherf5tlu0dv4j70276oqj.webp"
     }
   ],
   "categorias": [
