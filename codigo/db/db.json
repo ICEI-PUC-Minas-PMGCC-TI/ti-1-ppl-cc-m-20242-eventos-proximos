@@ -3,7 +3,7 @@
     {
       "id": 1,
       "id_usuario": 1,
-      "id_evento": 1
+      "id_evento": 2
     },
     {
       "id": 2,
@@ -13,12 +13,12 @@
     {
       "id": 3,
       "id_usuario": 1,
-      "id_evento": 3
+      "id_evento": 4
     },
     {
       "id": 4,
-      "id_usuario": 1,
-      "id_evento": 4
+      "id_usuario": 2,
+      "id_evento": 2
     },
     {
       "id": 5,
@@ -198,7 +198,7 @@
       "id": 2,
       "id_produtor": 3,
       "id_usuario": 1,
-      "id_evento": 4,
+      "id_evento": 1,
       "confirmed": true
     },
     {
@@ -213,13 +213,20 @@
       "id_produtor": 5,
       "id_usuario": 4,
       "id_evento": 2,
-      "confirmed": false
+      "confirmed": true
     },
     {
       "id": 5,
       "id_produtor": 5,
       "id_usuario": 7,
       "id_evento": 3,
+      "confirmed": true
+    },
+    {
+      "id": 6,
+      "id_produtor": 5,
+      "id_usuario": 6,
+      "id_evento": 5,
       "confirmed": true
     }
   ],
