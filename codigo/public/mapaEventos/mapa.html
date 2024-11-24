@@ -1,28 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Mapbox GL JS map</title>
-<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-<link href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css" rel="stylesheet">
-<script src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"></script>
-<script src="/codigo/public/mapaEventos/mapaEventos.js" defer></script>
-<script></script>
-<style>
-body { margin: 0; padding: 0; }
-#map { position: absolute; top: 0; bottom: 0; width: 100%; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
 </head>
 <body>
-<div id="map"></div>
-<script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoicmFmYWVsaHMyMDA1IiwiYSI6ImNtM3FsNjNtZjBxZ2gyaW9oeXk4ZW01OXQifQ.mmlab2YgTHETB9_neLDMaw';
-    const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        center: [-74.5, 40], // starting position [lng, lat]. Note that lat must be set between -90 and 90
-        zoom: 9 // starting zoom
-    });
-</script>
 
+    <div id="map"></div>
+
+    <script>
+
+        const centralLatLong= [-43.9397233,-19.9332786]
+
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoicmFmYWVsaHMyMDA1IiwiYSI6ImNtM3FsNjNtZjBxZ2gyaW9oeXk4ZW01OXQifQ.mmlab2YgTHETB9_neLDMaw';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: centralLatLong,
+            zoom: 9
+        });
+
+
+        fetch('/codigo/db/db.json')
+            .then(response => response.json())
+            .then(data => {
+                const { locais, eventos, enderecos } = data;
+
+                eventos.forEach((evento) => {
+                    const local = locais.find((l) => l.id === evento.id_local);
+                    const endereco = enderecos.find((e) => e.id === local.endereco_id);
+
+                    if (endereco && endereco.coordinates) {
+                        let popup = new mapboxgl.Popup({ offset: 25 })
+                            .setHTML(`
+                                <img src="${evento.imagem}" alt="${evento.nome}" width="100px">
+                                <h3>${evento.nome}</h3>
+                                <p>${evento.descricao}</p>
+                                <p><strong>Data:</strong> ${evento.data}</p>
+                                <p><strong>Local:</strong> ${local.nome}</p>
+                                <p>${endereco.rua}, ${endereco.numero} - ${endereco.bairro}, ${endereco.cidade} - ${endereco.estado}</p>
+                            `);
+
+                        const marker = new mapboxgl.Marker({ color: "red" }) 
+                            .setLngLat(endereco.coordinates) 
+                            .setPopup(popup) 
+                            .addTo(map); 
+                    }
+                });
+            });
+
+        function processarGeo(local) {
+            const userLatLong = [local.coords.longitude, local.coords.latitude];
+
+            const popup = new mapboxgl.Popup({ offset: 25 })
+                .setHTML('<h3>Estou aqui!</h3>');
+
+            new mapboxgl.Marker({ color: 'yellow' })
+                .setLngLat(userLatLong)
+                .setPopup(popup)
+                .addTo(map);
+
+            map.flyTo({ center: userLatLong, zoom: 12 }); 
+        }
+
+        navigator.geolocation.getCurrentPosition(
+            processarGeo,
+            () => { alert('Erro ao obter localização.'); }
+        );
+      
+    </script>
 </body>
 </html>

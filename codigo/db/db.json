@@ -94,60 +94,66 @@
   ],
   "enderecos": [
     {
-      "id": 1,
-      "rua": "Av. das Nações Unidas",
-      "numero": 1234,
-      "bairro": "Brooklin",
-      "cidade": "Belo Horizonte",
-      "estado": "MG",
-      "cep": "04578-000"
+        "id": 1,
+        "rua": "Av. Paulista",
+        "numero": 1578,
+        "bairro": "Bela Vista",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "01310-200",
+        "coordinates": [-46.656114, -23.564701]
     },
     {
-      "id": 2,
-      "rua": "Av. do Mineirão",
-      "numero": 500,
-      "bairro": "Estádio Mineirão",
-      "cidade": "Belo Horizonte",
-      "estado": "MG",
-      "cep": "31275-000"
+        "id": 2,
+        "rua": "Av. do Contorno",
+        "numero": 3000,
+        "bairro": "Savassi",
+        "cidade": "Belo Horizonte",
+        "estado": "MG",
+        "cep": "30110-127",
+        "coordinates": [-43.932528, -19.931370]
     },
     {
-      "id": 3,
-      "rua": "Rua Liberdade",
-      "numero": 200,
-      "bairro": "Centro",
-      "cidade": "Belo Horizonte",
-      "estado": "MG",
-      "cep": "30140-000"
+        "id": 3,
+        "rua": "Rua das Palmeiras",
+        "numero": 20,
+        "bairro": "Centro",
+        "cidade": "Rio de Janeiro",
+        "estado": "RJ",
+        "cep": "20021-160",
+        "coordinates": [-43.182310, -22.902897]
     },
     {
-      "id": 4,
-      "rua": "Estrada do Castelo",
-      "numero": 10,
-      "bairro": "Castelo",
-      "cidade": "Petrópolis",
-      "estado": "RJ",
-      "cep": "25685-000"
+        "id": 4,
+        "rua": "Rua XV de Novembro",
+        "numero": 145,
+        "bairro": "Centro",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "cep": "80020-310",
+        "coordinates": [-49.267987, -25.429545]
     },
     {
-      "id": 5,
-      "rua": "Setor de Autarquias Sul",
-      "numero": 100,
-      "bairro": "Asa Sul",
-      "cidade": "Brasília",
-      "estado": "DF",
-      "cep": "70070-000"
+        "id": 5,
+        "rua": "Setor de Autarquias Sul",
+        "numero": 900,
+        "bairro": "Asa Sul",
+        "cidade": "Brasília",
+        "estado": "DF",
+        "cep": "70070-000",
+        "coordinates": [-47.929768, -15.780271]
     },
     {
-      "id": 6,
-      "rua": "Av. João Pessoa",
-      "numero": 1500,
-      "bairro": "Cidade Baixa",
-      "cidade": "Porto Alegre",
-      "estado": "RS",
-      "cep": "90040-000"
+        "id": 6,
+        "rua": "Av. Borges de Medeiros",
+        "numero": 3000,
+        "bairro": "Cidade Baixa",
+        "cidade": "Porto Alegre",
+        "estado": "RS",
+        "cep": "90040-050",
+        "coordinates": [-51.219451, -30.034179]
     }
-  ],
+],
   "locais": [
     {
       "id": 1,
@@ -353,35 +359,7 @@
       "dataAvaliacao": "2024-11-16"
     }
   ],
-  "maps": [
-    {
-      "id": 1,
-      "id_evento": 1,
-      "latlong": [
-        -43.992911,
-        -19.923564
-      ],
-      "cor": "red"
-    },
-    {
-      "id": 2,
-      "id_evento": 2,
-      "latlong": [
-        -43.992911,
-        -19.923564
-      ],
-      "cor": "blue"
-    },
-    {
-      "id": 3,
-      "id_evento": 3,
-      "latlong": [
-        -43.992911,
-        -19.923564
-      ],
-      "cor": "green"
-    }
-  ],
+
   "meses": [
     {
       "nome": "Janeiro",
