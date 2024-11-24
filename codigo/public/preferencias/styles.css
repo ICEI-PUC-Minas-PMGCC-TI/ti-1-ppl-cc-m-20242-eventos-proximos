@@ -162,7 +162,6 @@ button:active {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-
 .card[data-category="Corporativo"] {
     background-image: url('img/corporativo.png');
 }
