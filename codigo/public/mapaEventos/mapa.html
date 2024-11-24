@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/codigo/public/mapaEventos/mapa.css">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="/codigo/public/mapaEventos/mapa.js" defer></script>
     <style>
         body { margin: 0; padding: 0; }
         #map { position: absolute; top: 0; bottom: 0; width: 100%; }
     </style>
 </head>
 <body>
+
+    <header>
+        <a href="/codigo/public/index.html">
+            <img src="/codigo/public/assets/images/logo.png" alt="" id="logo">
+        </a>
+        <div class="perfil">
+            <a href="meusEventos">
+                <p id="user-name">Olá</p>
+            </a>
+        </div>
+    </header>
 
     <div id="map"></div>
 
@@ -41,12 +54,14 @@
                     if (endereco && endereco.coordinates) {
                         let popup = new mapboxgl.Popup({ offset: 25 })
                             .setHTML(`
-                                <img src="${evento.imagem}" alt="${evento.nome}" width="100px">
-                                <h3>${evento.nome}</h3>
-                                <p>${evento.descricao}</p>
-                                <p><strong>Data:</strong> ${evento.data}</p>
-                                <p><strong>Local:</strong> ${local.nome}</p>
-                                <p>${endereco.rua}, ${endereco.numero} - ${endereco.bairro}, ${endereco.cidade} - ${endereco.estado}</p>
+                                <a href="/codigo/public/descEventos/descEventos.html">
+                                    <img src="${evento.imagem}" alt="${evento.nome}" width="100px">
+                                    <h3>${evento.nome}</h3>
+                                    <p>${evento.descricao}</p>
+                                    <p><strong>Data:</strong> ${evento.data}</p>
+                                    <p><strong>Local:</strong> ${local.nome}</p>
+                                    <p>${endereco.rua}, ${endereco.numero} - ${endereco.bairro}, ${endereco.cidade} - ${endereco.estado}</p>
+                                </a>
                             `);
 
                         const marker = new mapboxgl.Marker({ color: "red" }) 
@@ -77,5 +92,7 @@
         );
       
     </script>
+
+    
 </body>
 </html>
