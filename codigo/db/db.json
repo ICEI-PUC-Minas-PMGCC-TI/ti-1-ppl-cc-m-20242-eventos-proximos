@@ -530,6 +530,83 @@
         "lido": false
       }
     ]
+
+  "preferences": [
+    {
+      "id": 1,
+      "user": "Fulano",
+      "categories": ["Cultural", "Esportivo"]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Corporativo",
+      "description": "Eventos voltados para o mundo dos negócios, como reuniões, workshops empresariais e mais.",
+      "image": "img/corporativo.png"
+    },
+    {
+      "id": 2,
+      "name": "Cultural",
+      "description": "Eventos que promovem arte, cultura e diversidade, incluindo exposições e espetáculos.",
+      "image": "img/cultural.png"
+    },
+    {
+      "id": 3,
+      "name": "Educacional",
+      "description": "Palestras, cursos e seminários focados em aprendizado e capacitação.",
+      "image": "img/educacional.png"
+    },
+    {
+      "id": 4,
+      "name": "Esportivo",
+      "description": "Competições esportivas, corridas e eventos ligados à prática de esportes.",
+      "image": "img/esportivo.png"
+    },
+    {
+      "id": 5,
+      "name": "Exposição",
+      "description": "Mostras de arte, ciência ou tecnologia para o público geral.",
+      "image": "img/exposicao.png"
+    },
+    {
+      "id": 6,
+      "name": "Festa",
+      "description": "Eventos sociais e celebrações com música, dança e diversão.",
+      "image": "img/festa.png"
+    },
+    {
+      "id": 7,
+      "name": "Festival",
+      "description": "Grandes eventos culturais ou musicais, com várias atrações.",
+      "image": "img/festival.png"
+    },
+    {
+      "id": 8,
+      "name": "Palestra",
+      "description": "Eventos com especialistas compartilhando conhecimentos e insights.",
+      "image": "img/palestra.png"
+    },
+    {
+      "id": 9,
+      "name": "Show",
+      "description": "Apresentações musicais e performances ao vivo.",
+      "image": "img/show.png"
+    },
+    {
+      "id": 10,
+      "name": "Teatro",
+      "description": "Peças teatrais e performances dramáticas para entreter e emocionar.",
+      "image": "img/teatro.png"
+    },
+    {
+      "id": 11,
+      "name": "Workshop",
+      "description": "Atividades práticas para aprender novas habilidades e técnicas.",
+      "image": "img/workshop.png"
+    }
+  ]
+
   
 }
 
