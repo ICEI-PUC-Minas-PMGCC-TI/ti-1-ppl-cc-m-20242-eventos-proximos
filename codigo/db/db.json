@@ -538,10 +538,11 @@
       }
     ],
 
-  "preferences": [
+   "preferences": [
     {
       "id": 1,
       "user": "Fulano",
+      "categories": []
     }
   ],
   "categories": [
@@ -612,7 +613,6 @@
       "image": "img/workshop.png"
     }
   ]
-
   
 }
 
