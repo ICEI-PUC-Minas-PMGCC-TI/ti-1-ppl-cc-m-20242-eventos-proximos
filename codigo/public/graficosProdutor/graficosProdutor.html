@@ -37,35 +37,38 @@
             </div>
 
             <div class="perfil-do-usuario">
-                <a href=" ">Olá, Produtor!</a>
+                <a href="#">Olá, Produtor!</a>
             </div>
         </nav>
     </header>
-    <body>
-        <div class="sidebar">
-            <a href="javascript:void(0)" onclick="mostrarTela('meusEventos')">Meus Eventos</a>
-            <a href="javascript:void(0)" onclick="mostrarTela('maisFavoritados')">Mais Favoritados</a>
-            <a href="javascript:void(0)" onclick="mostrarTela('maisConfirmados')">Mais Confirmados</a>
-        </div>
-    
-        <div class="main-content">
-            <div class="container" id="meusEventos">
-                <h3>Meus Eventos</h3>
-                <p>Lista de eventos criados por você!!!</p>
-            </div>
-    
-            <div class="container" id="maisFavoritados">
-                <h3>Mais Favoritados</h3>
-                <p>Os seus eventos que foram mais favoritados pelos usuários.</p>
-            </div>
-    
-            <div class="container" id="maisConfirmados">
-                <h3>Mais Confirmados</h3>
-                <p>Os seus eventos com mais confirmações de presença.</p>
-            </div>
-        </div>
-    </body>
 
-    <script src="script.js"></script>
+    <div class="sidebar">
+        <a href="#" onclick="mostrarTela('meusEventos')">Meus Eventos</a>
+        <a href="#" onclick="mostrarTela('maisFavoritados')">Mais Favoritados</a>
+        <a href="#" onclick="mostrarTela('maisConfirmados')">Mais Confirmados</a>
+    </div>
+
+    <div class="main-content">
+
+        <div class="container active" id="meusEventos">
+            <h3>Meus Eventos</h3>
+            <p>Lista de eventos criados por você!!!</p>
+        </div>
+
+        <div class="container" id="maisFavoritados">
+            <h3>Mais Favoritados</h3>
+            <p>Os seus eventos que foram mais favoritados pelos usuários.</p>
+            <canvas id="graficoFavoritos" width="800" height="400"></canvas>
+        </div>
+
+        <div class="container" id="maisConfirmados">
+            <h3>Mais Confirmados</h3>
+            <p>Os seus eventos com mais confirmações de presença.</p>
+            <canvas id="graficoConfirmacoes" width="800" height="400"></canvas>
+        </div>
+
+    </div>
+    
+    <script src="./script.js"></script>
 </body>
 </html>
