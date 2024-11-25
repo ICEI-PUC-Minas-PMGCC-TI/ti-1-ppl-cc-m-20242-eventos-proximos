@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventful</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="eventful.png" alt="Logo Eventful">
+            </div>
+
+            <div class="barra-pesquisa">
+                <ion-icon name="search-outline"></ion-icon>
+                <input type="text" id="searchInput" placeholder="Pesquisar eventos...">
+            </div>
+
+            <div class="location-filter-container">
+                <img src="loc.png" alt="Ícone Local" class="location-icon">
+                <select class="location-filter" id="locationFilter">
+                    <option value="">Onde encontrar</option>
+                </select>
+            </div>
+
+            <div class="menu-direita">
+                <div class="usuario">
+                    Olá, fulano!
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <aside class="filters">
+            <h2>Filtros de Evento</h2>
+            <div id="category-filters"></div>
+        </aside>
+
+        <section class="events"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
