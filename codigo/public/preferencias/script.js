@@ -45,15 +45,10 @@ async function savePreferences() {
         }
 
         alert('Preferências salvas com sucesso!');
+        renderCards();
     } catch (error) {
         console.error('Erro ao salvar preferências:', error);
     }
-}
-
-function resetPreferences() {
-    selectedPreferences = [];
-    renderCards();
-    alert('Todas as preferências foram desmarcadas!');
 }
 
 function renderCards() {
@@ -74,31 +69,7 @@ function renderCards() {
 
     selectedCards.forEach(card => card.classList.add('active'));
     unselectedCards.forEach(card => card.classList.remove('active'));
+
     container.innerHTML = '';
     selectedCards.concat(unselectedCards).forEach(card => container.appendChild(card));
-}
-async function resetPreferences() {
-    try {
-        const response = await fetch('http://localhost:3000/defaultPreferences');
-        const defaultData = await response.json();
-
-        const restoreResponse = await fetch('http://localhost:3000/preferences/1', {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                user: "Fulano",
-                categories: defaultData.categories
-            })
-        });
-
-        if (!restoreResponse.ok) {
-            throw new Error(`Erro ao restaurar preferências: ${restoreResponse.status}`);
-        }
-
-        selectedPreferences = defaultData.categories;
-        renderCards();
-        alert('Preferências restauradas com sucesso!');
-    } catch (error) {
-        console.error('Erro ao restaurar preferências:', error);
-    }
 }

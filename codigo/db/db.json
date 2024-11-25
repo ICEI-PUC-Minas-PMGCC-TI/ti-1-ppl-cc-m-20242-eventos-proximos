@@ -655,8 +655,6 @@
       "description": "Atividades práticas para aprender novas habilidades e técnicas.",
       "image": "img/workshop.png"
     }
-  ],
-  "defaultPreferences": {
-    "categories": []
-  }
+  ]
+
 }
