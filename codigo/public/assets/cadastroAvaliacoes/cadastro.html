@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação de Evento</title>
+</head>
+<body>
+  <h2>Avaliação de Evento</h2>
+  <form id="avaliacaoForm">
+    <label for="nota">Nota (0 a 5):</label>
+    <select id="nota" required>
+      <option value="">Selecione uma nota</option>
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select><br><br>
+
+    <label for="comentario">Comentário:</label>
+    <textarea id="comentario" rows="4" placeholder="Escreva sua opinião sobre o evento"></textarea><br><br>
+
+    <button type="button" onclick="enviarAvaliacao()">Enviar Avaliação</button>
+
+  </form>
+
+  <p id="mensagem"></p>
+
+  <script src="./script.js"></script>
+</body>
+</html>
