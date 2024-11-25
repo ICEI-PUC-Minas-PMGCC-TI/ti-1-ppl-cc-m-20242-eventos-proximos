@@ -1,78 +1,83 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #f4f4f4;
+    background-color: #f3f4f6;
+    height: 100vh;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.logo img {
-    height: 100px;
-}
-
-.search-bar input {
-    padding: 10px;
-    width: 300px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-}
-
-.calendar-header {
-    display: flex;
-    align-items: center;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .calendar-header h1 {
-    margin-right: 10px;
-}
-
-.icon img {
-    height: 30px;
-}
-
-.greeting p {
     margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #444;
 }
 
 .calendar-controls {
-    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 12px 18px;
+    background-color: #f9fafb;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.calendar-controls:hover {
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .calendar-controls select {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: white;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #333;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-main {
-    display: flex;
-    width: 100%;
-    padding: 20px;
+.calendar-controls select:hover {
+    background-color: #f0f8ff;
+    border-color: #3b82f6;
 }
 
-.calendar-container {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 20px;
+.calendar-controls button {
+    padding: 10px 18px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(59, 130, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.calendar-controls button:hover {
+    background-color: #2563eb;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
 }
 
 .days-of-week {
@@ -81,70 +86,159 @@ main {
     width: 100%;
     text-align: center;
     font-weight: bold;
+    color: #555;
+    font-size: 14px;
+    margin: 15px 0;
+    text-transform: uppercase;
 }
 
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
+    gap: 12px;
     width: 100%;
+    padding: 10px 0;
 }
 
 .day {
-    background-color: #e0e0e0;
-    padding: 40px;
+    background-color: #e0f7fa;
+    border-radius: 12px;
     text-align: center;
-    border-radius: 10px;
-    font-size: 20px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 500;
     position: relative;
     cursor: pointer;
+    height: 90px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #333;
 }
 
-.favorite {
-    background-color: #ffd700; 
+.day:hover {
+    background-color: #b2ebf2;
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.favorite .star {
-    color: gold; 
+.day.empty {
+    background-color: #f3f4f6;
+    cursor: default;
+    box-shadow: none;
+    color: #bbb;
 }
 
-.star {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    font-size: 20px;
-    color: #ccc;
-    cursor: pointer;
+.day.favorite {
+    background: linear-gradient(135deg, #ffd700, #ffcc33);
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 200, 0, 0.4);
 }
 
-.star:hover {
-    color: gold;
+.holiday {
+    margin-top: 8px;
+    font-size: 12px;
+    color: #e63946;
+    font-weight: 600;
 }
 
 .sidebar {
     flex: 1;
-    background-color: white;
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.sidebar h3 {
-    margin: 0 0 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
 }
 
 .event-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f3f4f6; 
+    font-size: 14px;
+    color: #363535;
     margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.tag {
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
+.event-item:hover {
+    background-color: #e2e8f0; 
+    border-color: #cbd5e0; 
+    transform: translateY(-3px);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.search-bar input {
+    padding: 12px;
+    width: 200%;
+    max-width: 400px;
+    border-radius: 25px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #3b82f6;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon img {
+    height: 25px;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: calc(100vh - 80px);
+}
+
+.calendar-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .day {
+        padding: 10px;
+        height: 75px;
+        font-size: 14px;
+    }
+
+    .calendar-grid {
+        gap: 8px;
+    }
+
+    .event-item {
+        margin: 5px 0;
+        padding: 10px;
+        font-size: 14px;
+    }
 }

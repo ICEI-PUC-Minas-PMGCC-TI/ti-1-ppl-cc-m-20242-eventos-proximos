@@ -34,52 +34,44 @@
   "usuarios": [
     {
       "id": "1",
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
-    },
-    {
-      "id": "2",
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
-    },
-    {
-      "id": "3",
-      "login": "rommel",
-      "senha": "123",
-      "nome": "Rommel",
-      "email": "rommel@gmail.com"
-    },
-    {
-      "id": "4",
-      "login": "maria123",
-      "senha": "senha123",
-      "nome": "Maria Silva",
-      "email": "maria.silva@gmail.com"
-    },
-    {
-      "id": "5",
-      "login": "joaod",
-      "senha": "pass456",
-      "nome": "João Dias",
-      "email": "joao.dias@hotmail.com"
-    },
-    {
-      "id": "6",
-      "login": "carla_santos",
-      "senha": "senha789",
-      "nome": "Carla Santos",
-      "email": "carla.santos@yahoo.com"
-    },
-    {
-      "id": "7",
-      "login": "ricardo85",
-      "senha": "minhasenha",
-      "nome": "Ricardo Pereira",
-      "email": "ricardo.pereira@empresa.com"
+      "nome": "Fulano",
+      "favoritos": [
+        {
+          "day": 18,
+          "month": 2,
+          "year": 2026
+        },
+        {
+          "day": 8,
+          "month": 11,
+          "year": 2025
+        },
+        {
+          "day": 14,
+          "month": 4,
+          "year": 2025
+        },
+        {
+          "day": 7,
+          "month": 4,
+          "year": 2025
+        },
+        {
+          "day": 8,
+          "month": 4,
+          "year": 2025
+        },
+        {
+          "day": 14,
+          "month": 0,
+          "year": 2026
+        },
+        {
+          "day": 6,
+          "month": 4,
+          "year": 2027
+        }
+      ]
     }
   ],
   "produtor": [
@@ -505,6 +497,81 @@
       "ano": 2025,
       "bissexto": false,
       "id": "3aec"
+    },
+    {
+      "ano": 2026,
+      "bissexto": false,
+      "id": "a26c"
+    },
+    {
+      "ano": 2027,
+      "bissexto": false,
+      "id": "ff12"
+    },
+    {
+      "ano": 2028,
+      "bissexto": true,
+      "id": "cb99"
+    },
+    {
+      "ano": 2029,
+      "bissexto": false,
+      "id": "f712"
+    },
+    {
+      "ano": 2030,
+      "bissexto": false,
+      "id": "9831"
+    },
+    {
+      "ano": 2031,
+      "bissexto": false,
+      "id": "68da"
+    },
+    {
+      "ano": 2032,
+      "bissexto": true,
+      "id": "2ca1"
+    },
+    {
+      "ano": 2033,
+      "bissexto": false,
+      "id": "e9f3"
+    },
+    {
+      "ano": 2034,
+      "bissexto": false,
+      "id": "1d0f"
+    },
+    {
+      "ano": 2035,
+      "bissexto": false,
+      "id": "934d"
+    },
+    {
+      "ano": 2036,
+      "bissexto": true,
+      "id": "5f93"
+    },
+    {
+      "ano": 2037,
+      "bissexto": false,
+      "id": "8d3e"
+    },
+    {
+      "ano": 2038,
+      "bissexto": false,
+      "id": "ce92"
+    },
+    {
+      "ano": 2039,
+      "bissexto": false,
+      "id": "21a4"
+    },
+    {
+      "ano": 2040,
+      "bissexto": true,
+      "id": "16c8"
     }
   ],
   "feriados": [
@@ -584,7 +651,13 @@
   "preferences": [
     {
       "user": "Fulano",
-      "categories": [],
+      "categories": [
+        "Educacional",
+        "Cultural",
+        "Palestra",
+        "Festival",
+        "Teatro"
+      ],
       "id": "1"
     }
   ],
@@ -656,5 +729,4 @@
       "image": "img/workshop.png"
     }
   ]
-
 }
