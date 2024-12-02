@@ -34,44 +34,52 @@
   "usuarios": [
     {
       "id": "1",
-      "nome": "Fulano",
-      "favoritos": [
-        {
-          "day": 18,
-          "month": 2,
-          "year": 2026
-        },
-        {
-          "day": 8,
-          "month": 11,
-          "year": 2025
-        },
-        {
-          "day": 14,
-          "month": 4,
-          "year": 2025
-        },
-        {
-          "day": 7,
-          "month": 4,
-          "year": 2025
-        },
-        {
-          "day": 8,
-          "month": 4,
-          "year": 2025
-        },
-        {
-          "day": 14,
-          "month": 0,
-          "year": 2026
-        },
-        {
-          "day": 6,
-          "month": 4,
-          "year": 2027
-        }
-      ]
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": "2",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "id": "3",
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com"
+    },
+    {
+      "id": "4",
+      "login": "maria123",
+      "senha": "senha123",
+      "nome": "Maria Silva",
+      "email": "maria.silva@gmail.com"
+    },
+    {
+      "id": "5",
+      "login": "joaod",
+      "senha": "pass456",
+      "nome": "João Dias",
+      "email": "joao.dias@hotmail.com"
+    },
+    {
+      "id": "6",
+      "login": "carla_santos",
+      "senha": "senha789",
+      "nome": "Carla Santos",
+      "email": "carla.santos@yahoo.com"
+    },
+    {
+      "id": "7",
+      "login": "ricardo85",
+      "senha": "minhasenha",
+      "nome": "Ricardo Pereira",
+      "email": "ricardo.pereira@empresa.com"
     }
   ],
   "produtor": [
