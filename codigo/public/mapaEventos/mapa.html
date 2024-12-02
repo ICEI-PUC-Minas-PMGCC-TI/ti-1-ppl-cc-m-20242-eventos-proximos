@@ -42,7 +42,7 @@
         });
 
 
-        fetch('./db/db.json')
+        fetch('/codigo/db/db.json')
             .then(response => response.json())
             .then(data => {
                 const { locais, eventos, enderecos } = data;
