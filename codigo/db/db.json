@@ -82,16 +82,6 @@
       "email": "ricardo.pereira@empresa.com"
     }
   ],
-  "produtor": [
-    {
-      "id": "1",
-      "id_usuario": 1
-    },
-    {
-      "id": "2",
-      "id_usuario": 2
-    }
-  ],
   "enderecos": [
     {
       "id": "1",
