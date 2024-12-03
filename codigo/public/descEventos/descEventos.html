@@ -35,12 +35,36 @@
     </header>
     <main id="events">
         <div id="event-details"></div>
+
+          <!-- Seção para avaliar o evento -->
+          <section id="event-rating">
+            <h3>Avalie o evento</h3>
+            <form id="rating-form">
+                <div class="form-group">
+                    <label for="rating">Sua avaliação (1 a 5):</label>
+                    <input type="number" id="rating" name="rating" min="1" max="5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Deixe seu comentário:</label>
+                    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Escreva seu comentário aqui..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar avaliação</button>
+            </form>
+
+            <div id="user-comments" class="comment-display">
+                <!-- Os comentários serão exibidos aqui -->
+            </div>
+        </section>
     </main>
     <footer>
         <h2><i>EVENTFUL</i></h2>
     </footer>
 
     <script src="script.js"></script>
+    <script src="avaliacao.js"></script>
+
 </body>
 
 </html>
