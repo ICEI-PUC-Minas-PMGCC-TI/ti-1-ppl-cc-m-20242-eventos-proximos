@@ -39,25 +39,47 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("http://localhost:3000/eventos")
       .then(response => response.json())
       .then(data => {
-        console.log(data); 
-        const eventos = document.querySelectorAll(".eventos");
+        const eventosContainer = document.querySelector(".eventos-container");
+
+        const ultimosEventos = data.slice(-3);
   
-        
-        const eventosCount = Math.min(data.length, eventos.length);
+        ultimosEventos.forEach(evento => {
+
+          const eventoDiv = document.createElement("div");
+          eventoDiv.classList.add("eventos");
   
-        for (let i = 0; i < eventosCount; i++) {
-          const evento = data[i];
-          eventos[i].querySelector("img").src = evento.imagem; 
-          eventos[i].querySelector("h2").textContent = evento.nome; 
-          eventos[i].querySelector("p").textContent = evento.descricao; 
-          
-          
-          const dataElemento = document.createElement("p");
-          dataElemento.textContent = evento.data; 
-          dataElemento.classList.add("data-evento");
-          eventos[i].appendChild(dataElemento);
-        }
+          // Cria o link
+          const link = document.createElement("a");
+          link.href = `../public/descEventos/descEventos.html?id=${evento.id}`;
+          link.classList.add("link-desc");
+  
+          // Cria e adiciona a imagem
+          const img = document.createElement("img");
+          img.src = evento.imagem;
+          img.alt = `Imagem do evento ${evento.nome}`;
+          img.classList.add("evento-img");
+          link.appendChild(img);
+  
+          // Cria e adiciona o texto
+          const textoDiv = document.createElement("div");
+          textoDiv.classList.add("eventos-txt");
+  
+          const titulo = document.createElement("h2");
+          titulo.textContent = evento.nome;
+          textoDiv.appendChild(titulo);
+  
+          const descricao = document.createElement("p");
+          descricao.textContent = evento.descricao;
+          textoDiv.appendChild(descricao);
+  
+          link.appendChild(textoDiv);
+          eventoDiv.appendChild(link);
+  
+          // Adiciona o evento ao contêiner
+          eventosContainer.appendChild(eventoDiv);
+        });
       })
       .catch(error => console.error("Erro ao carregar os eventos:", error));
   });
+  
   

@@ -1,32 +1,32 @@
 {
   "favoritos": [
     {
-      "id": 1,
+      "id": "1",
       "id_usuario": 1,
       "id_evento": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "id_usuario": 1,
       "id_evento": 2
     },
     {
-      "id": 3,
+      "id": "3",
       "id_usuario": 1,
       "id_evento": 3
     },
     {
-      "id": 4,
+      "id": "4",
       "id_usuario": 1,
       "id_evento": 4
     },
     {
-      "id": 5,
+      "id": "5",
       "id_usuario": 1,
       "id_evento": 5
     },
     {
-      "id": 6,
+      "id": "6",
       "id_usuario": 1,
       "id_evento": 6
     }
@@ -84,7 +84,7 @@
   ],
   "enderecos": [
     {
-      "id": 1,
+      "id": "1",
       "rua": "Av. Paulista",
       "numero": 1578,
       "bairro": "Bela Vista",
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "rua": "Av. do Contorno",
       "numero": 3000,
       "bairro": "Savassi",
@@ -110,7 +110,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "rua": "Rua das Palmeiras",
       "numero": 20,
       "bairro": "Centro",
@@ -123,7 +123,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "rua": "Rua XV de Novembro",
       "numero": 145,
       "bairro": "Centro",
@@ -136,7 +136,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "rua": "Setor de Autarquias Sul",
       "numero": 900,
       "bairro": "Asa Sul",
@@ -149,7 +149,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "rua": "Av. Borges de Medeiros",
       "numero": 3000,
       "bairro": "Cidade Baixa",
@@ -164,32 +164,32 @@
   ],
   "locais": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Centro de Convenções Belo Horizonte",
       "endereco_id": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Mineirão",
       "endereco_id": 2
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "Auditório Liberdade",
       "endereco_id": 3
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "Castelo de Itaipava",
       "endereco_id": 4
     },
     {
-      "id": 5,
+      "id": "5",
       "nome": "Centro de Convenções Ulysses Guimarães",
       "endereco_id": 5
     },
     {
-      "id": 6,
+      "id": "6",
       "nome": "Araújo Vianna - Parque Farroupilha",
       "endereco_id": 6
     }
@@ -240,7 +240,7 @@
   ],
   "eventos": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Numanice #3 Tour",
       "data": "15-11-2024",
       "id_local": 2,
@@ -248,10 +248,11 @@
       "id_categoria": 1,
       "id_produtor": 1,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
+      "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png",
+      "confirmed": true
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Web-Tech Days",
       "data": "29-11-2024",
       "id_local": 3,
@@ -262,7 +263,7 @@
       "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "Réveillon da Serra",
       "data": "31-12-2024",
       "id_local": 4,
@@ -273,7 +274,7 @@
       "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "nome": "6ª Mostra de tecnologia + TI",
       "data": "26-11-2024",
       "id_local": 5,
@@ -284,7 +285,7 @@
       "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
     },
     {
-      "id": 5,
+      "id": "5",
       "nome": "Bruno Mars - Live in Brazil",
       "data": "05-11-2024",
       "id_local": 2,
@@ -295,7 +296,7 @@
       "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png"
     },
     {
-      "id": 6,
+      "id": "6",
       "nome": "Fábio JR",
       "data": "07-11-2024",
       "id_local": 6,

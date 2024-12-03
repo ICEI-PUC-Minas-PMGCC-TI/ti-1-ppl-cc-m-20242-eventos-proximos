@@ -1,5 +1,3 @@
-
-
 .carousel-inner {
   display: flex; 
   padding: 20px;
@@ -31,7 +29,8 @@
 }
 
 .eventos img {
-  width: 25%;
+  width: 400px;
+  height: 250px;
   border-radius: 10px;
   margin-right: 20px;
 }
@@ -53,9 +52,8 @@ footer h2 {
 }
 
 .eventos {
-  position: relative;
   display:flex;
-  align-items: center;
+  flex-direction: row;
   border-radius: 20px;
   border: 2px solid black;
   padding: 40px;
@@ -64,8 +62,16 @@ footer h2 {
   margin-right: 20px;
 }
 
+.link-desc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color:black;
+}
+
 .data-evento {
-  position: absolute;
+  align-self: self-end;
   top: 10px;
   right: 10px;
   font-size: 20px;
