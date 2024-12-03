@@ -197,42 +197,36 @@
   "confirmacao": [
     {
       "id": "1",
-      "id_produtor": 5,
       "id_usuario": 2,
       "id_evento": 5,
       "confirmed": false
     },
     {
       "id": "2",
-      "id_produtor": 3,
       "id_usuario": 1,
       "id_evento": 1,
       "confirmed": true
     },
     {
       "id": "3",
-      "id_produtor": 4,
       "id_usuario": 5,
       "id_evento": 2,
       "confirmed": true
     },
     {
       "id": "4",
-      "id_produtor": 5,
       "id_usuario": 4,
       "id_evento": 2,
       "confirmed": true
     },
     {
       "id": "5",
-      "id_produtor": 5,
       "id_usuario": 7,
       "id_evento": 3,
       "confirmed": true
     },
     {
       "id": "6",
-      "id_produtor": 5,
       "id_usuario": 6,
       "id_evento": 5,
       "confirmed": true
@@ -246,7 +240,6 @@
       "id_local": 2,
       "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
       "id_categoria": 1,
-      "id_produtor": 1,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png",
       "confirmed": true
@@ -258,7 +251,6 @@
       "id_local": 3,
       "descricao": "Inteligência artificial, tecnologia e conhecimento",
       "id_categoria": 5,
-      "id_produtor": 1,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg"
     },
@@ -269,7 +261,6 @@
       "id_local": 4,
       "descricao": "Venha passar o Réveillon na festa mais tradicional da serra. Uma ceia especial e muita animação. Traga a família e os amigos para viver esta experiência.",
       "id_categoria": 6,
-      "id_produtor": 1,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
     },
@@ -280,7 +271,6 @@
       "id_local": 5,
       "descricao": "Nos dias 26, 27 e 28 de novembro, o Centro de Convenções Ulysses Guimarães será o ponto de encontro de especialistas, empresários, estudantes e entusiastas da tecnologia para a 6ª Mostra de Tecnologia Brasília Mais TI, o maior evento de tecnologia do Centro-Oeste.",
       "id_categoria": 3,
-      "id_produtor": 1,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
     },
@@ -291,7 +281,6 @@
       "id_local": 2,
       "descricao": "Bruno Mars apresentará seu show Live in Brazil em Belo Horizonte no dia 5 de novembro de 2024, no Mineirão. O espetáculo promete hits como Uptown Funk e Just the Way You Are, oferecendo uma noite vibrante e inesquecível para o público.",
       "id_categoria": 1,
-      "id_produtor": 1,
       "status": "ativo",
       "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png"
     },
@@ -302,7 +291,6 @@
       "id_local": 6,
       "descricao": "Um dos maiores artistas do país, completa 70 anos e quem ganha o presente é o público. Para celebrar esse marco, Fábio Jr trará a Porto Alegre sua nova turnê “Bem Mais Que os Meus 20 e Poucos Anos”, que vai contar de forma surpreendente a história artística do cantor.",
       "id_categoria": 1,
-      "id_produtor": 1,
       "status": "ativo",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2g1gnk3b44m1q8e8g6kevcbmqgd3defd5t2251493ultt2mbiqidmtkdko4rc1eksee15dt70u6q2gfuvhherf5tlu0dv4j70276oqj.webp"
     }
