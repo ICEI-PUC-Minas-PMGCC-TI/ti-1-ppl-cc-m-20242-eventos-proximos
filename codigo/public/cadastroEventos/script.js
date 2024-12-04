@@ -114,6 +114,7 @@ function rolarParaTopo() {
 }
 
 async function editarEvento(id) {
+    rolarParaTopo();
     const eventos = JSON.parse(localStorage.getItem('eventos')) || [];
     const evento = eventos.find(e => e.id === id);
 
