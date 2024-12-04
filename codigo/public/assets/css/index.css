@@ -5,6 +5,21 @@
   margin-bottom: 50px;
 }
 
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.carousel-control-prev {
+  left: 0px;  
+}
+
+.carousel-control-next {
+  right: 0px; 
+}
+
 .carousel-item {
   display: flex;
   width: 100%; 
@@ -78,6 +93,16 @@ footer h2 {
   color: black;
   margin-right: 20px;
   margin-top: 20px;
+}
+
+#carouselFiltros {
+  height: auto;
+  padding: 20px;
+}
+
+.d-flex.flex-wrap.justify-content-start.filtros-container {
+    display: flex;
+    
 }
 
 @media (max-width: 768px) {
