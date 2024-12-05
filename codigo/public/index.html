@@ -28,10 +28,10 @@
               <input type="text" placeholder="Pesquisar eventos..." id="search-input">
           </div>
 
-          <div class="filtro-localizacao">
-            <img src="https://img.icons8.com/?size=100&id=Qrcap2tCbmPN&format=png&color=000000" alt="icon-localizacao">
+          <div class="location-filter-container">
+            <ion-icon name="location-outline"></ion-icon>
             <select class="location-filter" id="locationFilter">
-                <option value="">Onde encontrar</option>
+                <option value="">Todas as Localizações</option>
             </select>
         </div>
             <div class="perfil-do-usuario">
@@ -54,30 +54,16 @@
       </button>
     </div>    
     
-    <div id="filtrosCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-          <div class="carousel-item active">
-              <div class="d-flex flex-wrap justify-content-start filtros-container">
-                  <!-- Filtros de cidade serão inseridos dinamicamente aqui -->
-              </div>
-          </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#filtrosCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#filtrosCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-      </button>
-  </div>
-   
+    <div class="carrossel-container">
+        <button class="carrossel-prev">&lt;</button> <!-- Botão de voltar -->
+        <div class="carrossel" id="carrossel"></div> <!-- Carrossel preenchido dinamicamente -->
+        <button class="carrossel-next">&gt;</button> <!-- Botão de avançar -->
+    </div>    
+    
 
-
-    <div class="eventos-container"></div>
+    <section class="eventos-container"></section>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../public/filtragemEventos/script.js"></script>
     <script src="../inicial.js"></script>
 
     <footer>

@@ -95,14 +95,64 @@ footer h2 {
   margin-top: 20px;
 }
 
-#carouselFiltros {
-  height: auto;
-  padding: 20px;
+/* Ajusta o container do carrossel para ocupar toda a largura da página */
+.carrossel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; /* 100% da largura da tela */
+  overflow: hidden; /* Impede rolagem extra fora da área visível */
 }
 
-.d-flex.flex-wrap.justify-content-start.filtros-container {
-    display: flex;
-    
+/* Ajusta o carrossel para que ele ocupe toda a largura disponível */
+.carrossel {
+  display: flex;
+  overflow-x: hidden; /* Garante que não haja rolagem indesejada */
+  width: 100%; /* Faz o carrossel ocupar toda a largura disponível */
+}
+
+/* Cada item do carrossel ocupa uma fração da largura da tela */
+.carrossel-item {
+  flex: 0 0 auto;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box; /* Inclui padding e margem no cálculo do tamanho */
+  background-color: #f0f0f0;
+  scroll-snap-align: start; /* Alinha ao começar de cada item ao rolar */
+  width: 16%; /* Ajusta para que caibam 6 itens sem cortar */
+}
+
+/* Estilo para os títulos das categorias */
+.carrossel-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  word-wrap: break-word; /* Permite que o nome quebre a linha se necessário */
+}
+
+.carrossel-prev, .carrossel-next {
+  background-color: #fff;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.top-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/fogo.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
 }
 
 @media (max-width: 768px) {

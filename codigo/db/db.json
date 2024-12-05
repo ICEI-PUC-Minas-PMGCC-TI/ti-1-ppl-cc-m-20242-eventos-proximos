@@ -348,15 +348,15 @@
     },
     {
       "id": "10",
-      "tipo": "Festa"
-    },
-    {
-      "id": "11",
       "tipo": "Teatro"
     },
     {
-      "id": "12",
+      "id": "11",
       "tipo": "Workshop"
+    },
+    {
+      "id": "12",
+      "tipo": "Games"
     }
   ],
   "avaliacoes": [
