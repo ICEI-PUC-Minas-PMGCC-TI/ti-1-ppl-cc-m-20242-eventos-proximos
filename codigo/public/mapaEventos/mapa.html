@@ -20,7 +20,7 @@
             <img src="/codigo/public/assets/images/logo.png" alt="" id="logo">
         </a>
         <div class="perfil">
-            <a href="meusEventos">
+            <a href="/codigo/public/graficosProdutor/graficosProdutor.html">
                 <p id="user-name">Olá</p>
             </a>
         </div>
@@ -48,8 +48,8 @@
                 const { locais, eventos, enderecos } = data;
 
                 eventos.forEach((evento) => {
-                    const local = locais.find((l) => l.id === evento.id_local);
-                    const endereco = enderecos.find((e) => e.id === local.endereco_id);
+                    const local = locais.find((l) => String(l.id) === String(evento.id_local)); 
+                    const endereco = enderecos.find((e) => String(e.id) === String(local.endereco_id)); 
 
                     if (endereco && endereco.coordinates) {
                         let popup = new mapboxgl.Popup({ offset: 25 })

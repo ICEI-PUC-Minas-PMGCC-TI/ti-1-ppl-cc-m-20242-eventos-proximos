@@ -48,3 +48,12 @@ header {
 #map {
     top: 60px; 
 }
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+a:hover {
+    color: #007BFF; 
+}

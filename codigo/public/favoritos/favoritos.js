@@ -25,7 +25,6 @@ async function exibirFavoritos(idUsuario) {
     console.log('Favoritos:', favoritos);
     console.log('Eventos:', eventos);
 
-    // Comparar os IDs como strings
     const favoritosDoUsuario = favoritos.filter(fav => String(fav.id_usuario) === String(idUsuario));
     console.log('Favoritos do usuário:', favoritosDoUsuario);
 
@@ -42,13 +41,22 @@ async function exibirFavoritos(idUsuario) {
     } else {
       eventosFavoritos.forEach(evento => {
         const eventoHTML = `
-          <div class="evento">
-            <img src="${evento.imagem}" alt="${evento.nome}" width="100px">
-            <h2>${evento.nome}</h2>
-            <p>${evento.descricao}</p>
-            <p>Data: ${evento.data}</p>
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="${evento.imagem}" alt="${evento.nome}" class="card-img" style="height: 200px; object-fit: cover;">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">${evento.nome}</h5>
+                    <p class="card-text">${evento.descricao}</p>
+                    <p><strong>Data:</strong> ${evento.data}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <hr>
         `;
         container.innerHTML += eventoHTML;
       });
@@ -57,6 +65,8 @@ async function exibirFavoritos(idUsuario) {
     console.error('Erro ao buscar os favoritos e eventos:', error);
   }
 }
+
+exibirFavoritos(1);
 
 exibirFavoritos(1);
 fetchUserName();
