@@ -139,6 +139,11 @@
 }
 
 
+.perfil-do-usuario ion-icon {
+    font-size: 84px;
+    margin-top: 40px;
+}
+
 @media (max-width: 480px) {
     .caixa-menu-principal {
         flex-direction: column;

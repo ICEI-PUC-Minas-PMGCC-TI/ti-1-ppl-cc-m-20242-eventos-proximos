@@ -591,7 +591,66 @@
       "id": "ac51"
     }
   ],
-  "notificacoes": [],
+
+  "notificacoes": [
+    {
+      "notificacoesId": 1,
+      "titulo": "Novo Workshop sobre Desenvolvimento Web",
+      "desc": "Inscreva-se agora para o workshop e não perca!",
+      "categoria": "workshop",
+      "lido": true,
+      "link": "/event/001",
+      "id_evento": 1,
+      "id": "c9cd"
+    },
+    {
+      "notificacoesId": 2,
+      "titulo": "Novo Curso de React Disponível",
+      "desc": "Aprenda React com o nosso novo curso online!",
+      "categoria": "curso",
+      "lido": false,
+      "link": "/course/002",
+      "id_evento": 2,
+      "id": "a252"
+    },
+    {
+      "notificacoesId": 3,
+      "titulo": "Evento de Networking em São Paulo",
+      "desc": "Conecte-se com profissionais de TI e expanda sua rede de contatos.",
+      "categoria": "evento",
+      "lido": false,
+      "link": "/event/003",
+      "id_evento": 3,
+      "id": "8e39"
+    },
+    {
+      "notificacoesId": 4,
+      "titulo": "Novo Workshop sobre Design de Interfaces",
+      "desc": "Não perca o workshop sobre Design de Interfaces!",
+      "categoria": "workshop",
+      "lido": false,
+      "link": "/event/004",
+      "id_evento": 4,
+      "id": "a403"
+    },
+    {
+      "notificacoesId": 5,
+      "titulo": "Novo Evento Disponível!",
+      "desc": "Um novo evento foi adicionado ao seu calendário de favoritos. Não perca a chance de participar!",
+      "link": "/event/005",
+      "lido": false,
+      "id": "9086"
+    },
+    {
+      "notificacoesId": 6,
+      "titulo": "Lembrete de Evento",
+      "desc": "Você tem um evento programado para amanhã às 18:00. Não se esqueça de conferir os detalhes.",
+      "link": "/event/006",
+      "lido": false,
+      "id": "8f68"
+    }
+  ],
+
   "preferences": [
     {
       "user": "Fulano",

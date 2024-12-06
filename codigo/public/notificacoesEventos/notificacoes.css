@@ -2,62 +2,32 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-  }
-  
 
-  .header {
-    position: fixed;  
-    left: 0;
-    background-color: #333;
-    color: white;
-    width: 300px;  
-    height: 100vh; 
-    display: flex;
-    padding-top: 20px;
-    padding-left: 20px;
-    box-sizing: border-box;
   }
   
+.voltar {
+  font-size: 30px;
+  margin: 50px;
+}
 
-  .header ul{
-    margin-top: 30px;
-  }
-  
-  .header nav ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .header nav ul li {
-    margin-top: 20px;
-    margin-left: 20px;
-  }
-
-  .logo{
-    margin-left: 20px;
-    width: 100px;
-  }
-  .header nav ul li a {
-    color: white;
-    font-weight:bolder;
-    font-size: 18px;
-  }
-  
-
-  .not{
-    text-decoration: underline;
-  }
-  
+.btn {
+  background-color: #34495e;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin: 40px;
+}
 
   .main {
-    position: fixed;  
-    margin-left: 420px;
-    margin-top: 50px;
-    padding: 20px;
-    width: 50%; 
+    margin-left: 40px;
+    padding: 30px;
+    width: 60%; 
     flex-direction: column;
+   
   }
   
 
