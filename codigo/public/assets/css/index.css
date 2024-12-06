@@ -11,6 +11,15 @@
   z-index: 1;
 }
 
+.eventos-container {
+  margin-top: 40px;
+}
+
+.mensagem-sem-eventos {
+  padding: 100px;
+  font-size: 25px;
+  text-align: center;
+}
 .carousel-control-prev {
   left: 0px;  
 }
@@ -94,23 +103,20 @@ footer h2 {
   margin-top: 20px;
 }
 
-/* Ajusta o container do carrossel para ocupar toda a largura da página */
 .carrossel-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw; /* 100% da largura da tela */
-  overflow: hidden; /* Impede rolagem extra fora da área visível */
+  width: 100vw; 
+  overflow: hidden; 
 }
 
-/* Ajusta o carrossel para que ele ocupe toda a largura disponível */
 .carrossel {
   display: flex;
-  overflow-x: hidden; /* Garante que não haja rolagem indesejada */
-  width: 100%; /* Faz o carrossel ocupar toda a largura disponível */
+  overflow-x: hidden; 
+  width: 100%; 
 }
 
-/* Cada item do carrossel ocupa uma fração da largura da tela */
 .carrossel-item {
   flex: 0 0 auto;
   margin: 10px;
@@ -118,19 +124,18 @@ footer h2 {
   border: 1px solid #ccc;
   border-radius: 8px;
   text-align: center;
-  box-sizing: border-box; /* Inclui padding e margem no cálculo do tamanho */
+  box-sizing: border-box; 
   background-color: #f0f0f0;
-  scroll-snap-align: start; /* Alinha ao começar de cada item ao rolar */
-  width: 16%; /* Ajusta para que caibam 6 itens sem cortar */
+  scroll-snap-align: start; 
+  width: 16%; 
 }
 
-/* Estilo para os títulos das categorias */
 .carrossel-item h3 {
   font-size: 18px;
   font-weight: bold;
   color: #333;
   margin: 0;
-  word-wrap: break-word; /* Permite que o nome quebre a linha se necessário */
+  word-wrap: break-word; 
 }
 
 .carrossel-prev, .carrossel-next {
@@ -139,7 +144,6 @@ footer h2 {
   font-size: 24px;
   cursor: pointer;
 }
-
 
 .top-badge {
   position: absolute;
