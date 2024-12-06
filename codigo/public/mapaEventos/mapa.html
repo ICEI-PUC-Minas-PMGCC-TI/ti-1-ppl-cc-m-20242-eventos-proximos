@@ -29,10 +29,8 @@
     <div id="map"></div>
 
     <script>
-
-        const centralLatLong= [-43.9397233,-19.9332786]
-
-
+        const centralLatLong = [-43.9397233, -19.9332786];
+    
         mapboxgl.accessToken = 'pk.eyJ1IjoicmFmYWVsaHMyMDA1IiwiYSI6ImNtM3FsNjNtZjBxZ2gyaW9oeXk4ZW01OXQifQ.mmlab2YgTHETB9_neLDMaw';
         const map = new mapboxgl.Map({
             container: 'map',
@@ -40,17 +38,15 @@
             center: centralLatLong,
             zoom: 9
         });
-
-
+    
         fetch('/codigo/db/db.json')
             .then(response => response.json())
             .then(data => {
-                const { locais, eventos, enderecos } = data;
-
+                const { eventos, enderecos } = data;
+    
                 eventos.forEach((evento) => {
-                    const local = locais.find((l) => String(l.id) === String(evento.id_local)); 
-                    const endereco = enderecos.find((e) => String(e.id) === String(local.endereco_id)); 
-
+                    const endereco = enderecos.find((e) => String(e.id) === String(evento.id_endereco)); 
+    
                     if (endereco && endereco.coordinates) {
                         let popup = new mapboxgl.Popup({ offset: 25 })
                             .setHTML(`
@@ -59,11 +55,11 @@
                                     <h3>${evento.nome}</h3>
                                     <p>${evento.descricao}</p>
                                     <p><strong>Data:</strong> ${evento.data}</p>
-                                    <p><strong>Local:</strong> ${local.nome}</p>
+                                    <p><strong>Local:</strong> ${endereco.local}</p>
                                     <p>${endereco.rua}, ${endereco.numero} - ${endereco.bairro}, ${endereco.cidade} - ${endereco.estado}</p>
                                 </a>
                             `);
-
+    
                         const marker = new mapboxgl.Marker({ color: "red" }) 
                             .setLngLat(endereco.coordinates) 
                             .setPopup(popup) 
@@ -71,26 +67,25 @@
                     }
                 });
             });
-
+    
         function processarGeo(local) {
             const userLatLong = [local.coords.longitude, local.coords.latitude];
-
+    
             const popup = new mapboxgl.Popup({ offset: 25 })
                 .setHTML('<h3>Estou aqui!</h3>');
-
-            new mapboxgl.Marker({ color: 'yellow' })
+    
+            new mapboxgl.Marker({ color: 'yellow' }) 
                 .setLngLat(userLatLong)
                 .setPopup(popup)
                 .addTo(map);
-
+    
             map.flyTo({ center: userLatLong, zoom: 12 }); 
         }
-
+    
         navigator.geolocation.getCurrentPosition(
             processarGeo,
             () => { alert('Erro ao obter localização.'); }
         );
-      
     </script>
 
     
