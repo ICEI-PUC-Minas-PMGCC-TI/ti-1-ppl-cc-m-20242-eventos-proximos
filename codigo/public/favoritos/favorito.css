@@ -31,15 +31,46 @@ header {
 
 .retangulo {
     position: fixed;
-    top: 0;
+    top: 80px; 
     left: 0;
     width: 200px; 
-    height: 100vh; 
+    height: calc(100vh - 80px); 
     background-color: rgb(1, 12, 41); 
-    z-index: 1;
+    z-index: 1; 
 }
+
 
 .conteudo {
     margin-left: 220px; 
     margin-top: 100px; 
+}
+
+.menu-lateral {
+    padding: 20px; 
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.menu-lateral ul {
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
+.menu-lateral ul li {
+    margin: 20px 0; 
+}
+
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: white; 
+    font-size: 18px; 
+    display: block; 
+    padding: 10px; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.menu-lateral ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
 }
