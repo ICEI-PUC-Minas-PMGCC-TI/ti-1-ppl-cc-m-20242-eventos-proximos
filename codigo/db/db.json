@@ -106,7 +106,8 @@
       "id_categoria": 3,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg",
-      "numero_acessos": 220
+      "numero_acessos": 220,
+      "confirmed": true
     },
     {
       "id": "3",
@@ -159,7 +160,6 @@
       "numero_acessos": 400
     }
   ],
-  
   "enderecos": [
     {
       "id": "1",
@@ -566,7 +566,6 @@
       "id": "ac51"
     }
   ],
-
   "notificacoes": [
     {
       "notificacoesId": 1,
@@ -625,7 +624,6 @@
       "id": "8f68"
     }
   ],
-
   "preferences": [
     {
       "user": "Fulano",
