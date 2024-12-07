@@ -1,3 +1,5 @@
+const MAPBOX_TOKEN = 'Spk.eyJ1IjoiY2Fpb25lc2VzIiwiYSI6ImNtNDkzajc3azA2OGYycXBzNDFrazFuMzcifQ.lPDeh6mVhTI-R1z_O6Zauw';
+
 let eventoAtual = null;
 let proximoId = 6;
 
@@ -32,7 +34,36 @@ function carregarCategorias() {
         .catch(error => console.error('Erro ao carregar categorias:', error));
 }
 
-document.getElementById('formularioEvento').addEventListener('submit', function (e) {
+async function buscarCoordenadas(endereco) {
+    // Estrutura os parâmetros do endereço
+    const params = new URLSearchParams({
+        street: `${endereco.rua}`,
+        number: endereco.numero,
+        place: endereco.cidade,
+        region: endereco.estado,
+        postcode: endereco.cep,
+        country: 'Brasil'
+    });
+
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${params.toString()}.json?access_token=${mapboxgl.accessToken}&limit=1`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        if (data.features && data.features.length > 0) {
+            endereco.coordinates = data.features[0].geometry.coordinates;
+            return endereco.coordinates;
+        }
+        console.log('Nenhuma coordenada encontrada para o endereço');
+        return null;
+    } catch (error) {
+        console.error('Erro ao buscar coordenadas:', error);
+        return null;
+    }
+}
+
+document.getElementById('formularioEvento').addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const endereco = {
@@ -42,7 +73,13 @@ document.getElementById('formularioEvento').addEventListener('submit', function 
         numero: document.getElementById('numero').value,
         cidade: document.getElementById('cidade').value,
         estado: document.getElementById('estado').value,
-        cep: document.getElementById('cep').value
+        cep: document.getElementById('cep').value,
+        coordinates: []
+    };
+
+    const coordinates = await buscarCoordenadas(endereco);
+    if (coordinates) {
+        endereco.coordinates = coordinates;
     }
 
     const evento = {
@@ -82,67 +119,73 @@ function carregarEventos() {
         .catch(error => console.error('Erro ao carregar eventos:', error));
 }
 
-function salvarDados(endereco, evento) {
-    let enderecos = JSON.parse(localStorage.getItem('enderecos')) || [];
-    let eventos = JSON.parse(localStorage.getItem('eventos')) || [];
-
-    enderecos.push(endereco);
-    eventos.push(evento);
-
-    localStorage.setItem('enderecos', JSON.stringify(enderecos));
-    localStorage.setItem('eventos', JSON.stringify(eventos));
-
-    Promise.all([
-        fetch("http://localhost:3000/enderecos", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(endereco)
-        }),
-        fetch("http://localhost:3000/eventos", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(evento)
-        })
-    ])
-    .then(responses => {
-        if (!responses.every(r => r.ok)) {
-            throw new Error('Falha ao salvar dados no servidor');
+async function salvarDados(endereco, evento) {
+    try {
+        const coordinates = await buscarCoordenadas(endereco);
+        if (coordinates) {
+            endereco.coordinates = coordinates;
         }
-        return Promise.all(responses.map(r => r.json()));
-    })
-    .then(() => {
+
+        let enderecos = JSON.parse(localStorage.getItem('enderecos')) || [];
+        let eventos = JSON.parse(localStorage.getItem('eventos')) || [];
+        
+        enderecos.push(endereco);
+        eventos.push(evento);
+        
+        localStorage.setItem('enderecos', JSON.stringify(enderecos));
+        localStorage.setItem('eventos', JSON.stringify(eventos));
+
+        await Promise.all([
+            fetch("http://localhost:3000/enderecos", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(endereco)
+            }),
+            fetch("http://localhost:3000/eventos", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(evento)
+            })
+        ]);
+
         console.log("Dados salvos com sucesso!");
         carregarEventos();
         resetarFormulario();
-    })
-    .catch(error => console.error("Erro ao salvar dados:", error));
+    } catch (error) {
+        console.error("Erro ao salvar dados:", error);
+    }
 }
 
-function atualizarDados(endereco, evento) {
-    Promise.all([
-        fetch(`http://localhost:3000/enderecos/${endereco.id}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(endereco)
-        }),
-        fetch(`http://localhost:3000/eventos/${evento.id}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(evento)
-        })
-    ])
-    .then(responses => {
+async function atualizarDados(endereco, evento) {
+    try {
+        const coordinates = await buscarCoordenadas(endereco);
+        if (coordinates) {
+            endereco.coordinates = coordinates;
+        }
+
+        const responses = await Promise.all([
+            fetch(`http://localhost:3000/enderecos/${endereco.id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(endereco)
+            }),
+            fetch(`http://localhost:3000/eventos/${evento.id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(evento)
+            })
+        ]);
+
         if (!responses.every(r => r.ok)) {
             throw new Error('Falha ao atualizar dados no servidor');
         }
-        return Promise.all(responses.map(r => r.json()));
-    })
-    .then(() => {
+
         console.log("Dados atualizados com sucesso!");
         carregarEventos();
         resetarFormulario();
-    })
-    .catch(error => console.error("Erro ao atualizar dados:", error));
+    } catch (error) {
+        console.error("Erro ao atualizar dados:", error);
+    }
 }
 
 function exibirEventos(eventos, categorias) {
