@@ -35,7 +35,6 @@ function carregarCategorias() {
 }
 
 async function buscarCoordenadas(endereco) {
-    // Estrutura os parâmetros do endereço
     const params = new URLSearchParams({
         street: `${endereco.rua}`,
         number: endereco.numero,
