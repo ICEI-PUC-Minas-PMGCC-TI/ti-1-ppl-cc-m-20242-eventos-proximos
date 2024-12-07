@@ -1,8 +1,9 @@
 let eventoAtual = null;
-let proximoId = 7;
+let proximoId = 6;
 
 document.addEventListener('DOMContentLoaded', () => {
     carregarEventos();
+    carregarCategorias();
     fetch("http://localhost:3000/eventos")
         .then(response => response.json())
         .then(eventos => {
@@ -13,6 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Erro ao carregar IDs:', error));
 });
+
+function carregarCategorias() {
+    fetch("http://localhost:3000/categorias")
+        .then(response => response.json())
+        .then(categorias => {
+            const selectCategoria = document.getElementById('categoria');
+            selectCategoria.innerHTML = '<option value="">Selecione uma categoria</option>';
+            
+            categorias.forEach(categoria => {
+                const option = document.createElement('option');
+                option.value = categoria.id;
+                option.textContent = categoria.tipo;
+                selectCategoria.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar categorias:', error));
+}
 
 document.getElementById('formularioEvento').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -52,9 +70,13 @@ document.getElementById('formularioEvento').addEventListener('submit', function 
 function carregarEventos() {
     fetch("http://localhost:3000/eventos")
         .then(response => response.json())
-        .then(data => {
-            if (Array.isArray(data)) {
-                exibirEventos(data);
+        .then(eventos => {
+            if (Array.isArray(eventos)) {
+                fetch("http://localhost:3000/categorias")
+                    .then(response => response.json())
+                    .then(categorias => {
+                        exibirEventos(eventos, categorias);
+                    });
             }
         })
         .catch(error => console.error('Erro ao carregar eventos:', error));
@@ -123,13 +145,14 @@ function atualizarDados(endereco, evento) {
     .catch(error => console.error("Erro ao atualizar dados:", error));
 }
 
-function exibirEventos(eventos) {
+function exibirEventos(eventos, categorias) {
     const listaEventos = document.getElementById('listaEventos');
     if (!listaEventos) return;
     
     listaEventos.innerHTML = '';
     
     eventos.forEach(evento => {
+        const categoria = categorias.find(c => c.id === evento.id_categoria);
         const itemEvento = document.createElement('div');
         itemEvento.classList.add('item-evento');
 
@@ -148,7 +171,7 @@ function exibirEventos(eventos) {
                 <div class="info-evento">
                     <strong>${evento.nome}</strong>
                     <br>
-                    <em>Categoria: ${evento.id_categoria}</em> | Data: ${evento.data}
+                    <em>Categoria: ${categoria ? categoria.tipo : 'N/A'}</em> | Data: ${evento.data}
                     <br>
                     <em>${evento.descricao}</em>
                 </div>
