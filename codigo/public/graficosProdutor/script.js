@@ -1,3 +1,91 @@
+// Adicione esta função para carregar o conteúdo inicial
+function carregarConteudoInicial() {
+    mostrarTela('meusEventos');
+    carregarCategorias();
+}
+
+// Adicione um event listener para quando o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', carregarConteudoInicial);
+
+function carregarCategorias() {
+    fetch("http://localhost:3000/categorias")
+        .then(response => response.json())
+        .then(categorias => {
+            const selectCategoria = document.getElementById('categoria');
+            if (!selectCategoria) return;
+            
+            selectCategoria.innerHTML = '<option value="">Selecione uma categoria</option>';
+            
+            categorias.forEach(categoria => {
+                const option = document.createElement('option');
+                option.value = categoria.id;
+                option.textContent = categoria.tipo;
+                selectCategoria.appendChild(option);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar categorias:', error));
+}
+
+function carregarMeusEventos() {
+    Promise.all([
+        fetch("http://localhost:3000/eventos").then(r => r.json()),
+        fetch("http://localhost:3000/categorias").then(r => r.json())
+    ])
+    .then(([eventos, categorias]) => {
+        if (Array.isArray(eventos)) {
+            exibirMeusEventos(eventos, categorias);
+        }
+    })
+    .catch(error => console.error('Erro ao carregar eventos:', error));
+}
+
+function exibirMeusEventos(eventos, categorias) {
+    const meusEventos = document.getElementById('meusEventos');
+    if (!meusEventos) return;
+    
+    meusEventos.innerHTML = `
+        <h3>Meus Eventos</h3>
+        <p>Lista de eventos criados por você!</p>
+        <button onclick="window.location.href='../cadastroEventos/cadastroEventos.html'" class="btn-neutral">
+            Cadastrar Evento
+        </button>
+        <div class="eventos-lista">
+    `;
+    
+    eventos.forEach(evento => {
+        const categoria = categorias.find(c => c.id === evento.id_categoria);
+        const itemEvento = document.createElement('div');
+        itemEvento.classList.add('item-evento');
+        
+        const imagemHtml = evento.imagem && !evento.imagem.startsWith('blob:')
+            ? `<div class="evento-imagem">
+                 <img src="${evento.imagem}" 
+                      alt="Imagem do Evento" 
+                      class="imagem-evento"
+                      onerror="this.style.display='none'">
+               </div>`
+            : '';
+        
+        itemEvento.innerHTML = `
+            <div class="detalhes-evento">
+                ${imagemHtml}
+                <div class="info-evento">
+                    <strong>${evento.nome}</strong>
+                    <br>
+                    <em>Categoria: ${categoria ? categoria.tipo : 'N/A'}</em> | Data: ${evento.data}
+                    <br>
+                    <em>${evento.descricao}</em>
+                </div>
+            </div>
+            <div class="acoes-evento">
+                <a href="../descEventos/descEventos.html?id=${evento.id}">Ver página do evento</a>
+            </div>
+        `;
+        
+        meusEventos.querySelector('.eventos-lista').appendChild(itemEvento);
+    });
+}
+
 function mostrarTela(telaId) {
     const containers = document.querySelectorAll('.container');
     containers.forEach(container => container.classList.remove('active'));
@@ -8,6 +96,7 @@ function mostrarTela(telaId) {
 
         if (telaId === 'maisFavoritados') createFavoritedEventsChart('graficoFavoritos');
         if (telaId === 'maisConfirmados') createConfirmedEventsChart('graficoConfirmacoes');
+        if (telaId === 'meusEventos') carregarMeusEventos();
     } else {
         console.error(`Tela com ID "${telaId}" não encontrada.`);
     }

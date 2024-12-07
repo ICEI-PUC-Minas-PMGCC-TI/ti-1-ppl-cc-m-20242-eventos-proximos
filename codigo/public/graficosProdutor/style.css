@@ -122,6 +122,83 @@ header {
     display: block;
 }
 
+/* Botão Cadastro de Eventos */
+.btn-neutral {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.btn-neutral:hover {
+    background-color: #45a049;
+}
+
+.btn-neutral:active {
+    background-color: #3d8b40;
+    transform: translateY(1px);
+}
+
+.btn-neutral:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+/* Eventos Cadastrados*/
+
+.event-list {
+    margin-top: 20px;
+}
+
+.item-evento {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.detalhes-evento {
+    display: flex;
+    align-items: center;
+}
+
+.imagem-evento {
+    width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.info-evento {
+    margin-left: 10px;
+}
+
+.acoes-evento {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.acoes-evento a {
+    color: #007bff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.acoes-evento a:hover {
+    text-decoration: underline;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .logo img {

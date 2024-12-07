@@ -45,16 +45,20 @@
     <div class="sidebar">
         <a href="#" onclick="mostrarTela('meusEventos')">Meus Eventos</a>
         <a href="../meuPerfil/perfil.html">Meu perfil</a>
+        <a href="../notificacoesEventos/notificacoes.html">Notificações</a> 
         <a href="#" onclick="mostrarTela('maisFavoritados')">Mais Favoritados</a>
         <a href="#" onclick="mostrarTela('maisConfirmados')">Mais Confirmados</a>
-        <a href="../notificacoesEventos/notificacoes.html">Notificações</a>
+        
     </div>
 
     <div class="main-content">
 
         <div class="container active" id="meusEventos">
             <h3>Meus Eventos</h3>
-            <p>Lista de eventos criados por você!!!</p>
+            <p>Lista de eventos criados por você!</p>
+            <button onclick="window.location.href='../cadastroEventos/cadastroEventos.html'" class="btn-neutral">
+                Cadastrar Evento
+            </button>
         </div>
 
         <div class="container" id="maisFavoritados">
