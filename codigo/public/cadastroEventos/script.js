@@ -1,5 +1,3 @@
-const MAPBOX_TOKEN = 'Spk.eyJ1IjoiY2Fpb25lc2VzIiwiYSI6ImNtNDkzajc3azA2OGYycXBzNDFrazFuMzcifQ.lPDeh6mVhTI-R1z_O6Zauw';
-
 let eventoAtual = null;
 let proximoId = 6;
 
@@ -38,6 +36,7 @@ async function buscarCoordenadas(endereco) {
     const params = new URLSearchParams({
         street: `${endereco.rua}`,
         number: endereco.numero,
+        neighborhood: endereco.bairro,
         place: endereco.cidade,
         region: endereco.estado,
         postcode: endereco.cep,
@@ -70,6 +69,7 @@ document.getElementById('formularioEvento').addEventListener('submit', async fun
         local: document.getElementById('nomeLocal').value,
         rua: document.getElementById('rua').value,
         numero: document.getElementById('numero').value,
+        bairro: document.getElementById('bairro').value,
         cidade: document.getElementById('cidade').value,
         estado: document.getElementById('estado').value,
         cep: document.getElementById('cep').value,
@@ -267,43 +267,6 @@ async function editarEvento(id) {
 }
 
 function preencherFormulario(evento, endereco) {
-    const elementos = {
-        nome: document.getElementById('nome'),
-        data: document.getElementById('data'),
-        descricao: document.getElementById('descricao'),
-        categoria: document.getElementById('categoria'),
-        nomeLocal: document.getElementById('nomeLocal'),
-        rua: document.getElementById('rua'),
-        numero: document.getElementById('numero'),
-        cidade: document.getElementById('cidade'),
-        estado: document.getElementById('estado'),
-        cep: document.getElementById('cep')
-    };
-
-    for (const [key, element] of Object.entries(elementos)) {
-        if (!element) {
-            throw new Error(`Elemento ${key} não encontrado`);
-        }
-    }
-
-    elementos.nome.value = evento.nome;
-    elementos.data.value = evento.data;
-    elementos.descricao.value = evento.descricao;
-    elementos.categoria.value = evento.id_categoria;
-    elementos.nomeLocal.value = endereco.local || '';
-    elementos.rua.value = endereco.rua;
-    elementos.numero.value = endereco.numero;
-    elementos.cidade.value = endereco.cidade;
-    elementos.estado.value = endereco.estado;
-    elementos.cep.value = endereco.cep;
-
-    const containerImagem = document.getElementById('containerImagem');
-    if (containerImagem && evento.imagem) {
-        containerImagem.innerHTML = `<img src="${evento.imagem}" alt="Imagem do Evento" class="imagem-evento">`;
-    }
-}
-
-function preencherFormulario(evento, endereco) {
     document.getElementById('nome').value = evento.nome;
     document.getElementById('data').value = evento.data;
     document.getElementById('descricao').value = evento.descricao;
@@ -311,6 +274,7 @@ function preencherFormulario(evento, endereco) {
     document.getElementById('nomeLocal').value = endereco.local || '';
     document.getElementById('rua').value = endereco.rua;
     document.getElementById('numero').value = endereco.numero;
+    document.getElementById('bairro').value = endereco.bairro;
     document.getElementById('cidade').value = endereco.cidade;
     document.getElementById('estado').value = endereco.estado;
     document.getElementById('cep').value = endereco.cep;
