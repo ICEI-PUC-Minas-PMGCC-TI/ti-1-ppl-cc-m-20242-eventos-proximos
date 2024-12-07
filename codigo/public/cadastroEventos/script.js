@@ -179,7 +179,7 @@ function exibirEventos(eventos, categorias) {
             <div class="acoes-evento">
                 <button class="editar-btn" onclick="editarEvento('${evento.id}')">Editar</button>
                 <button class="excluir-btn" onclick="excluirEvento('${evento.id}')">Excluir</button>
-                <a href="#" onclick="verPaginaEvento('${evento.id}')">Ver página do evento</a>
+                <a href="../descEventos/descEventos.html?id=${evento.id}">Ver página do evento</a>
             </div>
         `;
         
