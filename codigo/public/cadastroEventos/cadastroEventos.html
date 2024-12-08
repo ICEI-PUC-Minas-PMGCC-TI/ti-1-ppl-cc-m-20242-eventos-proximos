@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="../assets/css/style.css">
     <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiY2Fpb25lc2VzIiwiYSI6ImNtNDkzajc3azA2OGYycXBzNDFrazFuMzcifQ.lPDeh6mVhTI-R1z_O6Zauw';
     </script>
@@ -27,21 +28,13 @@
     <header>
         <nav class="caixa-menu-principal">
             <div class="logo">
-                <a href="../index.html"><img src="/ti-1-ppl-cc-m-20242-eventos-proximos/codigo/public/assets/images/eventful.png" alt="logotipo"> </a>     
+                <a href="../index.html"><img src="../assets/images/logo.png" alt="logotipo"> </a>     
             </div>  
-            <div class="barra-pesquisa">
-                <ion-icon name="search-outline"></ion-icon>
-                <input type="text" placeholder="Pesquisar eventos..." id="search-input">
-            </div>
             
-            <div class="filtro-localizacao">
-                <img src="https://img.icons8.com/?size=100&id=Qrcap2tCbmPN&format=png&color=000000" alt="icon-localizacao">
-                <span class="texto-seta">Onde encontrar</span> 
-                <ion-icon name="chevron-down-outline"></ion-icon>
-            </div>
-
-            <div class="perfil-do-usuario">
-                <a href=" ">Olá, fulano!</a>
+            <div class="perfil">
+                <a href="/codigo/public/graficosProdutor/graficosProdutor.html">
+                    <p id="user-name">Olá</p>
+                </a>
             </div>
         </nav>
     </header>
