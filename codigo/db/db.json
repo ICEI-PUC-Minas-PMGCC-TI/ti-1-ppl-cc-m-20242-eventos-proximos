@@ -93,7 +93,8 @@
       "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
       "id_categoria": 9,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
+      "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png",
+      "confirmed": true
     },
     {
       "id": 2,
@@ -242,7 +243,7 @@
       "id": 1,
       "id_usuario": 2,
       "id_evento": 5,
-      "confirmed": false
+      "confirmed": true
     },
     {
       "id": 2,
@@ -272,6 +273,36 @@
       "id": 6,
       "id_usuario": 6,
       "id_evento": 5,
+      "confirmed": true
+    },
+    {
+      "id_usuario": 1,
+      "id_evento": 2,
+      "confirmed": true,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "id_usuario": 1,
+      "id_evento": 5,
+      "confirmed": false
+    },
+    {
+      "id": 9,
+      "id_usuario": 2,
+      "id_evento": 6,
+      "confirmed": true
+    },
+    {
+      "id": 10,
+      "id_usuario": 3,
+      "id_evento": 6,
+      "confirmed": true
+    },
+    {
+      "id": 11,
+      "id_usuario": 1,
+      "id_evento": 3,
       "confirmed": true
     }
   ],
@@ -716,6 +747,6 @@
     {
       "id_evento": "6",
       "numero_acessos": 98
-   }
+    }
   ]
 }
