@@ -5,7 +5,8 @@
       "login": "admin",
       "senha": "123",
       "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+      "email": "admin@abc.com",
+      "favoritos": []
     },
     {
       "id": "2",

@@ -1,10 +1,8 @@
-// Adicione esta função para carregar o conteúdo inicial
 function carregarConteudoInicial() {
     mostrarTela('meusEventos');
     carregarCategorias();
 }
 
-// Adicione um event listener para quando o DOM estiver carregado
 document.addEventListener('DOMContentLoaded', carregarConteudoInicial);
 
 function carregarCategorias() {
@@ -164,7 +162,6 @@ async function createConfirmedEventsChart(idContainer) {
         const eventos = await fetchData('eventos');
         const confirmacoes = await fetchData('confirmacao');
 
-        // Filtra apenas confirmed: true
         const confirmacoesValidas = confirmacoes.filter(c => c.confirmed);
 
         const confirmacoesPorEvento = confirmacoesValidas.reduce((acc, confirmacao) => {

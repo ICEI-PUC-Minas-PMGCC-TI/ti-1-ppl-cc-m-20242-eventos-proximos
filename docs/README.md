@@ -24,7 +24,7 @@ A documentação do projeto é estruturada da seguinte forma:
 6. Solução
 7. Referências Bibliográficas
 
-✅ [Documentação de Design Thinking (MIRO)](files/Documentacao.pdfpdf)
+✅ [Documentação de Design Thinking (MIRO)](files/Documentacao.pdf)
 
 # Contexto
 
@@ -159,12 +159,6 @@ Tela inicial do usuario comum que mostra os eventos que estão para acontecer co
 
 ![telaInicial](images/inicial.png)
 
-### Tela inical do protutor
-
-Tela inicial para usuarios cadastrados como produtores com as mesmas funcionalidades de usuarios comuns porem com a posibilidade de divulgar seus eventos
-
-![telaInicialProdutor](images/inicialProdutor.png)
-
 ### Descrição dos eventos
 
 Tela que mostra a descrição do evento
@@ -185,7 +179,6 @@ Tela com os eventos mais acessados
 
 ### User Flow
 
-
 ![Userflow](images/UserFlow.png)
 
 ### Protótipo Interativo
@@ -204,33 +197,8 @@ Relação de ferramentas empregadas pelo grupo durante o projeto.
 | --------------------------- | ---------- | -------------------------------------------------- |
 | Processo de Design Thinking | Miro       | https://miro.com/app/board/uXjVKoWGKQ8=/        |
 | Repositório de código     | GitHub     | https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-ppl-cc-m-20242-eventos-proximos   |
-| Hospedagem do site          | Render     | https://site.render.com/XXXXXXX ⚠️ EXEMPLO ⚠️ |
 | Protótipo Interativo       | MarvelApp  | https://marvelapp.com/prototype/1b81d4a4   |
 |                             |            |                                                    |
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Liste as ferramentas empregadas no desenvolvimento do projeto, justificando a escolha delas, sempre que possível. Inclua itens como: (1) Editor de código, (2) )ferramentas de comunicação, (3) )ferramentas de diagramação, (4) )plataformas de hospedagem, entre outras.
-
-## Gerenciamento do Projeto
-
-Divisão de papéis no grupo e apresentação da estrutura da ferramenta de controle de tarefas (Kanban).
-
-![Exemplo de Kanban](images/exemplo-kanban.png)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
->
-> Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
->
-> **Orientações**:
->
-> - [Sobre Projects - GitHub Docs](https://docs.github.com/pt/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
-> - [Gestão de projetos com GitHub | balta.io](https://balta.io/blog/gestao-de-projetos-com-github)
-> - [(460) GitHub Projects - YouTube](https://www.youtube.com/playlist?list=PLiO7XHcmTsldZR93nkTFmmWbCEVF_8F5H)
-> - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
 
 # Solução Implementada
 
@@ -238,38 +206,54 @@ Esta seção apresenta todos os detalhes da solução criada no projeto.
 
 ## Vídeo do Projeto
 
-O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução. ⚠️ EXEMPLO ⚠️
+O vídeo a seguir traz uma apresentação do problema que a equipe está tratando e a proposta de solução.
 
-[![Vídeo do projeto](images/video.png)](https://www.youtube.com/embed/70gGoFyGeqQ)
-
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> O video de apresentação é voltado para que o público externo possa conhecer a solução. O formato é livre, sendo importante que seja apresentado o problema e a solução numa linguagem descomplicada e direta.
->
-> Inclua um link para o vídeo do projeto.
+[![Vídeo do projeto](images/video.png)](https://www.youtube.com/embed/70gGoFyGeqQ) //colocar link
 
 ## Funcionalidades
 
 Esta seção apresenta as funcionalidades da solução.Info
 
-##### Funcionalidade 1 - Cadastro de Contatos ⚠️ EXEMPLO ⚠️
+##### Funcionalidade 1 - Cadastro de Eventos
 
-Permite a inclusão, leitura, alteração e exclusão de contatos para o sistema
+Permite o cadastro, leitura, alteração e exclusão de eventos para o sistema.
 
-* **Estrutura de dados:** [Contatos](#ti_ed_contatos)
+* **Estrutura de dados:** Eventos, Enderecos, Categorias
 * **Instruções de acesso:**
   * Abra o site e efetue o login
-  * Acesse o menu principal e escolha a opção Cadastros
-  * Em seguida, escolha a opção Contatos
+  * Acesse o menu principal e clique no perfil do usuário
+  * Em seguida, escolha a opção Cadastrar Evento
 * **Tela da funcionalidade**:
 
-![Tela de Funcionalidade](images/exemplo-funcionalidade.png)
+![Tela de Funcionalidade - pt 1](images/cadastroEventos_1.jpg)
+![Tela de Funcionalidade - pt 2](images/cadastroEventos_2.jpg)
+![Tela de Funcionalidade - pt 3](images/cadastroEventos_3.jpg)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente cada uma das funcionalidades que a aplicação fornece tanto para os usuários quanto aos administradores da solução.
->
-> Inclua, para cada funcionalidade, itens como: (1) titulos e descrição da funcionalidade; (2) Estrutura de dados associada; (3) o detalhe sobre as instruções de acesso e uso.
+##### Funcionalidade 2 - Tela Inicial
+
+Permite a visualização e a filtragem com base nas categorias dos eventos.
+
+* **Estrutura de dados:** Eventos, Categorias
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Visualize a página e filtre as categorias
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/telaInicial_1.jpg)
+![Tela de Funcionalidade - pt 2](images/telaInicial_2.jpg)
+
+##### Funcionalidade 3 - Detalhes do Evento
+
+Permite a visualização das informações do evento, além de permitir o usuário a deixar um comentário, favoritar e confirmar sua presença.
+
+* **Estrutura de dados:** Eventos, Enderecos, Categorias, Confirmacao, Avaliacoes, Favoritos
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Clique em um dos eventos exibidos na tela
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/decEventos_1.jpg)
+![Tela de Funcionalidade - pt 2](images/descEventos_2.jpg)
 
 ## Estruturas de Dados
 
