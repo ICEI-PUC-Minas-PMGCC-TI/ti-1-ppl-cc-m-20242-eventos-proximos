@@ -91,7 +91,7 @@
       "data": "15-11-2024",
       "id_endereco": 2,
       "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
-      "id_categoria": "9",
+      "id_categoria": 9,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
     },
@@ -113,7 +113,7 @@
       "data": "31-12-2024",
       "id_endereco": 4,
       "descricao": "Venha passar o Réveillon na festa mais tradicional da serra. Uma ceia especial e muita animação. Traga a família e os amigos para viver esta experiência.",
-      "id_categoria": "6",
+      "id_categoria": 6,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
     },
@@ -135,7 +135,7 @@
       "data": "05-11-2024",
       "id_endereco": 2,
       "descricao": "Bruno Mars apresentará seu show Live in Brazil em Belo Horizonte no dia 5 de novembro de 2024, no Mineirão. O espetáculo promete hits como Uptown Funk e Just the Way You Are, oferecendo uma noite vibrante e inesquecível para o público.",
-      "id_categoria": "9",
+      "id_categoria": 9,
       "status": "ativo",
       "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png"
     },
@@ -146,7 +146,7 @@
       "data": "07-11-2024",
       "id_endereco": 6,
       "descricao": "Um dos maiores artistas do país, completa 70 anos e quem ganha o presente é o público. Para celebrar esse marco, Fábio Jr trará a Porto Alegre sua nova turnê “Bem Mais Que os Meus 20 e Poucos Anos”, que vai contar de forma surpreendente a história artística do cantor.",
-      "id_categoria": "9",
+      "id_categoria": 9,
       "status": "ativo",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2g1gnk3b44m1q8e8g6kevcbmqgd3defd5t2251493ultt2mbiqidmtkdko4rc1eksee15dt70u6q2gfuvhherf5tlu0dv4j70276oqj.webp"
     }
@@ -277,47 +277,47 @@
   ],
   "categorias": [
     {
-      "id": "1",
+      "id": 1,
       "tipo": "Corporativo"
     },
     {
-      "id": "2",
+      "id": 2,
       "tipo": "Cultural"
     },
     {
-      "id": "3",
+      "id": 3,
       "tipo": "Educacional"
     },
     {
-      "id": "4",
+      "id": 4,
       "tipo": "Esportivo"
     },
     {
-      "id": "5",
+      "id": 5,
       "tipo": "Exposição"
     },
     {
-      "id": "6",
+      "id": 6,
       "tipo": "Festa"
     },
     {
-      "id": "7",
+      "id": 7,
       "tipo": "Festival"
     },
     {
-      "id": "8",
+      "id": 8,
       "tipo": "Palestra"
     },
     {
-      "id": "9",
+      "id": 9,
       "tipo": "Show"
     },
     {
-      "id": "10",
+      "id": 10,
       "tipo": "Teatro"
     },
     {
-      "id": "11",
+      "id": 11,
       "tipo": "Workshop"
     }
   ],
