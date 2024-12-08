@@ -6,13 +6,13 @@ Informações básicas do projeto.
 * **Repositório GitHub:** [Repositorio](https://github.com/ICEI-PUC-Minas-PMGCC-TI/ti-1-ppl-cc-m-20242-eventos-proximos)
 * **Membros da equipe:**
 
-  * [Rafael Henrique](https://github.com/Rafaelhs2005) 
-  * [Joao Pedro](https://github.com/Jopefv) 
-  * [Kamily Vitória](https://github.com/kamivss)
   * [Bruna Noely](https://github.com/brunanoely)
-  * [Gabriel Lucas](https://github.com/Gabriellsmm)
   * [Caio Fernandes](https://github.com/caionesess)
+  * [Gabriel Lucas](https://github.com/Gabriellsmm)
+  * [Joao Pedro](https://github.com/Jopefv) 
   * [Julia Santos](https://github.com/ajuliasantos)
+  * [Kamily Vitória](https://github.com/kamivss)
+  * [Rafael Henrique](https://github.com/Rafaelhs2005)
 
 A documentação do projeto é estruturada da seguinte forma:
 
@@ -229,7 +229,7 @@ Permite o cadastro, leitura, alteração e exclusão de eventos para o sistema.
 ![Tela de Funcionalidade - pt 2](images/cadastroEventos_2.jpg)
 ![Tela de Funcionalidade - pt 3](images/cadastroEventos_3.jpg)
 
-##### Funcionalidade 2 - Tela Inicial
+##### Funcionalidade 2 - Tela Inicial / Filtragem dos Eventos
 
 Permite a visualização e a filtragem com base nas categorias dos eventos.
 
@@ -242,7 +242,7 @@ Permite a visualização e a filtragem com base nas categorias dos eventos.
 ![Tela de Funcionalidade - pt 1](images/telaInicial_1.jpg)
 ![Tela de Funcionalidade - pt 2](images/telaInicial_2.jpg)
 
-##### Funcionalidade 3 - Detalhes do Evento
+##### Funcionalidade 3 - Detalhes do Evento / Confirmação do Evento / Avaliações do Evento
 
 Permite a visualização das informações do evento, além de permitir o usuário a deixar um comentário, favoritar e confirmar sua presença.
 
@@ -262,7 +262,7 @@ Permite a visualização dos eventos em um mapa para que o usuário veja os mais
 * **Estrutura de dados:** Eventos, Enderecos
 * **Instruções de acesso:**
   * Abra o site e efetue o login
-  * Clique em "Mapa de Eventos" no menu inicial
+  * Clique em Mapa de Eventos no menu inicial
 * **Tela da funcionalidade**:
 
 ![Tela de Funcionalidade - pt 1](images/mapa.jpeg)
@@ -306,69 +306,240 @@ Exibe notificações a respeito dos eventos que interessam o usuário baseando-s
 
 ![Tela de Funcionalidade - pt 1](images/notificacoes.jpg)
 
+
+##### Funcionalidade 8 - Calendário
+
+Exibe um calendário com os eventos confirmados pelo usuário.
+
+* **Estrutura de dados:** Eventos, Confirmacoes
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Clique no perfil do usuário no menu inicial
+  * Clique em Calendário
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/calendario.jpg)
+
+##### Funcionalidade 8 - Seus Favoritos
+
+Permite a visualização dos eventos favoritados pelo usuário.
+
+* **Estrutura de dados:** Eventos, Favoritos
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Clique no perfil do usuário no menu inicial
+  * Clique em Seus Favoritos
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/favoritos.jpeg)
+
+##### Funcionalidade 9 - Meu Perfil
+
+Permite a visualização e alteração dos dados do usuário.
+
+* **Estrutura de dados:** Usuarios
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Clique no perfil do usuário no menu inicial
+  * Clique em Meu Perfil
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/meuPerfil.jpg)
+
 ## Estruturas de Dados
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
 
-##### Estrutura de Dados - Contatos   ⚠️ EXEMPLO ⚠️
-
-Contatos da aplicação
-
-```json
-  {
-    "id": 1,
-    "nome": "Leanne Graham",
-    "cidade": "Belo Horizonte",
-    "categoria": "amigos",
-    "email": "Sincere@april.biz",
-    "telefone": "1-770-736-8031",
-    "website": "hildegard.org"
-  }
-  
-```
-
-##### Estrutura de Dados - Usuários  ⚠️ EXEMPLO ⚠️
+##### Estrutura de Dados - Usuários
 
 Registro dos usuários do sistema utilizados para login e para o perfil do sistema
 
 ```json
   {
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    email: "admin@abc.com",
-    id: "eed55b91-45be-4f2c-81bc-7686135503f9",
-    login: "admin",
-    nome: "Administrador do Sistema",
-    senha: "123"
+    {
+      "id": "1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com",
+      "favoritos": []
+    },
   }
+  
 ```
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente as estruturas de dados utilizadas na solução tanto para dados utilizados na essência da aplicação quanto outras estruturas que foram criadas para algum tipo de configuração
->
-> Nomeie a estrutura, coloque uma descrição sucinta e apresente um exemplo em formato JSON.
->
-> **Orientações:**
->
-> * [JSON Introduction](https://www.w3schools.com/js/js_json_intro.asp)
-> * [Trabalhando com JSON - Aprendendo desenvolvimento web | MDN](https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/JSON)
+##### Estrutura de Dados - Favoritos
+
+Registro dos favoritados pelo usuário
+
+```json
+  {
+      "id": "1",
+      "id_usuario": 1,
+      "id_evento": 1
+  },
+```
+
+##### Estrutura de Dados - Eventos
+
+Eventos cadastrados
+
+```json
+  {
+    "id": "1",
+    "id_usuario": 1,
+    "nome": "Numanice #3 Tour",
+    "data": "15-11-2024",
+    "id_endereco": 2,
+    "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
+    "id_categoria": "9",
+    "status": "ativo",
+    "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
+  },
+```
+
+##### Estrutura de Dados - Endereços
+
+Endereços dos Eventos cadastrados
+
+```json
+  {
+    "id": "1",
+    "local": "Parque Ibirapuera - Auditório",
+    "rua": "Av. Pedro Álvares Cabral",
+    "numero": 0,
+    "bairro": "Vila Mariana",
+    "cidade": "São Paulo",
+    "estado": "SP",
+    "cep": "04094-050",
+    "coordinates": [
+        -46.653867,
+        -23.587416
+    ]
+  },
+```
+
+##### Estrutura de Dados - Confirmação
+
+Confirmação de usuários em Eventos cadastrados
+
+```json
+    {
+      "id": "1",
+      "id_usuario": 2,
+      "id_evento": 5,
+      "confirmed": false
+    },
+```
+
+
+##### Estrutura de Dados - Categorias
+
+Categorias de Eventos
+
+```json
+    {
+      "id": "1",
+      "tipo": "Corporativo"
+    },
+```
+
+##### Estrutura de Dados - Avaliações
+
+Avaliações de Eventos feitas pelos usuários
+
+```json
+    {
+      "id": "1",
+      "usuarioId": 1,
+      "eventoId": 1,
+      "nota": 4.5,
+      "comentario": "Evento bem organizado e com boa seleção de bandas!",
+      "dataAvaliacao": "2024-11-16"
+    },
+```
+
+##### Estrutura de Dados - Meses
+
+Estrutura de meses para o calendário
+
+```json
+    {
+      "nome": "Janeiro",
+      "numero_dias": 31,
+      "trimestre": 1,
+      "id": "0aab"
+    },
+```
+
+##### Estrutura de Dados - Dias da Semana
+
+Estrutura de dias para o calendário
+
+```json
+    {
+      "nome": "Domingo",
+      "abreviacao": "D",
+      "id": "4846"
+    },
+```
+
+##### Estrutura de Dados - Anos
+
+Estrutura de anos para o calendário
+
+```json
+    {
+      "ano": 2024,
+      "bissexto": true,
+      "id": "1cd9"
+    },
+```
+
+
+##### Estrutura de Dados - Feriados
+
+Estrutura de feriados para o calendário
+
+```json
+    {
+      "nome": "Ano Novo",
+      "data": "2024-01-01",
+      "tipo": "Nacional",
+      "descricao": "Celebração do início do ano",
+      "id": "8f05"
+    },
+```
+
+##### Estrutura de Dados - Notificações
+
+Estrutura de notificações de Eventos
+
+```json
+    {
+      "notificacoesId": 1,
+      "titulo": "Novo Workshop sobre Desenvolvimento Web",
+      "desc": "Inscreva-se agora para o workshop e não perca!",
+      "categoria": "workshop",
+      "lido": true,
+      "link": "/event/001",
+      "id_evento": 1,
+      "id": "c9cd"
+    },
+```
 
 ## Módulos e APIs
 
 Esta seção apresenta os módulos e APIs utilizados na solução
 
-**Images**:
-
-* Unsplash - [https://unsplash.com/](https://unsplash.com/) ⚠️ EXEMPLO ⚠️
-
 **Fonts:**
 
-* Icons Font Face - [https://fontawesome.com/](https://fontawesome.com/) ⚠️ EXEMPLO ⚠️
+* Fontes - [https://fonts.googleapis.com/](https://fonts.googleapis.com/)
 
 **Scripts:**
 
-* jQuery - [http://www.jquery.com/](http://www.jquery.com/) ⚠️ EXEMPLO ⚠️
-* Bootstrap 4 - [http://getbootstrap.com/](http://getbootstrap.com/) ⚠️ EXEMPLO ⚠️
+* Bootstrap 5.3.0 - [http://getbootstrap.com/](http://getbootstrap.com/)
+* MapBox v2.14.1 - [https://www.mapbox.com/](https://www.mapbox.com/)
 
 > ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
 >
@@ -378,13 +549,5 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 
 As referências utilizadas no trabalho foram:
 
-* SOBRENOME, Nome do autor. Título da obra. 8. ed. Cidade: Editora, 2000. 287 p ⚠️ EXEMPLO ⚠️
+* ROMMEL, P. JSONServer. 2024. Disponível em: https://replit.com/@rommelpuc/JSONServer. Acesso em: 7 dez. 2024.
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
->
-> **Orientações**:
->
-> - [Formato ABNT](https://www.normastecnicas.com/abnt/trabalhos-academicos/referencias/)
-> - [Referências Bibliográficas da ABNT](https://comunidade.rockcontent.com/referencia-bibliografica-abnt/)
