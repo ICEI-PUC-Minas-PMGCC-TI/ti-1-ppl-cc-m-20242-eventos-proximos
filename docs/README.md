@@ -255,6 +255,57 @@ Permite a visualização das informações do evento, além de permitir o usuár
 ![Tela de Funcionalidade - pt 1](images/decEventos_1.jpg)
 ![Tela de Funcionalidade - pt 2](images/descEventos_2.jpg)
 
+##### Funcionalidade 4 - Mapa dos Eventos
+
+Permite a visualização dos eventos em um mapa para que o usuário veja os mais próximos e veja a página de detalhes ao clicar sobre o evento.
+
+* **Estrutura de dados:** Eventos, Enderecos
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Clique em "Mapa de Eventos" no menu inicial
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/mapa.jpeg)
+
+##### Funcionalidade 5 - Página do Usuário
+
+Permite a visualização dos eventos cadastrados(se houver), e um menu lateral para escolher uma página a ser direcionado.
+
+* **Estrutura de dados:** Eventos, Enderecos, Categorias
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Clique no perfil do usuário no menu inicial
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/perfilUsuario.jpg)
+
+##### Funcionalidade 6 - Gráficos dos Produtores
+
+Permite a visualização dos eventos cadastrados mais favoritados e com mais confirmações (se houver), e um menu lateral para escolher uma página a ser direcionado.
+
+* **Estrutura de dados:** Eventos, Favoritos, Confirmacoes
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Clique no perfil do usuário no menu inicial
+  * Clique em Mais Favoritados e Mais Confirmados
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/graficos_1.jpg)
+![Tela de Funcionalidade - pt 2](images/graficos_2.jpg)
+
+##### Funcionalidade 7 - Notificações
+
+Exibe notificações a respeito dos eventos que interessam o usuário baseando-se nos seus favoritos.
+
+* **Estrutura de dados:** Eventos, Favoritos
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Clique no perfil do usuário no menu inicial
+  * Clique em Notificações
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/notificacoes.jpg)
+
 ## Estruturas de Dados
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
