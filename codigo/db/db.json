@@ -99,9 +99,7 @@
       "descricao": "Não perca esse festival incrível com os maiores sucessos do momento!",
       "id_categoria": 9,
       "status": "ativo",
-      "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png",
-      "confirmed": true,
-      "confirmed": true
+      "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
     },
     {
       "id": "2",
