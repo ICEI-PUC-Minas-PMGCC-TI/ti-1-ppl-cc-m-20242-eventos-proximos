@@ -1,26 +1,23 @@
 let maxId = 0;
 
 function carregarPerguntas() {
-  const perguntasJson = localStorage.getItem('perguntas');
   const perguntasHolder = document.getElementById('perguntas');
   perguntasHolder.innerHTML = '';
-  maxId = 0;
 
-  if (perguntasJson) {
-    const data = JSON.parse(perguntasJson);
-
-    data.perguntas.forEach((pergunta) => {
-      criarPerguntaElement(pergunta, perguntasHolder);
-      if (pergunta.id > maxId) {
-        maxId = pergunta.id;
-      }
+  fetch('http://localhost:3000/perguntas')
+    .then((response) => response.json())
+    .then((data) => {
+      maxId = 0;
+      data.forEach((pergunta) => {
+        criarPerguntaElement(pergunta, perguntasHolder);
+        if (pergunta.id > maxId) {
+          maxId = pergunta.id;
+        }
+      });
+    })
+    .catch((error) => {
+      console.error('Erro ao carregar perguntas:', error);
     });
-  } else {
-    const initialData = {
-      perguntas: [],
-    };
-    localStorage.setItem('perguntas', JSON.stringify(initialData));
-  }
 }
 
 function criarPerguntaElement(pergunta, container) {
@@ -67,13 +64,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (pergunta && resumo && respostaCompleta) {
       const novaPergunta = {
-        id: maxId + 1,
+        id: maxId + 1, // Calcula um novo ID baseado no maior ID atual
         pergunta: pergunta,
         resumo: resumo,
         respostaCompleta: respostaCompleta,
       };
 
-      adicionarPerguntaAoLocalStorage(novaPergunta);
+      adicionarPerguntaAoServidor(novaPergunta);
       popup.style.display = 'none';
       document.getElementById('pergunta').value = '';
       document.getElementById('resumo').value = '';
@@ -97,28 +94,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
 window.onload = carregarPerguntas;
 
-function adicionarPerguntaAoLocalStorage(novaPergunta) {
-  const perguntasJson = localStorage.getItem('perguntas');
-  const perguntasData = JSON.parse(perguntasJson);
-
-  perguntasData.perguntas.push(novaPergunta);
-  localStorage.setItem('perguntas', JSON.stringify(perguntasData));
-  carregarPerguntas();
+function adicionarPerguntaAoServidor(novaPergunta) {
+  fetch('http://localhost:3000/perguntas', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(novaPergunta),
+  })
+    .then((response) => {
+      if (response.ok) {
+        carregarPerguntas(); // Recarrega as perguntas após adicionar
+      } else {
+        console.error('Erro ao adicionar pergunta:', response.statusText);
+      }
+    })
+    .catch((error) => {
+      console.error('Erro na requisição:', error);
+    });
 }
 
 function filtrarPerguntasPorId(id) {
   const perguntasHolder = document.getElementById('perguntas');
   perguntasHolder.innerHTML = ''; // Limpa as perguntas atuais
 
-  const perguntasJson = localStorage.getItem('perguntas');
-  if (perguntasJson) {
-    const data = JSON.parse(perguntasJson);
-    const filtradas = data.perguntas.filter(
-      (pergunta) => pergunta.id.toString() === id,
-    );
-
-    filtradas.forEach((pergunta) =>
-      criarPerguntaElement(pergunta, perguntasHolder),
-    );
-  }
+  fetch(`http://localhost:3000/perguntas?id=${id}`)
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((pergunta) =>
+        criarPerguntaElement(pergunta, perguntasHolder),
+      );
+    })
+    .catch((error) => {
+      console.error('Erro ao filtrar perguntas:', error);
+    });
 }

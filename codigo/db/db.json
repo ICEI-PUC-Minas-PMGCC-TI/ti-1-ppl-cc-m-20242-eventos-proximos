@@ -1,7 +1,7 @@
 {
   "usuarios": [
     {
-      "id": "1",
+      "id": 1,
       "login": "admin",
       "senha": "123",
       "nome": "Administrador do Sistema",
@@ -15,42 +15,42 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "login": "user",
       "senha": "123",
       "nome": "Usuario Comum",
       "email": "user@abc.com"
     },
     {
-      "id": "3",
+      "id": 3,
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com"
     },
     {
-      "id": "4",
+      "id": 4,
       "login": "maria123",
       "senha": "senha123",
       "nome": "Maria Silva",
       "email": "maria.silva@gmail.com"
     },
     {
-      "id": "5",
+      "id": 5,
       "login": "joaod",
       "senha": "pass456",
       "nome": "João Dias",
       "email": "joao.dias@hotmail.com"
     },
     {
-      "id": "6",
+      "id": 6,
       "login": "carla_santos",
       "senha": "senha789",
       "nome": "Carla Santos",
       "email": "carla.santos@yahoo.com"
     },
     {
-      "id": "7",
+      "id": 7,
       "login": "ricardo85",
       "senha": "minhasenha",
       "nome": "Ricardo Pereira",
@@ -59,39 +59,39 @@
   ],
   "favoritos": [
     {
-      "id": "1",
+      "id": 1,
       "id_usuario": 1,
       "id_evento": 1
     },
     {
-      "id": "2",
+      "id": 2,
       "id_usuario": 1,
       "id_evento": 2
     },
     {
-      "id": "3",
+      "id": 3,
       "id_usuario": 1,
       "id_evento": 3
     },
     {
-      "id": "4",
+      "id": 4,
       "id_usuario": 1,
       "id_evento": 4
     },
     {
-      "id": "5",
+      "id": 5,
       "id_usuario": 1,
       "id_evento": 5
     },
     {
-      "id": "6",
+      "id": 6,
       "id_usuario": 1,
       "id_evento": 6
     }
   ],
   "eventos": [
     {
-      "id": "1",
+      "id": 1,
       "id_usuario": 1,
       "nome": "Numanice #3 Tour",
       "data": "15-11-2024",
@@ -103,7 +103,7 @@
       "confirmed": true
     },
     {
-      "id": "2",
+      "id": 2,
       "id_usuario": 1,
       "nome": "Web-Tech Days",
       "data": "29-11-2024",
@@ -114,7 +114,7 @@
       "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg"
     },
     {
-      "id": "3",
+      "id": 3,
       "id_usuario": 1,
       "nome": "Réveillon da Serra",
       "data": "31-12-2024",
@@ -125,7 +125,7 @@
       "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
     },
     {
-      "id": "4",
+      "id": 4,
       "id_usuario": 1,
       "nome": "6ª Mostra de tecnologia + TI",
       "data": "26-11-2024",
@@ -136,7 +136,7 @@
       "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
     },
     {
-      "id": "5",
+      "id": 5,
       "id_usuario": 1,
       "nome": "Bruno Mars - Live in Brazil",
       "data": "05-11-2024",
@@ -147,7 +147,7 @@
       "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png"
     },
     {
-      "id": "6",
+      "id": 6,
       "id_usuario": 1,
       "nome": "Fábio JR",
       "data": "07-11-2024",
@@ -160,7 +160,7 @@
   ],
   "enderecos": [
     {
-      "id": "1",
+      "id": 1,
       "local": "Parque Ibirapuera - Auditório",
       "rua": "Av. Pedro Álvares Cabral",
       "numero": 0,
@@ -168,13 +168,10 @@
       "cidade": "São Paulo",
       "estado": "SP",
       "cep": "04094-050",
-      "coordinates": [
-        -46.653867,
-        -23.587416
-      ]
+      "coordinates": [-46.653867, -23.587416]
     },
     {
-      "id": "2",
+      "id": 2,
       "local": "Mineirão",
       "rua": "Av. Antônio Abrahão Caram",
       "numero": 1001,
@@ -182,13 +179,10 @@
       "cidade": "Belo Horizonte",
       "estado": "MG",
       "cep": "31275-000",
-      "coordinates": [
-        -43.971121,
-        -19.865596
-      ]
+      "coordinates": [-43.971121, -19.865596]
     },
     {
-      "id": "3",
+      "id": 3,
       "local": "Centro de Convenções Ulysses Guimarães",
       "rua": "Eixo Monumental",
       "numero": 0,
@@ -196,13 +190,10 @@
       "cidade": "Brasília",
       "estado": "DF",
       "cep": "70070-350",
-      "coordinates": [
-        -47.899207,
-        -15.798557
-      ]
+      "coordinates": [-47.899207, -15.798557]
     },
     {
-      "id": "4",
+      "id": 4,
       "local": "Castelo de Itaipava",
       "rua": "Rod. BR-040",
       "numero": "KM 56",
@@ -210,13 +201,10 @@
       "cidade": "Petrópolis",
       "estado": "RJ",
       "cep": "25750-226",
-      "coordinates": [
-        -43.170086,
-        -22.446681
-      ]
+      "coordinates": [-43.170086, -22.446681]
     },
     {
-      "id": "5",
+      "id": 5,
       "local": "Auditório Araújo Vianna",
       "rua": "Av. Osvaldo Aranha",
       "numero": 685,
@@ -224,13 +212,10 @@
       "cidade": "Porto Alegre",
       "estado": "RS",
       "cep": "90035-191",
-      "coordinates": [
-        -51.214626,
-        -30.033056
-      ]
+      "coordinates": [-51.214626, -30.033056]
     },
     {
-      "id": "6",
+      "id": 6,
       "local": "Auditório Oscar Niemeyer",
       "rua": "Av. República do Líbano",
       "numero": 331,
@@ -238,45 +223,42 @@
       "cidade": "São Paulo",
       "estado": "SP",
       "cep": "04002-000",
-      "coordinates": [
-        -46.653134,
-        -23.591563
-      ]
+      "coordinates": [-46.653134, -23.591563]
     }
   ],
   "confirmacao": [
     {
-      "id": "1",
+      "id": 1,
       "id_usuario": 2,
       "id_evento": 5,
       "confirmed": true
     },
     {
-      "id": "2",
+      "id": 2,
       "id_usuario": 1,
       "id_evento": 1,
       "confirmed": true
     },
     {
-      "id": "3",
+      "id": 3,
       "id_usuario": 5,
       "id_evento": 2,
       "confirmed": true
     },
     {
-      "id": "4",
+      "id": 4,
       "id_usuario": 4,
       "id_evento": 2,
       "confirmed": true
     },
     {
-      "id": "5",
+      "id": 5,
       "id_usuario": 7,
       "id_evento": 3,
       "confirmed": true
     },
     {
-      "id": "6",
+      "id": 6,
       "id_usuario": 6,
       "id_evento": 5,
       "confirmed": true
@@ -314,53 +296,53 @@
   ],
   "categorias": [
     {
-      "id": "1",
+      "id": 1,
       "tipo": "Corporativo"
     },
     {
-      "id": "2",
+      "id": 2,
       "tipo": "Cultural"
     },
     {
-      "id": "3",
+      "id": 3,
       "tipo": "Educacional"
     },
     {
-      "id": "4",
+      "id": 4,
       "tipo": "Esportivo"
     },
     {
-      "id": "5",
+      "id": 5,
       "tipo": "Exposição"
     },
     {
-      "id": "6",
+      "id": 6,
       "tipo": "Festa"
     },
     {
-      "id": "7",
+      "id": 7,
       "tipo": "Festival"
     },
     {
-      "id": "8",
+      "id": 8,
       "tipo": "Palestra"
     },
     {
-      "id": "9",
+      "id": 9,
       "tipo": "Show"
     },
     {
-      "id": "10",
+      "id": 10,
       "tipo": "Teatro"
     },
     {
-      "id": "11",
+      "id": 11,
       "tipo": "Workshop"
     }
   ],
   "avaliacoes": [
     {
-      "id": "1",
+      "id": 1,
       "usuarioId": 1,
       "eventoId": 1,
       "nota": 4.5,
@@ -368,7 +350,7 @@
       "dataAvaliacao": "2024-11-16"
     },
     {
-      "id": "2",
+      "id": 2,
       "usuarioId": 2,
       "eventoId": 2,
       "nota": 3,
@@ -663,67 +645,67 @@
   ],
   "categories": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Corporativo",
       "description": "Eventos voltados para o mundo dos negócios, como reuniões, workshops empresariais e mais.",
       "image": "img/corporativo.png"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Cultural",
       "description": "Eventos que promovem arte, cultura e diversidade, incluindo exposições e espetáculos.",
       "image": "img/cultural.png"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Educacional",
       "description": "Palestras, cursos e seminários focados em aprendizado e capacitação.",
       "image": "img/educacional.png"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Esportivo",
       "description": "Competições esportivas, corridas e eventos ligados à prática de esportes.",
       "image": "img/esportivo.png"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Exposição",
       "description": "Mostras de arte, ciência ou tecnologia para o público geral.",
       "image": "img/exposicao.png"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Festa",
       "description": "Eventos sociais e celebrações com música, dança e diversão.",
       "image": "img/festa.png"
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Festival",
       "description": "Grandes eventos culturais ou musicais, com várias atrações.",
       "image": "img/festival.png"
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Palestra",
       "description": "Eventos com especialistas compartilhando conhecimentos e insights.",
       "image": "img/palestra.png"
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "Show",
       "description": "Apresentações musicais e performances ao vivo.",
       "image": "img/show.png"
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Teatro",
       "description": "Peças teatrais e performances dramáticas para entreter e emocionar.",
       "image": "img/teatro.png"
     },
     {
-      "id": "11",
+      "id": 11,
       "name": "Workshop",
       "description": "Atividades práticas para aprender novas habilidades e técnicas.",
       "image": "img/workshop.png"
@@ -731,34 +713,50 @@
   ],
   "acessos": [
     {
-      "id_evento": "1",
+      "id_evento": 1,
       "numero_acessos": 134,
       "id": "ea26"
     },
     {
-      "id_evento": "2",
+      "id_evento": 2,
       "numero_acessos": 78,
       "id": "451b"
     },
     {
-      "id_evento": "3",
+      "id_evento": 3,
       "numero_acessos": 221,
       "id": "3d67"
     },
     {
-      "id_evento": "4",
+      "id_evento": 4,
       "numero_acessos": 156,
       "id": "1005"
     },
     {
-      "id_evento": "5",
+      "id_evento": 5,
       "numero_acessos": 312,
       "id": "e293"
     },
     {
-      "id_evento": "6",
+      "id_evento": 6,
       "numero_acessos": 98,
       "id": "e76a"
+    }
+  ],
+  "perguntas": [
+    {
+      "id": 1,
+      "id_usuario": 1,
+      "pergunta": "Html",
+      "resumo": "HTML (Hypertext Markup Language) é uma linguagem de marcação de texto que serve para criar páginas web. É o componente básico da web",
+      "respostaCompleta": "HTML (Hypertext Markup Language) é uma linguagem de marcação de texto que serve para criar páginas web. É o componente básico da web"
+    },
+    {
+      "id": 2,
+      "id_usuario": 1,
+      "pergunta": "Inteligência artificial (IA) ",
+      "resumo": "Inteligência artificial (IA) é um campo da ciência da computação que desenvolve tecnologias para tarefas",
+      "respostaCompleta": "Inteligência artificial (IA) é um campo da ciência da computação que desenvolve tecnologias para que computadores possam realizar tarefas de forma automatizada, imitando o comportamento humano"
     }
   ]
 }

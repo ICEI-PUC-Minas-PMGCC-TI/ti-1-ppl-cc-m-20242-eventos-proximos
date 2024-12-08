@@ -63,16 +63,31 @@
   flex-direction: column;
 }
 
-footer {
-  background-color: black;
-  height: 150px;
-  width: 100%;
+#main-footer {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-footer h2 {
-  color: white;
-  padding: 30px 60px;
+#main-footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+#main-footer .footer-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4caf50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#main-footer .footer-link:hover {
+  text-decoration: underline;
+  color: #2e7d32;
+}
+
 
 .eventos {
   display:flex;
