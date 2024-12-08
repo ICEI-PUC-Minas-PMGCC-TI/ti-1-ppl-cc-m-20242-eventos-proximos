@@ -279,4 +279,14 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Erro ao carregar os eventos:", error));
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const locationFilter = document.getElementById('locationFilter');
+
+    locationFilter.addEventListener('change', (event) => {
+        if (event.target.value === 'mapa') {
+            window.location.href = '/codigo/public/mapaEventos/mapa.html';
+        }
+    });
+});
+
 
