@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     locationFilter.addEventListener('change', (event) => {
         if (event.target.value === 'mapa') {
-            window.location.href = '/codigo/public/mapaEventos/mapa.html';
+            window.location.href = '../public/mapaEventos/mapa.html';
         }
     });
 });
