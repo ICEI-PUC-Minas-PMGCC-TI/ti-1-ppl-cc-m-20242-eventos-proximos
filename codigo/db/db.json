@@ -1,7 +1,7 @@
 {
   "usuarios": [
     {
-      "id": "1",
+      "id": 1,
       "login": "admin",
       "senha": "123",
       "nome": "Administrador do Sistema",
@@ -9,42 +9,42 @@
       "favoritos": []
     },
     {
-      "id": "2",
+      "id": 2,
       "login": "user",
       "senha": "123",
       "nome": "Usuario Comum",
       "email": "user@abc.com"
     },
     {
-      "id": "3",
+      "id": 3,
       "login": "rommel",
       "senha": "123",
       "nome": "Rommel",
       "email": "rommel@gmail.com"
     },
     {
-      "id": "4",
+      "id": 4,
       "login": "maria123",
       "senha": "senha123",
       "nome": "Maria Silva",
       "email": "maria.silva@gmail.com"
     },
     {
-      "id": "5",
+      "id": 5,
       "login": "joaod",
       "senha": "pass456",
       "nome": "João Dias",
       "email": "joao.dias@hotmail.com"
     },
     {
-      "id": "6",
+      "id": 6,
       "login": "carla_santos",
       "senha": "senha789",
       "nome": "Carla Santos",
       "email": "carla.santos@yahoo.com"
     },
     {
-      "id": "7",
+      "id": 7,
       "login": "ricardo85",
       "senha": "minhasenha",
       "nome": "Ricardo Pereira",
@@ -53,39 +53,39 @@
   ],
   "favoritos": [
     {
-      "id": "1",
+      "id": 1,
       "id_usuario": 1,
       "id_evento": 1
     },
     {
-      "id": "2",
+      "id": 2,
       "id_usuario": 1,
       "id_evento": 2
     },
     {
-      "id": "3",
+      "id": 3,
       "id_usuario": 1,
       "id_evento": 3
     },
     {
-      "id": "4",
+      "id": 4,
       "id_usuario": 1,
       "id_evento": 4
     },
     {
-      "id": "5",
+      "id": 5,
       "id_usuario": 1,
       "id_evento": 5
     },
     {
-      "id": "6",
+      "id": 6,
       "id_usuario": 1,
       "id_evento": 6
     }
   ],
   "eventos": [
     {
-      "id": "1",
+      "id": 1,
       "id_usuario": 1,
       "nome": "Numanice #3 Tour",
       "data": "15-11-2024",
@@ -96,18 +96,18 @@
       "imagem": "https://images.sympla.com.br/6671b9992fd5e-lg.png"
     },
     {
-      "id": "2",
+      "id": 2,
       "id_usuario": 1,
       "nome": "Web-Tech Days",
       "data": "29-11-2024",
       "id_endereco": 3,
       "descricao": "Inteligência artificial, tecnologia e conhecimento",
-      "id_categoria": "3",
+      "id_categoria": 3,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/66db573ce92ff-lg.jpg"
     },
     {
-      "id": "3",
+      "id": 3,
       "id_usuario": 1,
       "nome": "Réveillon da Serra",
       "data": "31-12-2024",
@@ -118,18 +118,18 @@
       "imagem": "https://images.sympla.com.br/66c4902fab964-lg.jpg"
     },
     {
-      "id": "4",
+      "id": 4,
       "id_usuario": 1,
       "nome": "6ª Mostra de tecnologia + TI",
       "data": "26-11-2024",
       "id_endereco": 5,
       "descricao": "Nos dias 26, 27 e 28 de novembro, o Centro de Convenções Ulysses Guimarães será o ponto de encontro de especialistas, empresários, estudantes e entusiastas da tecnologia para a 6ª Mostra de Tecnologia Brasília Mais TI, o maior evento de tecnologia do Centro-Oeste.",
-      "id_categoria": "3",
+      "id_categoria": 3,
       "status": "ativo",
       "imagem": "https://images.sympla.com.br/6709815641ecc-lg.png"
     },
     {
-      "id": "5",
+      "id": 5,
       "id_usuario": 1,
       "nome": "Bruno Mars - Live in Brazil",
       "data": "05-11-2024",
@@ -140,7 +140,7 @@
       "imagem": "https://cdn.getcrowder.com/images/b14eeab3-423f-43d7-89c9-9f87daae544e-bm1440x540.png"
     },
     {
-      "id": "6",
+      "id": 6,
       "id_usuario": 1,
       "nome": "Fábio JR",
       "data": "07-11-2024",
@@ -153,7 +153,7 @@
   ],
   "enderecos": [
     {
-      "id": "1",
+      "id": 1,
       "local": "Parque Ibirapuera - Auditório",
       "rua": "Av. Pedro Álvares Cabral",
       "numero": 0,
@@ -167,7 +167,7 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "local": "Mineirão",
       "rua": "Av. Antônio Abrahão Caram",
       "numero": 1001,
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": 3,
       "local": "Centro de Convenções Ulysses Guimarães",
       "rua": "Eixo Monumental",
       "numero": 0,
@@ -195,7 +195,7 @@
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "local": "Castelo de Itaipava",
       "rua": "Rod. BR-040",
       "numero": "KM 56",
@@ -209,7 +209,7 @@
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "local": "Auditório Araújo Vianna",
       "rua": "Av. Osvaldo Aranha",
       "numero": 685,
@@ -223,7 +223,7 @@
       ]
     },
     {
-      "id": "6",
+      "id": 6,
       "local": "Auditório Oscar Niemeyer",
       "rua": "Av. República do Líbano",
       "numero": 331,
@@ -239,37 +239,37 @@
   ],
   "confirmacao": [
     {
-      "id": "1",
+      "id": 1,
       "id_usuario": 2,
       "id_evento": 5,
       "confirmed": false
     },
     {
-      "id": "2",
+      "id": 2,
       "id_usuario": 1,
       "id_evento": 1,
       "confirmed": true
     },
     {
-      "id": "3",
+      "id": 3,
       "id_usuario": 5,
       "id_evento": 2,
       "confirmed": true
     },
     {
-      "id": "4",
+      "id": 4,
       "id_usuario": 4,
       "id_evento": 2,
       "confirmed": true
     },
     {
-      "id": "5",
+      "id": 5,
       "id_usuario": 7,
       "id_evento": 3,
       "confirmed": true
     },
     {
-      "id": "6",
+      "id": 6,
       "id_usuario": 6,
       "id_evento": 5,
       "confirmed": true
@@ -323,7 +323,7 @@
   ],
   "avaliacoes": [
     {
-      "id": "1",
+      "id": 1,
       "usuarioId": 1,
       "eventoId": 1,
       "nota": 4.5,
@@ -331,7 +331,7 @@
       "dataAvaliacao": "2024-11-16"
     },
     {
-      "id": "2",
+      "id": 2,
       "usuarioId": 2,
       "eventoId": 2,
       "nota": 3,
@@ -626,67 +626,67 @@
   ],
   "categories": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Corporativo",
       "description": "Eventos voltados para o mundo dos negócios, como reuniões, workshops empresariais e mais.",
       "image": "img/corporativo.png"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Cultural",
       "description": "Eventos que promovem arte, cultura e diversidade, incluindo exposições e espetáculos.",
       "image": "img/cultural.png"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Educacional",
       "description": "Palestras, cursos e seminários focados em aprendizado e capacitação.",
       "image": "img/educacional.png"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Esportivo",
       "description": "Competições esportivas, corridas e eventos ligados à prática de esportes.",
       "image": "img/esportivo.png"
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Exposição",
       "description": "Mostras de arte, ciência ou tecnologia para o público geral.",
       "image": "img/exposicao.png"
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Festa",
       "description": "Eventos sociais e celebrações com música, dança e diversão.",
       "image": "img/festa.png"
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Festival",
       "description": "Grandes eventos culturais ou musicais, com várias atrações.",
       "image": "img/festival.png"
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Palestra",
       "description": "Eventos com especialistas compartilhando conhecimentos e insights.",
       "image": "img/palestra.png"
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "Show",
       "description": "Apresentações musicais e performances ao vivo.",
       "image": "img/show.png"
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Teatro",
       "description": "Peças teatrais e performances dramáticas para entreter e emocionar.",
       "image": "img/teatro.png"
     },
     {
-      "id": "11",
+      "id": 11,
       "name": "Workshop",
       "description": "Atividades práticas para aprender novas habilidades e técnicas.",
       "image": "img/workshop.png"
