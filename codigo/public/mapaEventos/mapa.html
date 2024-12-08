@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/codigo/public/mapaEventos/mapa.css">
+    <link rel="stylesheet" href="/ti-1-ppl-cc-m-20242-eventos-proximos/codigo/public/mapaEventos/mapa.css">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
     <script src="/codigo/public/mapaEventos/mapa.js" defer></script>
@@ -16,11 +16,11 @@
 <body>
 
     <header>
-        <a href="/codigo/public/index.html">
-            <img src="/codigo/public/assets/images/logo.png" alt="" id="logo">
+        <a href="/ti-1-ppl-cc-m-20242-eventos-proximos/codigo/public/index.html">
+            <img src="/ti-1-ppl-cc-m-20242-eventos-proximos/codigo/public/assets/images/logo.png" alt="" id="logo">
         </a>
         <div class="perfil">
-            <a href="/codigo/public/graficosProdutor/graficosProdutor.html">
+            <a href="/ti-1-ppl-cc-m-20242-eventos-proximos/codigo/public/graficosProdutor/graficosProdutor.html">
                 <p id="user-name">Olá</p>
             </a>
         </div>
@@ -39,7 +39,7 @@
             zoom: 9
         });
     
-        fetch('/codigo/db/db.json')
+        fetch('/ti-1-ppl-cc-m-20242-eventos-proximos/codigo/db/db.json')
             .then(response => response.json())
             .then(data => {
                 const { eventos, enderecos } = data;
