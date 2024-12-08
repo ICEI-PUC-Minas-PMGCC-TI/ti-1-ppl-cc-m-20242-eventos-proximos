@@ -691,5 +691,31 @@
       "description": "Atividades práticas para aprender novas habilidades e técnicas.",
       "image": "img/workshop.png"
     }
+  ],
+  "acessos": [
+    {
+      "id_evento": "1",
+      "numero_acessos": 134
+    },
+    {
+      "id_evento": "2",
+      "numero_acessos": 78
+    },
+    {
+      "id_evento": "3",
+      "numero_acessos": 221
+    },
+    {
+      "id_evento": "4",
+      "numero_acessos": 156
+    },
+    {
+      "id_evento": "5",
+      "numero_acessos": 312
+    },
+    {
+      "id_evento": "6",
+      "numero_acessos": 98
+   }
   ]
 }
