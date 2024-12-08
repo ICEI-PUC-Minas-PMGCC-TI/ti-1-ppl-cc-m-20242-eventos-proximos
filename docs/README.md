@@ -541,10 +541,6 @@ Esta seção apresenta os módulos e APIs utilizados na solução
 * Bootstrap 5.3.0 - [http://getbootstrap.com/](http://getbootstrap.com/)
 * MapBox v2.14.1 - [https://www.mapbox.com/](https://www.mapbox.com/)
 
-> ⚠️ **APAGUE ESSA PARTE ANTES DE ENTREGAR SEU TRABALHO**
->
-> Apresente os módulos e APIs utilizados no desenvolvimento da solução. Inclua itens como: (1) Frameworks, bibliotecas, módulos, etc. utilizados no desenvolvimento da solução; (2) APIs utilizadas para acesso a dados, serviços, etc.
-
 # Referências
 
 As referências utilizadas no trabalho foram:
