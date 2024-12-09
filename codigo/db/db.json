@@ -168,7 +168,10 @@
       "cidade": "São Paulo",
       "estado": "SP",
       "cep": "04094-050",
-      "coordinates": [-46.653867, -23.587416]
+      "coordinates": [
+        -46.653867,
+        -23.587416
+      ]
     },
     {
       "id": 2,
@@ -179,7 +182,10 @@
       "cidade": "Belo Horizonte",
       "estado": "MG",
       "cep": "31275-000",
-      "coordinates": [-43.971121, -19.865596]
+      "coordinates": [
+        -43.971121,
+        -19.865596
+      ]
     },
     {
       "id": 3,
@@ -190,7 +196,10 @@
       "cidade": "Brasília",
       "estado": "DF",
       "cep": "70070-350",
-      "coordinates": [-47.899207, -15.798557]
+      "coordinates": [
+        -47.899207,
+        -15.798557
+      ]
     },
     {
       "id": 4,
@@ -201,7 +210,10 @@
       "cidade": "Petrópolis",
       "estado": "RJ",
       "cep": "25750-226",
-      "coordinates": [-43.170086, -22.446681]
+      "coordinates": [
+        -43.170086,
+        -22.446681
+      ]
     },
     {
       "id": 5,
@@ -212,7 +224,10 @@
       "cidade": "Porto Alegre",
       "estado": "RS",
       "cep": "90035-191",
-      "coordinates": [-51.214626, -30.033056]
+      "coordinates": [
+        -51.214626,
+        -30.033056
+      ]
     },
     {
       "id": 6,
@@ -223,7 +238,10 @@
       "cidade": "São Paulo",
       "estado": "SP",
       "cep": "04002-000",
-      "coordinates": [-46.653134, -23.591563]
+      "coordinates": [
+        -46.653134,
+        -23.591563
+      ]
     }
   ],
   "confirmacao": [
