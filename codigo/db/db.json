@@ -747,16 +747,16 @@
     {
       "id": 1,
       "id_usuario": 1,
-      "pergunta": "Html",
-      "resumo": "HTML (Hypertext Markup Language) é uma linguagem de marcação de texto que serve para criar páginas web. É o componente básico da web",
-      "respostaCompleta": "HTML (Hypertext Markup Language) é uma linguagem de marcação de texto que serve para criar páginas web. É o componente básico da web"
+      "pergunta": " O que é necessário para planejar um evento de sucesso?",
+      "resumo": " Planejar um evento de sucesso exige organização, definição de objetivos e coordenação de recursos.",
+      "respostaCompleta": "Para planejar um evento de sucesso, é essencial seguir etapas estratégicas. Primeiro, defina o objetivo principal do evento, como promover um produto, celebrar uma data ou arrecadar fundos. Em seguida, escolha uma data e local apropriados e crie um orçamento detalhado. A divulgação é crucial, podendo ser feita por redes sociais, e-mails e cartazes. Durante o evento, coordene a equipe para garantir que tudo saia conforme o planejado e esteja preparado para lidar com imprevistos. Após o evento, avalie o sucesso coletando feedback dos participantes."
     },
     {
       "id": 2,
       "id_usuario": 1,
-      "pergunta": "Inteligência artificial (IA) ",
-      "resumo": "Inteligência artificial (IA) é um campo da ciência da computação que desenvolve tecnologias para tarefas",
-      "respostaCompleta": "Inteligência artificial (IA) é um campo da ciência da computação que desenvolve tecnologias para que computadores possam realizar tarefas de forma automatizada, imitando o comportamento humano"
+      "pergunta": "Como escolher o local ideal para um evento?",
+      "resumo": " A escolha do local de um evento deve considerar fatores como o público-alvo, orçamento e acessibilidade.",
+      "respostaCompleta": "Escolher o local ideal para um evento requer análise de vários fatores. É importante considerar o número de participantes esperados e verificar se o local possui a capacidade adequada. A localização deve ser acessível e ter opções de transporte público ou estacionamento. O orçamento também desempenha um papel crucial; locais luxuosos podem atrair mais público, mas precisam estar dentro do planejamento financeiro. Além disso, verifique os serviços oferecidos, como equipamento audiovisual, suporte técnico e opções de catering. A escolha de um local que se alinhe ao tema do evento também pode criar uma experiência mais imersiva para os participantes."
     }
   ]
 }
