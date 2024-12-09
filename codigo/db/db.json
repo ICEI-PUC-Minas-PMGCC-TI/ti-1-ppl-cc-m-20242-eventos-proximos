@@ -156,6 +156,17 @@
       "id_categoria": 9,
       "status": "ativo",
       "imagem": "https://assets.bileto.sympla.com.br/eventmanager/production/2g1gnk3b44m1q8e8g6kevcbmqgd3defd5t2251493ultt2mbiqidmtkdko4rc1eksee15dt70u6q2gfuvhherf5tlu0dv4j70276oqj.webp"
+    },
+    {
+      "id": "8",
+      "id_usuario": 1,
+      "nome": "Brasil Game Show (BGS)",
+      "data": "2024-12-09",
+      "id_endereco": "7",
+      "descricao": "A Maior Feira de Games da América Latina!",
+      "id_categoria": "2",
+      "status": "ativo",
+      "imagem": "blob:http://127.0.0.1:5500/9fc9e89c-eb14-48ec-a0e0-6e24e873d303"
     }
   ],
   "enderecos": [
@@ -168,7 +179,10 @@
       "cidade": "São Paulo",
       "estado": "SP",
       "cep": "04094-050",
-      "coordinates": [-46.653867, -23.587416]
+      "coordinates": [
+        -46.653867,
+        -23.587416
+      ]
     },
     {
       "id": 2,
@@ -179,7 +193,10 @@
       "cidade": "Belo Horizonte",
       "estado": "MG",
       "cep": "31275-000",
-      "coordinates": [-43.971121, -19.865596]
+      "coordinates": [
+        -43.971121,
+        -19.865596
+      ]
     },
     {
       "id": 3,
@@ -190,7 +207,10 @@
       "cidade": "Brasília",
       "estado": "DF",
       "cep": "70070-350",
-      "coordinates": [-47.899207, -15.798557]
+      "coordinates": [
+        -47.899207,
+        -15.798557
+      ]
     },
     {
       "id": 4,
@@ -201,7 +221,10 @@
       "cidade": "Petrópolis",
       "estado": "RJ",
       "cep": "25750-226",
-      "coordinates": [-43.170086, -22.446681]
+      "coordinates": [
+        -43.170086,
+        -22.446681
+      ]
     },
     {
       "id": 5,
@@ -212,7 +235,10 @@
       "cidade": "Porto Alegre",
       "estado": "RS",
       "cep": "90035-191",
-      "coordinates": [-51.214626, -30.033056]
+      "coordinates": [
+        -51.214626,
+        -30.033056
+      ]
     },
     {
       "id": 6,
@@ -223,7 +249,24 @@
       "cidade": "São Paulo",
       "estado": "SP",
       "cep": "04002-000",
-      "coordinates": [-46.653134, -23.591563]
+      "coordinates": [
+        -46.653134,
+        -23.591563
+      ]
+    },
+    {
+      "id": "7",
+      "local": "Expo Center Norte",
+      "rua": "Av. Otto Baumgart",
+      "numero": "1000 ",
+      "bairro": "Vila Guilherme",
+      "cidade": "São Paulo ",
+      "estado": "São Paulo - SP",
+      "cep": "02049-000",
+      "coordinates": [
+        -46.619975,
+        -23.514952
+      ]
     }
   ],
   "confirmacao": [
@@ -273,7 +316,7 @@
       "id": 8,
       "id_usuario": 1,
       "id_evento": 5,
-      "confirmed": false
+      "confirmed": true
     },
     {
       "id": 9,
@@ -292,6 +335,12 @@
       "id_usuario": 1,
       "id_evento": 3,
       "confirmed": true
+    },
+    {
+      "id": 12,
+      "id_usuario": 1,
+      "id_evento": 8,
+      "confirmed": false
     }
   ],
   "categorias": [
@@ -572,64 +621,7 @@
       "id": "ac51"
     }
   ],
-  "notificacoes": [
-    {
-      "notificacoesId": 1,
-      "titulo": "Novo Workshop sobre Desenvolvimento Web",
-      "desc": "Inscreva-se agora para o workshop e não perca!",
-      "categoria": "workshop",
-      "lido": true,
-      "link": "/event/001",
-      "id_evento": 1,
-      "id": "c9cd"
-    },
-    {
-      "notificacoesId": 2,
-      "titulo": "Novo Curso de React Disponível",
-      "desc": "Aprenda React com o nosso novo curso online!",
-      "categoria": "curso",
-      "lido": false,
-      "link": "/course/002",
-      "id_evento": 2,
-      "id": "a252"
-    },
-    {
-      "notificacoesId": 3,
-      "titulo": "Evento de Networking em São Paulo",
-      "desc": "Conecte-se com profissionais de TI e expanda sua rede de contatos.",
-      "categoria": "evento",
-      "lido": false,
-      "link": "/event/003",
-      "id_evento": 3,
-      "id": "8e39"
-    },
-    {
-      "notificacoesId": 4,
-      "titulo": "Novo Workshop sobre Design de Interfaces",
-      "desc": "Não perca o workshop sobre Design de Interfaces!",
-      "categoria": "workshop",
-      "lido": false,
-      "link": "/event/004",
-      "id_evento": 4,
-      "id": "a403"
-    },
-    {
-      "notificacoesId": 5,
-      "titulo": "Novo Evento Disponível!",
-      "desc": "Um novo evento foi adicionado ao seu calendário de favoritos. Não perca a chance de participar!",
-      "link": "/event/005",
-      "lido": false,
-      "id": "9086"
-    },
-    {
-      "notificacoesId": 6,
-      "titulo": "Lembrete de Evento",
-      "desc": "Você tem um evento programado para amanhã às 18:00. Não se esqueça de conferir os detalhes.",
-      "link": "/event/006",
-      "lido": false,
-      "id": "8f68"
-    }
-  ],
+  "notificacoes": [],
   "preferences": [
     {
       "user": "Fulano",
@@ -757,6 +749,41 @@
       "pergunta": "Como escolher o local ideal para um evento?",
       "resumo": " A escolha do local de um evento deve considerar fatores como o público-alvo, orçamento e acessibilidade.",
       "respostaCompleta": "Escolher o local ideal para um evento requer análise de vários fatores. É importante considerar o número de participantes esperados e verificar se o local possui a capacidade adequada. A localização deve ser acessível e ter opções de transporte público ou estacionamento. O orçamento também desempenha um papel crucial; locais luxuosos podem atrair mais público, mas precisam estar dentro do planejamento financeiro. Além disso, verifique os serviços oferecidos, como equipamento audiovisual, suporte técnico e opções de catering. A escolha de um local que se alinhe ao tema do evento também pode criar uma experiência mais imersiva para os participantes."
+    },
+    {
+      "id": 3,
+      "id_usuario": 1,
+      "pergunta": "Quais estratégias são eficazes para aumentar o engajamento em eventos?",
+      "resumo": " Aumentar o engajamento em eventos requer ações que estimulem a interação, como atividades dinâmicas e o uso de tecnologia.",
+      "respostaCompleta": "Para aumentar o engajamento em eventos, comece criando uma programação envolvente que inclua palestras inspiradoras, workshops interativos e momentos de networking. Use a tecnologia a seu favor, como aplicativos para eventos, que permitem os participantes interagirem com o conteúdo e enviarem perguntas em tempo real. Além disso, utilize gamificação, como desafios e prêmios, para incentivar a participação. Oferecer espaços personalizados, como áreas para fotos ou experiências sensoriais, também pode criar momentos memoráveis. Após o evento, mantenha o engajamento compartilhando resumos, fotos e agradecimentos nas redes sociais, incentivando os participantes a interagir."
+    },
+    {
+      "id": 4,
+      "id_usuario": 1,
+      "pergunta": "Quais estratégias são eficazes para aumentar o engajamento em eventos?",
+      "resumo": "Aumentar o engajamento em eventos requer ações que estimulem a interação, como atividades dinâmicas e o uso de tecnologia.",
+      "respostaCompleta": "Para aumentar o engajamento em eventos, comece criando uma programação envolvente que inclua palestras inspiradoras, workshops interativos e momentos de networking. Use a tecnologia a seu favor, como aplicativos para eventos, que permitem os participantes interagirem com o conteúdo e enviarem perguntas em tempo real. Além disso, utilize gamificação, como desafios e prêmios, para incentivar a participação. Oferecer espaços personalizados, como áreas para fotos ou experiências sensoriais, também pode criar momentos memoráveis. Após o evento, mantenha o engajamento compartilhando resumos, fotos e agradecimentos nas redes sociais, incentivando os participantes a interagir.\n"
+    },
+    {
+      "id": 5,
+      "id_usuario": 1,
+      "pergunta": "Quais estratégias são eficazes para aumentar o engajamento em eventos?",
+      "resumo": "Aumentar o engajamento em eventos requer ações que estimulem a interação, como atividades dinâmicas e o uso de tecnologia.\t",
+      "respostaCompleta": "Para aumentar o engajamento em eventos, comece criando uma programação envolvente que inclua palestras inspiradoras, workshops interativos e momentos de networking. Use a tecnologia a seu favor, como aplicativos para eventos, que permitem os participantes interagirem com o conteúdo e enviarem perguntas em tempo real. Além disso, utilize gamificação, como desafios e prêmios, para incentivar a participação. Oferecer espaços personalizados, como áreas para fotos ou experiências sensoriais, também pode criar momentos memoráveis. Após o evento, mantenha o engajamento compartilhando resumos, fotos e agradecimentos nas redes sociais, incentivando os participantes a interagir."
+    },
+    {
+      "id": 6,
+      "id_usuario": 1,
+      "pergunta": "Quais estratégias são eficazes para aumentar o engajamento em eventos?",
+      "resumo": "Aumentar o engajamento em eventos requer ações que estimulem a interação, como atividades dinâmicas e o uso de tecnologia.\t",
+      "respostaCompleta": "Para aumentar o engajamento em eventos, comece criando uma programação envolvente que inclua palestras inspiradoras, workshops interativos e momentos de networking. Use a tecnologia a seu favor, como aplicativos para eventos, que permitem os participantes interagirem com o conteúdo e enviarem perguntas em tempo real. Além disso, utilize gamificação, como desafios e prêmios, para incentivar a participação. Oferecer espaços personalizados, como áreas para fotos ou experiências sensoriais, também pode criar momentos memoráveis. Após o evento, mantenha o engajamento compartilhando resumos, fotos e agradecimentos nas redes sociais, incentivando os participantes a interagir.\n"
+    },
+    {
+      "id": 7,
+      "id_usuario": 1,
+      "pergunta": "Quais estratégias são eficazes para aumentar o engajamento em eventos?",
+      "resumo": "Aumentar o engajamento em eventos requer ações que estimulem a interação, como atividades dinâmicas e o uso de tecnologia.",
+      "respostaCompleta": "Para aumentar o engajamento em eventos, comece criando uma programação envolvente que inclua palestras inspiradoras, workshops interativos e momentos de networking. Use a tecnologia a seu favor, como aplicativos para eventos, que permitem os participantes interagirem com o conteúdo e enviarem perguntas em tempo real. Além disso, utilize gamificação, como desafios e prêmios, para incentivar a participação. Oferecer espaços personalizados, como áreas para fotos ou experiências sensoriais, também pode criar momentos memoráveis. Após o evento, mantenha o engajamento compartilhando resumos, fotos e agradecimentos nas redes sociais, incentivando os participantes a interagir."
     }
   ]
 }

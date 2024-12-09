@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (pergunta && resumo && respostaCompleta) {
       const novaPergunta = {
         id: maxId + 1, // Calcula um novo ID baseado no maior ID atual
+        id_usuario: 1, // Define o id_usuario como 1
         pergunta: pergunta,
         resumo: resumo,
         respostaCompleta: respostaCompleta,
