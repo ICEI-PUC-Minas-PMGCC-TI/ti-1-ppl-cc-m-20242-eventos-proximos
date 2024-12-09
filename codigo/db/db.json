@@ -249,12 +249,9 @@
       "cidade": "São Paulo",
       "estado": "SP",
       "cep": "04002-000",
-      "coordinates": [
-        
+      "coordinates": [     
         -46.653134,
-       
         -23.591563
-      
       ]
     },
     {

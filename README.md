@@ -7,14 +7,14 @@ Por meio de uma aplicação Web com ferramentas de mapas, cadastros e filtragens
 
 ## Alunos integrantes da equipe
 
-  * [Rafael Henrique](https://github.com/Rafaelhs2005) 
-  * [Joao Pedro](https://github.com/Jopefv) 
-  * [Kamily Vitória](https://github.com/kamivss)
   * [Bruna Noely](https://github.com/brunanoely)
-  * [Gabriel Lucas](https://github.com/Gabriellsmm)
   * [Caio Fernandes](https://github.com/caionesess)
+  * [Gabriel Lucas](https://github.com/Gabriellsmm)
+  * [Joao Pedro](https://github.com/Jopefv) 
   * [Julia Santos](https://github.com/ajuliasantos)
-
+  * [Kamily Vitória](https://github.com/kamivss)
+  * [Rafael Henrique](https://github.com/Rafaelhs2005)
+  
 ## Professores responsáveis
 
 * Rommel Vieira Carneiro

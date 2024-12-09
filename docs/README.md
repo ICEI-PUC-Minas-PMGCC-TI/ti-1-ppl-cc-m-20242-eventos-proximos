@@ -346,6 +346,18 @@ Permite a visualização e alteração dos dados do usuário.
 
 ![Tela de Funcionalidade - pt 1](images/meuPerfil.jpg)
 
+##### Funcionalidade 10 - Fórum de Perguntas
+
+Permite a visualização de perguntas e respostas frequentes sobre o site.
+
+* **Estrutura de dados:** perguntas
+* **Instruções de acesso:**
+  * Abra o site e efetue o login
+  * Clique no fórum no rodapé da página inicial
+* **Tela da funcionalidade**:
+
+![Tela de Funcionalidade - pt 1](images/forum.jpg)
+
 ## Estruturas de Dados
 
 Descrição das estruturas de dados utilizadas na solução com exemplos no formato JSON.Info
@@ -525,6 +537,20 @@ Estrutura de notificações de Eventos
       "link": "/event/001",
       "id_evento": 1,
       "id": "c9cd"
+    },
+```
+
+##### Estrutura de Dados - Perguntas
+
+Estrutura de perguntas frequentes
+
+```json
+    {
+      "id": 1,
+      "id_usuario": 1,
+      "pergunta": " O que é necessário para planejar um evento de sucesso?",
+      "resumo": " Planejar um evento de sucesso exige organização, definição de objetivos e coordenação de recursos.",
+      "respostaCompleta": "Para planejar um evento de sucesso, é essencial seguir etapas estratégicas. Primeiro, defina o objetivo principal do evento, como promover um produto, celebrar uma data ou arrecadar fundos. Em seguida, escolha uma data e local apropriados e crie um orçamento detalhado. A divulgação é crucial, podendo ser feita por redes sociais, e-mails e cartazes. Durante o evento, coordene a equipe para garantir que tudo saia conforme o planejado e esteja preparado para lidar com imprevistos. Após o evento, avalie o sucesso coletando feedback dos participantes."
     },
 ```
 
